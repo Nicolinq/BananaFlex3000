@@ -1,0 +1,198 @@
+[gd_scene load_steps=3 format=3 uid="uid://cibjxbk0tikbb"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_a4vdr"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_2jp88"]
+
+[node name="BaseSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 1024.0
+script = ExtResource("1_a4vdr")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13725491, 0.21568628, 1, 1)
+
+[node name="player_score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 120
+text = "12233"
+horizontal_alignment = 1
+script = ExtResource("2_2jp88")
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="BottomMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -123.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HFlowContainer" type="HFlowContainer" parent="BottomMarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+
+[node name="player_number" type="Label" parent="BottomMarginContainer/HFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.12156863, 0.9098039, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "PLAYER 1"
+script = ExtResource("2_2jp88")
+variable_name = "number"
+template_string = "Player %s"
+min_players = 1
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="player_ball" type="Label" parent="BottomMarginContainer/HFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.12156863, 0.9098039, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "BALL 1"
+script = ExtResource("2_2jp88")
+variable_name = "ball"
+template_string = "Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="LeftMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 307.0
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="VFlowContainer" type="VFlowContainer" parent="LeftMarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+
+[node name="bonus" type="Label" parent="LeftMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95478195, 0.39243633, 0.21187225, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Base Bonus 1,000"
+script = ExtResource("2_2jp88")
+variable_name = "base_bonus"
+comma_separate = true
+template_string = "Base Bonus %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="playfield_multi" type="Label" parent="LeftMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95478195, 0.39243633, 0.21187225, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Bonus x2"
+script = ExtResource("2_2jp88")
+variable_name = "bonus_multiplier"
+comma_separate = true
+template_string = "Bonus x%s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="RightMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="VFlowContainer" type="VFlowContainer" parent="RightMarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+
+[node name="p1Score" type="Label" parent="RightMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "1,000,000"
+horizontal_alignment = 2
+script = ExtResource("2_2jp88")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+template_string = "P1 : %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p2Score" type="Label" parent="RightMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "1,000,000"
+script = ExtResource("2_2jp88")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+template_string = "P2 : %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p3Score" type="Label" parent="RightMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "1,000,000"
+script = ExtResource("2_2jp88")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+template_string = "P3 : %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p4Score" type="Label" parent="RightMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "1,000,000"
+script = ExtResource("2_2jp88")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+template_string = "P4 : %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

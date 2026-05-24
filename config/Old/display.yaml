@@ -1,0 +1,25 @@
+#config_version=5
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: Starting Mafia Pinball !
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 500
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+  init_done: welcome_slide
+  mode_attract_started: attract_started

@@ -1,0 +1,213 @@
+[gd_scene load_steps=4 format=3 uid="uid://bma8gj2vk3r2e"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_4xgho"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_5bwht"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_d5wm8"]
+
+[node name="Bonus" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 1024.0
+script = ExtResource("1_4xgho")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9869711, 0.7092198, 0.37070882, 1)
+
+[node name="MPFConditionalChildren" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_5bwht")
+variable_type = 1
+variable_name = "entry"
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="initial" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="MPFVariable" type="Label" parent="MPFConditionalChildren/initial"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -133.0
+offset_right = 575.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "\"End of Ball 1\""
+script = ExtResource("3_d5wm8")
+variable_name = "ball"
+template_string = "End of Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="__default__" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFConditionalChildren/__default__"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -427.0
+offset_right = 1273.0
+offset_bottom = -317.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="text" type="Label" parent="MPFConditionalChildren/__default__/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "Bonus Entry Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_d5wm8")
+variable_type = 1
+variable_name = "text"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/__default__/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "1,000,000"
+script = ExtResource("3_d5wm8")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFConditionalChildren/subtotal"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -1014.0
+offset_right = 1275.0
+offset_bottom = -904.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/subtotal/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "Bonus Subtotal"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/subtotal/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "1,000,000"
+script = ExtResource("3_d5wm8")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="total" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFConditionalChildren/total"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -795.0
+offset_right = 1273.0
+offset_bottom = -571.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/total/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "Total Bonus"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/total/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "1,000,000"
+script = ExtResource("3_d5wm8")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MPFConditionalChildren/multiplier"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -596.0
+offset_right = 1290.0
+offset_bottom = -372.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/multiplier/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "Bonus Multiplier"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/multiplier/HFlowContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "1,000,000"
+script = ExtResource("3_d5wm8")
+variable_type = 1
+variable_name = "score"
+template_string = "%sX"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

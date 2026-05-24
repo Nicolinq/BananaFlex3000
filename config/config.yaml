@@ -1,0 +1,35 @@
+#config_version=6
+
+hardware:
+   platform: opp
+   driverboards: gen2
+
+opp:
+   ports: /dev/ttyACM0, /dev/ttyACM1
+
+config:
+- hardware.yaml
+
+player_vars:
+  bonus_multiplier:
+    initial_value: 1
+  base_bonus:
+    initial_value: 0
+
+modes:
+- attract
+- base
+
+
+
+named_colors:
+   tt_white:   [255,250,240]
+   tt_nwhite:  [255,240,200]
+   tt_wwhite:  [255,230,170]
+   tt_yellow:  [255,220,  0]
+   tt_orange:  [255,110,  0]
+   tt_blue:    [ 15, 72,255]
+   tt_ltblue:  [ 30,144,255]
+   tt_red:     [255,  0,  0]
+   tt_green:   [  0,255,  0]
+   tt_magenta: [255,  0,255]

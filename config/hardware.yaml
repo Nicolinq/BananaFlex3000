@@ -1,0 +1,170 @@
+#config_version=6
+
+coils:
+    c_outhole:
+       number: 0-0-7
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_hold_power: 0.075
+    c_flipper_left:
+        number: 0-0-14
+        #allow_enable: true
+        default_hold_power: 0.08
+        default_pulse_power: 1.0
+        default_pulse_ms: 35
+    c_flipper_right:
+        number: 0-0-13
+        #allow_enable: true
+        default_hold_power: 0.08
+        default_pulse_power: 1.0
+        default_pulse_ms: 35
+        
+switches:
+    #Cabinet Switches
+   s_start_button:
+ #     number: 0-0-16
+      number: 1-0-32
+      tags: start
+      ignore_window_ms: 500ms 
+   s_left_flipper:
+      number: 0-0-17
+      tags: left_flipper
+   s_right_flipper:
+      number: 0-0-18
+      tags: right_flipper
+    #Playfield Switches (Matrix)
+   s_launch_button:
+      number: 1-0-33
+   s_setup_button:
+      number: 1-0-34
+   s_plus_button:
+      number: 1-0-35
+   s_minus_button:
+      number: 1-0-36
+   s_enter_button:
+      number: 1-0-37
+   s_tilt:
+      number: 1-0-38
+      tags: tilt_warning
+   s_coin_mech:
+      number: 1-0-39
+   s_red_monkey_target:
+      number: 1-0-40
+   s_bumper_done:
+      number: 1-0-41    
+   s_bank4_1:
+      number: 1-0-42  
+   s_bank4_2:
+      number: 1-0-43  
+   s_bank4_3:
+      number: 1-0-44  
+   s_bank4_4:
+      number: 1-0-45  
+   s_left_inlane:
+      number: 1-0-46  
+   s_right_inlane:
+      number: 1-0-47  
+   s_left_orbit:
+      number: 1-0-48  
+   s_right_orbit:
+      number: 1-0-49  
+   s_bank3_1:
+      number: 1-0-50  
+   s_bank3_2:
+      number: 1-0-51  
+   s_bank3_3:
+      number: 1-0-52  
+   s_right_mini_target:
+      number: 1-0-53  
+   s_left_mini_target:
+      number: 1-0-54  
+   s_spinner:
+      number: 1-0-55  
+   s_slingshot_done:
+      number: 1-0-56  
+
+    #Playfield Switches (Direct)
+   s_left_EOS:
+      number: 0-0-1
+   s_right_EOS:
+      number: 0-0-2
+   s_ball_trough_1:
+      number: 0-0-8    
+   s_ball_trough_2:
+      number: 0-0-9   
+   s_ball_trough_3:
+      number: 0-0-10   
+   s_ball_trough_jam:
+      number: 0-0-11   
+   s_bumper_spe:
+      number: 0-0-16 
+   s_slingshot_spe:
+      number: 0-0-19 
+   s_lock_1:
+      number: 0-0-24 
+   s_lock_2:
+      number: 0-0-25 
+   s_lock_3:
+      number: 0-0-26 
+   s_magnet_1:
+      number: 0-0-27 
+   s_magnet_2:
+      number: 1-0-1 
+   s_ramp_begin:
+      number: 0-0-3
+
+flippers:
+  left_flipper:
+        main_coil: c_flipper_left
+        activation_switch: s_left_flipper
+        eos_switch : s_left_EOS
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+  right_flipper:
+        main_coil: c_flipper_right
+        activation_switch: s_right_flipper
+        eos_switch : s_right_EOS
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+
+
+
+# keyboard:
+#    1:
+#      event: led_off
+#    2:
+#      event: led_code
+#    3:
+#      event: led_name
+#    4:
+#      event: group_light
+#    5:
+#      event: led_fade
+     
+ball_devices:
+    bd_trough:
+        ball_switches: s_ball_trough_1,s_ball_trough_2,s_ball_trough_3
+        jam_switch: s_ball_trough_jam
+        eject_coil: c_outhole
+        tags: trough, home, drain, home
+        eject_coil_jam_pulse: 15ms
+        debug: true
+            
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_trough
+    enable_ball_search: True
+    ball_search_timeout: 45s
+    ball_search_wait_after_iteration: 30s
+    ball_search_interval: 250ms
+
+# virtual_platform_start_active_switches:
+#     - s_outhole
+
+machine:
+    balls_installed: 1
+
+game:
+    balls_per_game: 3
+    max_players: 4

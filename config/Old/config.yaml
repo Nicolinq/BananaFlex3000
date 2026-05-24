@@ -1,0 +1,233 @@
+#config_version=5
+
+hardware:
+   platform: opp
+   driverboards: gen2
+
+opp:
+   ports: com3, com4 # change if your Cobra board uses different ports
+
+coils:
+    c_left_saucer:
+       number: 0-0-1
+       default_pulse_ms: 22
+       default_pulse_power: 0.44
+    c_right_sling:
+       number: 0-0-2
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 4
+    c_left_sling:
+       number: 0-0-3
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 4
+    c_right_bump:
+       number: 0-0-4
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 1
+    c_left_bump:
+       number: 0-0-5
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 1
+    c_bottom_bump:
+       number: 0-0-6
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 1
+    c_outhole:
+       number: 0-0-7
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_hold_power: 0.075
+    c_flipper_left:
+        number: 0-0-14
+        allow_enable: true
+        default_hold_power: 0.5
+        default_pulse_power: 0.54
+        default_pulse_ms: 15
+        
+switches:
+   s_startButton:
+      number: 0-0-16
+      tags: start
+      ignore_window_ms: 500ms 
+   s_left_flipper:
+      number: 0-0-17
+      tags: left_flipper
+   s_right_sling_spe:
+      number: 0-0-27
+   s_left_sling_spe:
+      number: 0-0-26       
+   s_right_bumper_spe:
+      number: 0-0-25     
+   s_left_bumper_spe:
+      number: 0-0-24      
+   s_bottom_bumper_spe:
+      number: 0-0-19            
+   s_outhole:
+      number: 1-0-40
+   s_left_outlane:
+      number: 1-0-41
+   s_d_rollover:
+      number: 1-0-42
+   s_left_kicker:
+      number: 1-0-43
+   s_lower_left_standup:
+      number: 1-0-44
+   s_1_target:
+      number: 1-0-45
+   s_eject_hole:
+      number: 1-0-46
+   s_middle_left_standup:
+      number: 1-0-47
+   s_upper_left_standup:
+      number: 1-0-48
+   s_g_drop_target:
+      number: 1-0-49
+   s_o_drop_target:
+      number: 1-0-50
+   s_r_drop_target:
+      number: 1-0-51
+   s_gor_drop_targets_series:
+      number: 1-0-52
+   s_gor_drop_target_Standup:
+      number: 1-0-53
+   s_magnet_switch:
+      number: 1-0-54
+   s_middle_lower_standup:
+      number: 1-0-55
+   s_middle_upper_standup:
+      number: 1-0-56
+   s_a_rollover:
+      number: 1-0-57
+   s_b_rollover:
+      number: 1-0-58
+   s_c_rollover:
+      number: 1-0-59
+   s_playfield_tilt:
+      number: 1-0-60
+   s_spinner:
+      number: 1-0-61
+   s_2_target:
+      number: 1-0-62
+   s_3_target:
+      number: 1-0-63
+   s_4_target:
+      number: 1-0-64
+   s_right_outlane:
+      number: 1-0-65
+   s_e_rollover:
+      number: 1-0-66
+   s_right_kicker:
+      number: 1-0-67
+   s_left_bumper:
+      number: 1-0-68
+   s_top_bumper:
+      number: 1-0-69
+   s_bottom_bumper:
+      number: 1-0-70
+   s_gar_drop_targets_standup:
+      number: 1-0-71
+   s_g2_drop_target:
+      number: 1-0-72
+   s_a_drop_target:
+      number: 1-0-73
+   s_r2_drop_target:
+      number: 1-0-74
+   s_gar_drop_targets_series:
+      number: 1-0-75
+      
+flippers:
+  left_flipper:
+        main_coil: c_flipper_left
+        activation_switch: s_left_flipper
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+
+autofire_coils:
+    slingshot_left:
+        coil: c_left_sling
+        switch: s_left_sling_spe
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+    slingshot_right:
+        coil: c_right_sling
+        switch: s_right_sling_spe
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+    pop_left:
+        coil: c_left_bump
+        switch: s_left_bumper_spe
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+    pop_right:
+        coil: c_right_bump
+        switch: s_right_bumper_spe
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+    pop_lower:
+        coil: c_bottom_bump
+        switch: s_bottom_bumper_spe
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+
+ball_devices:
+#!    bd_drain:
+#!        ball_switches: s_outhole
+#!        eject_coil: c_outhole
+#!        eject_targets: bd_trough
+#!        eject_timeouts: 2s
+#!        tags: drain
+#!        debug: True
+#!    bd_trough:
+#!        entrance_switch: s_outhole
+#!        entrance_switch_full_timeout: 1s
+#!        entrance_switch_ignore_window_ms: 500ms
+#!        entrance_count_delay: 750ms
+#!        ball_switches: s_outhole
+#!        ball_capacity: 1
+#!        eject_coil: c_outhole
+#!        eject_coil_enable_time: 700ms
+#!        eject_timeouts: 1.5s
+#!        tags: drain, trough, home
+#!        debug: True
+    bd_trough:
+        ball_switches: s_outhole
+        eject_coil: c_outhole
+        tags: trough, home, drain, home
+        eject_coil_jam_pulse: 15ms
+        debug: true
+    bd_leftSaucer:
+        ball_switches: s_eject_hole
+        eject_coil: c_left_saucer
+        eject_timeouts: 1s
+        entrance_count_delay: 900ms
+        
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_trough
+    enable_ball_search: True
+    ball_search_timeout: 15s
+    ball_search_wait_after_iteration: 10s
+    ball_search_interval: 250ms
+    
+machine:
+    balls_installed: 1
+
+game:
+    balls_per_game: 3
+    max_players: 1
