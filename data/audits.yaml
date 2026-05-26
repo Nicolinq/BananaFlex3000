@@ -1,6 +1,6 @@
 events:
-  game_ended: 26
-  game_started: 209
+  game_ended: 27
+  game_started: 214
 missing_switches:
   s_1_target: 4
   s_2_target: 3
@@ -22,6 +22,7 @@ missing_switches:
   s_gor_drop_targets_series: 143
   s_left_bumper: 2
   s_left_bumper_spe: 4
+  s_left_flipper: 5
   s_left_kicker: 2
   s_left_outlane: 134
   s_left_sling_spe: 4
@@ -31,11 +32,11 @@ missing_switches:
   s_middle_lower_standup: 4
   s_middle_upper_standup: 143
   s_o_drop_target: 143
-  s_outhole: 1
   s_playfield_tilt: 143
   s_r2_drop_target: 143
   s_r_drop_target: 143
   s_right_bumper_spe: 4
+  s_right_flipper: 2
   s_right_kicker: 2
   s_right_outlane: 122
   s_right_sling_spe: 4
@@ -45,7 +46,7 @@ missing_switches:
   s_upper_left_standup: 143
 player:
   score:
-    average: 62250
+    average: 60304
     top:
     - 613000
     - 267000
@@ -57,7 +58,7 @@ player:
     - 62000
     - 61000
     - 52000
-    total: 31
+    total: 32
 shots:
   a_lane: 219
   b_lane: 267
@@ -96,17 +97,18 @@ switches:
   s_left_outlane: 45
   s_left_sling_spe: 43
   s_lower_left_standup: 1
+  s_magnet_1: 99
   s_magnet_switch: 2
   s_middle_left_standup: 0
   s_middle_lower_standup: 8
   s_middle_upper_standup: 1
   s_o_drop_target: 0
-  s_outhole: 175
+  s_outhole: 204
   s_playfield_tilt: 0
   s_r2_drop_target: 0
   s_r_drop_target: 0
   s_right_bumper_spe: 150
-  s_right_flipper: 496
+  s_right_flipper: 521
   s_right_kicker: 117
   s_right_outlane: 28
   s_right_sling_spe: 53

@@ -18,6 +18,11 @@ coils:
         default_hold_power: 0.2
 #!        default_pulse_power: 0.54
         default_pulse_ms: 35
+    c_magnet1:
+       number: 0-0-12
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_hold_power: 0.075
         
 switches:
     #Cabinet Switches
@@ -31,6 +36,8 @@ switches:
    s_right_flipper:
       number: 0-0-18
       tags: right_flipper
+   s_magnet_1:
+      number: 0-0-19
     #Trough Switches
    s_outhole:
       number: 1-0-40
@@ -70,6 +77,11 @@ ball_devices:
         tags: trough, home, drain, home
         eject_coil_jam_pulse: 15ms
         debug: true
+    bd_magnet1:
+        ball_switches: s_magnet_1
+        eject_coil: c_magnet1
+        eject_timeouts: 1s
+        entrance_count_delay: 900ms
             
 playfields:
   playfield:
