@@ -1,6 +1,6 @@
 events:
   game_ended: 27
-  game_started: 218
+  game_started: 219
 missing_switches:
   s_1_target: 4
   s_2_target: 3
@@ -22,7 +22,7 @@ missing_switches:
   s_gor_drop_targets_series: 143
   s_left_bumper: 2
   s_left_bumper_spe: 4
-  s_left_flipper: 3
+  s_left_flipper: 4
   s_left_kicker: 2
   s_left_outlane: 134
   s_left_sling_spe: 4
@@ -32,17 +32,17 @@ missing_switches:
   s_middle_lower_standup: 4
   s_middle_upper_standup: 143
   s_o_drop_target: 143
-  s_outhole: 4
+  s_outhole: 5
   s_playfield_tilt: 143
   s_r2_drop_target: 143
   s_r_drop_target: 143
   s_right_bumper_spe: 4
-  s_right_flipper: 2
+  s_right_flipper: 3
   s_right_kicker: 2
   s_right_outlane: 122
   s_right_sling_spe: 4
   s_spinner: 143
-  s_startButton: 5
+  s_startButton: 6
   s_top_bumper: 4
   s_upper_left_standup: 143
 player:
@@ -69,6 +69,7 @@ shots:
   c_lane: 192
   hurryup_OK: 7
   left_lane: 68
+  magnet1: 20
   topRollover2_skillshot: 6
   topRollover3_skillshot: 8
 switches:
@@ -98,7 +99,7 @@ switches:
   s_left_outlane: 45
   s_left_sling_spe: 43
   s_lower_left_standup: 1
-  s_magnet_1: 134
+  s_magnet_1: 154
   s_magnet_switch: 2
   s_middle_left_standup: 0
   s_middle_lower_standup: 8

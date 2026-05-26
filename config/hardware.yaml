@@ -77,11 +77,6 @@ ball_devices:
         tags: trough, home, drain, home
         eject_coil_jam_pulse: 15ms
         debug: true
-    bd_magnet1:
-        ball_switches: s_magnet_1
-        eject_coil: c_magnet1
-        eject_timeouts: 600ms
-        entrance_count_delay: 50ms
             
 playfields:
   playfield:

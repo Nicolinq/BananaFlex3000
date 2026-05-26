@@ -9,4 +9,10 @@ mode:
 
 slide_player:
    mode_base_started: base_slide
-   
+
+shots:
+   magnet1:
+      switches: s_magnet_1
+
+coil_player:
+  magnet1_hit: c_magnet1
