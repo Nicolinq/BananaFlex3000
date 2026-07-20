@@ -1,0 +1,18 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_bumper
+  stop_events: stop_mode_bumper
+  priority: 200
+
+shots:
+  bumper_center:
+    switch: s_bumper_done
+
+shot_groups:
+  bumpers:
+    shots: bumper_center
+
+variable_player:
+  bumpers_hit:
+    score: 1_000

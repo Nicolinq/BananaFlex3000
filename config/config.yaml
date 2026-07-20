@@ -19,9 +19,45 @@ player_vars:
 modes:
 - attract
 - base
+- bumper
+- slingshot
 
+ball_devices:
+    bd_trough:
+        ball_switches: s_ball_trough_1,s_ball_trough_2,s_ball_trough_3
+        jam_switch: s_ball_trough_jam
+        eject_coil: c_outhole
+        tags: trough, home, drain, home
+        eject_coil_jam_pulse: 15ms
+        eject_timeouts: 3s
+            
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_trough
+    enable_ball_search: True
+    ball_search_timeout: 45s
+    ball_search_wait_after_iteration: 30s
+    ball_search_interval: 250ms
 
+virtual_platform_start_active_switches: s_ball_trough_1, s_ball_trough_2, s_ball_trough_3, s_bank3_down
 
+logging:
+  console:
+    bcp: none
+    bcp_client: none
+    bcp_interface: none
+    bcp_server: none
+  file:
+    bcp: none
+    bcp_client: none
+    bcp_interface: none
+    bcp_server: none
+
+bcp:
+  debug: false
+  warning: false
+  
 named_colors:
    tt_white:   [255,250,240]
    tt_nwhite:  [255,240,200]

@@ -1,0 +1,18 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_slingshot
+  stop_events: stop_mode_slingshot
+  priority: 200
+
+shots:
+  slingshot_right:
+    switch: s_slingshot_done
+
+shot_groups:
+  slingshots:
+    shots: slingshot_right
+
+variable_player:
+  slingshots_hit:
+    score: 1_000

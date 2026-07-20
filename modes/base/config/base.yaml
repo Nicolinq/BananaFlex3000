@@ -5,7 +5,13 @@ mode:
   stop_events: ball_will_end
   priority: 100
 
-
+event_player:
+   mode_base_started:
+      - start_mode_bumper
+      - start_mode_slingshot
+   mode_base_will_stop:
+      - stop_mode_bumper
+      - stop_mode_slingshot
 
 slide_player:
    mode_base_started: base_slide
