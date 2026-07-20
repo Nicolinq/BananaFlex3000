@@ -60,9 +60,9 @@ switches:
       number: 1-0-44  
    s_bank4_4:
       number: 1-0-45  
-   s_left_inlane:
+   s_left_lane:
       number: 1-0-46  
-   s_right_inlane:
+   s_right_lane:
       number: 1-0-47  
    s_left_orbit:
       number: 1-0-48  
@@ -82,6 +82,17 @@ switches:
       number: 1-0-55  
    s_slingshot_done:
       number: 1-0-56  
+   s_left_inlane:
+      number: 1-0-57  
+   s_right_inlane:
+      number: 1-0-58  
+   s_bank3_target:
+      number: 1-0-59  
+   s_bank3_down:
+      number: 1-0-60  
+   s_bank3_up:
+      number: 1-0-61  
+
 
     #Playfield Switches (Direct)
    s_left_EOS:
