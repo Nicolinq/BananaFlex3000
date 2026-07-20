@@ -164,6 +164,258 @@ autofire_coils:
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
 
+lights:
+    l_Led_unbended_b_1:
+        number: 0-0-0
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_1:
+        previous: l_Led_unbended_b_1 #number: 0-0-0
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_2:
+        previous: l_Led_bended_b_1 #number: 0-0-1
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_2:
+        previous: l_Led_unbended_b_2 #number: 0-0-2
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_3:
+        previous: l_Led_bended_b_2 #number: 0-0-3
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_3:
+        previous: l_Led_unbended_b_3 #number: 0-0-4
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_4:
+        previous: l_Led_bended_b_3 #number: 0-0-5
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_4:
+        previous: l_Led_unbended_b_4 #number: 0-0-6
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_5:
+        previous: l_Led_bended_b_4 #number: 0-0-7
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_5:
+        previous: l_Led_unbended_b_5 #number: 0-0-8
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_6:
+        previous: l_Led_bended_b_5 #number: 0-0-9
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_6:
+        previous: l_Led_unbended_b_6 #number: 0-0-10
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_7:
+        previous: l_Led_bended_b_6 #number: 0-0-11
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_7:
+        previous: l_Led_unbended_b_7 #number: 0-0-12
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_8:
+        previous: l_Led_bended_b_7 #number: 0-0-13
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_8:
+        previous: l_Led_unbended_b_8 #number: 0-0-14
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_9:
+        previous: l_Led_bended_b_8 #number: 0-0-15
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_9:
+        previous: l_Led_unbended_b_9 #number: 0-0-16
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_10:
+        previous: l_Led_bended_b_9 #number: 0-0-17
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_10:
+        previous: l_Led_unbended_b_10 #number: 0-0-18
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_11:
+        previous: l_Led_bended_b_10 #number: 0-0-19
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_11:
+        previous: l_Led_unbended_b_11 #number: 0-0-20
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_12:
+        previous: l_Led_bended_b_11 #number: 0-0-21
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_12:
+        previous: l_Led_unbended_b_12 #number: 0-0-22
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_13:
+        previous: l_Led_bended_b_12 #number: 0-0-23
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_13:
+        previous: l_Led_unbended_b_13 #number: 0-0-24
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_14:
+        previous: l_Led_bended_b_13 #number: 0-0-25
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_14:
+        previous: l_Led_unbended_b_14 #number: 0-0-26
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_15:
+        previous: l_Led_bended_b_14 #number: 0-0-27
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_15:
+        previous: l_Led_unbended_b_15 #number: 0-0-28
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_16:
+        previous: l_Led_bended_b_15 #number: 0-0-29
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_16:
+        previous: l_Led_unbended_b_16 #number: 0-0-30
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_17:
+        previous: l_Led_bended_b_16 #number: 0-0-31
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_17:
+        previous: l_Led_unbended_b_17 #number: 0-0-32
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_18:
+        previous: l_Led_bended_b_17 #number: 0-0-33
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_18:
+        previous: l_Led_unbended_b_18 #number: 0-0-34
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_19:
+        previous: l_Led_bended_b_18 #number: 0-0-35
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_19:
+        previous: l_Led_unbended_b_19 #number: 0-0-36
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_20:
+        previous: l_Led_bended_b_19 #number: 0-0-37
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_20:
+        previous: l_Led_unbended_b_20 #number: 0-0-38
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_21:
+        previous: l_Led_bended_b_20 #number: 0-0-39
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_21:
+        previous: l_Led_unbended_b_21 #number: 0-0-40
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_22:
+        previous: l_Led_bended_b_21 #number: 0-0-41
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_22:
+        previous: l_Led_unbended_b_22 #number: 0-0-42
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_23:
+        previous: l_Led_bended_b_22 #number: 0-0-43
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_23:
+        previous: l_Led_unbended_b_23 #number: 0-0-444
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_24:
+        previous: l_Led_bended_b_23 #number: 0-0-45
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_24:
+        previous: l_Led_unbended_b_24 #number: 0-0-46
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_unbended_b_25:
+        previous: l_Led_bended_b_24 #number: 0-0-47
+        type: grb
+        subtype: led
+        tags: banana_belt
+    l_Led_bended_b_25:
+        previous: l_Led_unbended_b_25 #number: 0-0-48
+        type: grb
+        subtype: led
+        tags: banana_belt
+
 
 # keyboard:
 #    1:
@@ -195,8 +447,7 @@ playfields:
     ball_search_wait_after_iteration: 30s
     ball_search_interval: 250ms
 
-# virtual_platform_start_active_switches:
-#     - s_outhole
+virtual_platform_start_active_switches: s_ball_trough_1, s_ball_trough_2, s_ball_trough_3, s_bank3_down
 
 machine:
     balls_installed: 3
