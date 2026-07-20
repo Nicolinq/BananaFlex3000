@@ -1,0 +1,5 @@
+#config_version=6
+
+player_vars:
+    jet_ball_count:
+        initial_value: 0

@@ -9,10 +9,7 @@ shots:
   bumper_center:
     switch: s_bumper_done
 
-shot_groups:
-  bumpers:
-    shots: bumper_center
 
 variable_player:
-  bumpers_hit:
+  bumper_center_hit:
     score: 1_000

@@ -9,9 +9,11 @@ event_player:
    mode_base_started:
       - start_mode_bumper
       - start_mode_slingshot
+      - start_mode_banana_belt
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_slingshot
+      - stop_mode_banana_belt
 
 slide_player:
    mode_base_started: base_slide

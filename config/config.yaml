@@ -9,6 +9,7 @@ opp:
 
 config:
 - hardware.yaml
+- variables_player.yaml
 
 player_vars:
   bonus_multiplier:
@@ -21,6 +22,7 @@ modes:
 - base
 - bumper
 - slingshot
+- banana_belt
 
 ball_devices:
     bd_trough:
@@ -57,7 +59,7 @@ logging:
 bcp:
   debug: false
   warning: false
-  
+
 named_colors:
    tt_white:   [255,250,240]
    tt_nwhite:  [255,240,200]

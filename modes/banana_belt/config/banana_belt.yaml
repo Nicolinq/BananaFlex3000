@@ -1,0 +1,36 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_banana_belt
+  stop_events: stop_mode_banana_belt,start_bending_mode
+  priority: 200
+
+# modes/banana_belt/config/banana_belt.yaml
+
+shots:
+  shot_l1:
+    switch: s_bank4_1
+    show_tokens:
+      leds: l_Led_unbended_b_1
+    profile: banana_led_profile
+  shot_l2:
+    switch: s_bank4_2
+    show_tokens:
+      leds: l_Led_unbended_b_2
+    profile: banana_led_profile
+
+
+shot_profiles:
+  banana_led_profile:
+    states:
+      - name: off
+        show: off   # La led est éteinte par défaut
+      - name: on
+        show: on    # Reste allumée fixe (ne clignote pas si on retap le switch)
+
+counters:
+  banana_led_counter:
+    count_events: shot_hit_banana_led_profile_on 
+    count_complete_value: 10 # Le nombre précis de LEDs à allumer
+    direction: up
+    events_when_complete: start_bending_mode # Événement pour lancer ton autre mode
