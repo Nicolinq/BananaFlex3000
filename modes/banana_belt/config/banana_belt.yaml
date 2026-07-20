@@ -8,29 +8,131 @@ mode:
 # modes/banana_belt/config/banana_belt.yaml
 
 shots:
-  shot_l1:
+  shot_l_unbended_1:
     switch: s_bank4_1
     show_tokens:
       leds: l_Led_unbended_b_1
     profile: banana_led_profile
-  shot_l2:
+  shot_l_unbended_2:
     switch: s_bank4_2
     show_tokens:
       leds: l_Led_unbended_b_2
     profile: banana_led_profile
+  shot_l_unbended_3:
+    switch: s_bank4_3
+    show_tokens:
+      leds: l_Led_unbended_b_3
+    profile: banana_led_profile
+  shot_l_unbended_4:
+    switch: s_bank4_4
+    show_tokens:
+      leds: l_Led_unbended_b_4
+    profile: banana_led_profile    
+  shot_l_unbended_5:
+    show_tokens:
+      leds: l_Led_unbended_b_5
+    profile: banana_led_profile    
+  shot_l_unbended_6:
+    show_tokens:
+      leds: l_Led_unbended_b_6
+    profile: banana_led_profile    
+  shot_l_unbended_7:
+    show_tokens:
+      leds: l_Led_unbended_b_7
+    profile: banana_led_profile    
+  shot_l_unbended_8:
+    show_tokens:
+      leds: l_Led_unbended_b_8
+    profile: banana_led_profile    
+  shot_l_unbended_9:
+    show_tokens:
+      leds: l_Led_unbended_b_9
+    profile: banana_led_profile    
+  shot_l_unbended_10:
+    show_tokens:
+      leds: l_Led_unbended_b_10
+    profile: banana_led_profile    
+  shot_l_unbended_11:
+    show_tokens:
+      leds: l_Led_unbended_b_11
+    profile: banana_led_profile    
+  shot_l_unbended_12:
+    switch: s_bank3_1
+    show_tokens:
+      leds: l_Led_unbended_b_12
+    profile: banana_led_profile    
+  shot_l_unbended_13:
+    switch: s_bank3_2
+    show_tokens:
+      leds: l_Led_unbended_b_13
+    profile: banana_led_profile    
+  shot_l_unbended_14:
+    switch: s_bank3_3
+    show_tokens:
+      leds: l_Led_unbended_b_14
+    profile: banana_led_profile    
 
+
+# On supprime le variable_player problématique et on gère la variable ici :
 
 shot_profiles:
   banana_led_profile:
     states:
       - name: off
-        show: off   # La led est éteinte par défaut
+        show: off
       - name: on
-        show: on    # Reste allumée fixe (ne clignote pas si on retap le switch)
+        show: on
 
-counters:
-  banana_led_counter:
-    count_events: shot_hit_banana_led_profile_on 
-    count_complete_value: 10 # Le nombre précis de LEDs à allumer
-    direction: up
-    events_when_complete: start_bending_mode # Événement pour lancer ton autre mode
+
+event_player:
+  # Quand le switch s_rotation_target est activé, on lance la chaîne cinématique de décalage
+  s_rotation_target_active: shift_right
+  unbended_banana_score_updated{current_player.unbended_banana_score >= 10}: start_bending_mode
+
+  shift_right:
+    # On commence par la fin !
+    # Si la led 13 est allumée, on allume la 14. Sinon, on éteint la 14.
+    - shot_l_unbended_14_hit{device.shots.shot_l_unbended_13.state_name=='on'}
+    - shot_l_unbended_14_restart{device.shots.shot_l_unbended_13.state_name=='off'}
+    
+    # On passe à la suivante
+    - shot_l_unbended_13_hit{device.shots.shot_l_unbended_12.state_name=='on'}
+    - shot_l_unbended_13_restart{device.shots.shot_l_unbended_12.state_name=='off'}
+
+    # etc
+    - shot_l_unbended_12_hit{device.shots.shot_l_unbended_11.state_name=='on'}
+    - shot_l_unbended_12_restart{device.shots.shot_l_unbended_11.state_name=='off'}
+    - shot_l_unbended_11_hit{device.shots.shot_l_unbended_10.state_name=='on'}
+    - shot_l_unbended_11_restart{device.shots.shot_l_unbended_10.state_name=='off'}
+    - shot_l_unbended_10_hit{device.shots.shot_l_unbended_9.state_name=='on'}
+    - shot_l_unbended_10_restart{device.shots.shot_l_unbended_9.state_name=='off'}
+    - shot_l_unbended_9_hit{device.shots.shot_l_unbended_8.state_name=='on'}
+    - shot_l_unbended_9_restart{device.shots.shot_l_unbended_8.state_name=='off'}
+    - shot_l_unbended_8_hit{device.shots.shot_l_unbended_7.state_name=='on'}
+    - shot_l_unbended_8_restart{device.shots.shot_l_unbended_7.state_name=='off'}
+    - shot_l_unbended_7_hit{device.shots.shot_l_unbended_6.state_name=='on'}
+    - shot_l_unbended_7_restart{device.shots.shot_l_unbended_6.state_name=='off'}
+    - shot_l_unbended_6_hit{device.shots.shot_l_unbended_5.state_name=='on'}
+    - shot_l_unbended_6_restart{device.shots.shot_l_unbended_5.state_name=='off'}
+    - shot_l_unbended_5_hit{device.shots.shot_l_unbended_4.state_name=='on'}
+    - shot_l_unbended_5_restart{device.shots.shot_l_unbended_4.state_name=='off'}
+    - shot_l_unbended_4_hit{device.shots.shot_l_unbended_3.state_name=='on'}
+    - shot_l_unbended_4_restart{device.shots.shot_l_unbended_3.state_name=='off'}
+    - shot_l_unbended_3_hit{device.shots.shot_l_unbended_2.state_name=='on'}
+    - shot_l_unbended_3_restart{device.shots.shot_l_unbended_2.state_name=='off'}
+    - shot_l_unbended_2_hit{device.shots.shot_l_unbended_1.state=='on'}
+    - shot_l_unbended_2_restart{device.shots.shot_l_unbended_1.state_name=='off'}
+
+
+    # Enfin, la toute première LED (la 1) se retrouve vide après le décalage
+    - shot_l_unbended_1_restart
+
+variable_player:
+  mode_banana_belt_started:
+    unbended_banana_score:
+      int: 0
+      action: set
+  shot_banana_led_profile_on:
+    unbended_banana_score: 1
+  shot_banana_led_profile_off: # <--- Ajouté pour gérer le décalage vers le bas !
+    unbended_banana_score: -1

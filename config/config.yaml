@@ -42,7 +42,7 @@ playfields:
     ball_search_wait_after_iteration: 30s
     ball_search_interval: 250ms
 
-virtual_platform_start_active_switches: s_ball_trough_1, s_ball_trough_2, s_ball_trough_3, s_bank3_down
+virtual_platform_start_active_switches: s_ball_trough_1, s_ball_trough_2, s_ball_trough_3
 
 logging:
   console:
