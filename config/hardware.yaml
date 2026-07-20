@@ -18,6 +18,20 @@ coils:
         default_hold_power: 0.08
         default_pulse_power: 1.0
         default_pulse_ms: 35
+    c_right_sling:
+       number: 0-0-3
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 4
+    c_bump:
+       number: 0-0-4
+       default_pulse_ms: 22
+       default_pulse_power: 0.55
+       default_recycle: True
+       platform_settings:
+            recycle_factor: 1
         
 switches:
     #Cabinet Switches
@@ -138,6 +152,17 @@ flippers:
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
 
+autofire_coils:
+    slingshot_right:
+        coil: c_right_sling
+        switch: s_slingshot_done
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
+    pop_bumper:
+        coil: c_bump
+        switch: s_bumper_done
+        enable_events: ball_started, enableAutofire
+        disable_events: ball_will_end, disableAutofire, shutdown
 
 
 # keyboard:
@@ -174,7 +199,7 @@ playfields:
 #     - s_outhole
 
 machine:
-    balls_installed: 1
+    balls_installed: 3
 
 game:
     balls_per_game: 3
