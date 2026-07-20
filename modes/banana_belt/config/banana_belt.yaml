@@ -81,7 +81,28 @@ shot_profiles:
       - name: off
         show: off
       - name: on
-        show: on
+        show: led_flash
+        show_tokens:
+          color: white
+
+shows:
+  led_flash:
+  - time: 0
+    lights:
+      (leds): (color)
+  - time: +.2s
+    lights:
+      (leds): off
+  - time: +.2s
+    lights:
+      (leds): (color)
+  - time: +.2s
+    lights:
+      (leds): off
+  - time: +.2s
+    duration: -1
+    lights:
+      (leds): (color)
 
 
 event_player:
@@ -89,7 +110,7 @@ event_player:
   s_rotation_target_active: shift_right
   unbended_banana_score_updated{current_player.unbended_banana_score >= 10}: start_bending_mode
 
-  shift_right:
+  shift_right_hit:
     # On commence par la fin !
     # Si la led 13 est allumée, on allume la 14. Sinon, on éteint la 14.
     - shot_l_unbended_14_hit{device.shots.shot_l_unbended_13.state_name=='on'}
