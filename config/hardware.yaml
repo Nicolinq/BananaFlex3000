@@ -40,7 +40,7 @@ switches:
       number: 0-0-19
     #Trough Switches
    s_outhole:
-      number: 1-0-40
+      number: 0-0-24
     #Playfield Switches
  
       
