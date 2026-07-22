@@ -17,4 +17,30 @@ event_player:
 
 slide_player:
    mode_base_started: base_slide
+
+shots:
+  shot_service:
+    switch: s_setup_button, s_plus_button, s_minus_button, s_enter_button
+  shot_left_bank:
+    switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4
+  shot_right_bank:
+    switch: s_bank3_1, s_bank3_2, s_bank3_3
+  shot_top_lanes:
+    switch: s_left_lane, s_right_lane
+  shot_orbits:
+    switch: s_left_orbit, s_right_orbit
+  shot_mini_targets:
+    switch: s_right_mini_target, s_left_mini_target
    
+
+variable_player:
+  shot_left_bank_hit:
+    score: 2000 * current_player.playfield_multiplier
+  shot_right_bank_hit:
+    score: 2000 * current_player.playfield_multiplier
+  shot_top_lanes_hit:
+    score: 1500 * current_player.playfield_multiplier
+  shot_orbits_hit:
+    score: 1500 * current_player.playfield_multiplier
+  shot_mini_targets_hit:
+    score: 1500 * current_player.playfield_multiplier

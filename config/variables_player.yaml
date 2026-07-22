@@ -1,5 +1,5 @@
 #config_version=6
 
 player_vars:
-    jet_ball_count:
-        initial_value: 0
+    playfield_multiplier:
+        initial_value: 1
