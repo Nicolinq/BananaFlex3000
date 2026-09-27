@@ -23,6 +23,7 @@ modes:
 - bumper
 - slingshot
 - banana_belt
+- banana_bend
 
 ball_devices:
     bd_trough:

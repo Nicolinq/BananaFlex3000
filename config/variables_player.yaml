@@ -5,3 +5,5 @@ player_vars:
         initial_value: 1
     unbended_bananas_to_complete:
         initial_value: 10
+    unbended_bananas_count:
+        initial_value: 0

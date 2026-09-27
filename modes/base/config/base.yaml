@@ -14,6 +14,7 @@ event_player:
       - stop_mode_bumper
       - stop_mode_slingshot
       - stop_mode_banana_belt
+      - stop_mode_banana_bend
 
 slide_player:
    mode_base_started: base_slide
@@ -32,6 +33,33 @@ shots:
   shot_mini_targets:
     switch: s_right_mini_target, s_left_mini_target
    
+shows:
+  led_flash:
+  - time: 0
+    lights:
+      (leds): (color)
+  - time: +.5s
+    lights:
+      (leds): off
+  hit_flash:
+  - time: 0
+    lights:
+      (leds): (color)
+  - time: +.2s
+    lights:
+      (leds): off
+  - time: +.2s
+    lights:
+      (leds): (color)
+  - time: +.2s
+    lights:
+      (leds): off
+  - time: +.2s
+    duration: -1
+    lights:
+      (leds): (color)
+
+
 
 variable_player:
   shot_left_bank_hit:

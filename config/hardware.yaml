@@ -413,7 +413,11 @@ lights:
         type: grb
         subtype: led
         tags: banana_belt
-
+    l_led_bend_bananas:
+        previous: l_Led_bended_b_25 #number: 0-0-49
+        type: grb
+        subtype: led
+        tags: inserts
 
 # keyboard:
 #    1:

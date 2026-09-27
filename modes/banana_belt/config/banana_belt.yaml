@@ -2,7 +2,7 @@
 
 mode:
   start_events: start_mode_banana_belt
-  stop_events: stop_mode_banana_belt,start_bending_mode
+  stop_events: stop_mode_banana_belt,start_mode_banana_bend
   priority: 200
 
 # modes/banana_belt/config/banana_belt.yaml
@@ -12,65 +12,110 @@ shots:
     switch: s_bank4_1
     show_tokens:
       leds: l_Led_unbended_b_1
-    profile: banana_led_profile
+    profile: banana_belt_profile
   shot_l_unbended_2:
     switch: s_bank4_2
     show_tokens:
       leds: l_Led_unbended_b_2
-    profile: banana_led_profile
+    profile: banana_belt_profile
   shot_l_unbended_3:
     switch: s_bank4_3
     show_tokens:
       leds: l_Led_unbended_b_3
-    profile: banana_led_profile
+    profile: banana_belt_profile
   shot_l_unbended_4:
     switch: s_bank4_4
     show_tokens:
       leds: l_Led_unbended_b_4
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_5:
     show_tokens:
       leds: l_Led_unbended_b_5
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_6:
     show_tokens:
       leds: l_Led_unbended_b_6
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_7:
     show_tokens:
       leds: l_Led_unbended_b_7
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_8:
     show_tokens:
       leds: l_Led_unbended_b_8
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_9:
     show_tokens:
       leds: l_Led_unbended_b_9
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_10:
     show_tokens:
       leds: l_Led_unbended_b_10
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_11:
     show_tokens:
       leds: l_Led_unbended_b_11
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_12:
     switch: s_bank3_1
     show_tokens:
       leds: l_Led_unbended_b_12
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_13:
     switch: s_bank3_2
     show_tokens:
       leds: l_Led_unbended_b_13
-    profile: banana_led_profile    
+    profile: banana_belt_profile    
   shot_l_unbended_14:
     switch: s_bank3_3
     show_tokens:
       leds: l_Led_unbended_b_14
-    profile: banana_led_profile
+    profile: banana_belt_profile
+  shot_l_unbended_15:
+    show_tokens:
+      leds: l_Led_unbended_b_15
+    profile: banana_belt_profile
+  shot_l_unbended_16:
+    show_tokens:
+      leds: l_Led_unbended_b_16
+    profile: banana_belt_profile
+  shot_l_unbended_17:
+    show_tokens:
+      leds: l_Led_unbended_b_17
+    profile: banana_belt_profile
+  shot_l_unbended_18:
+    show_tokens:
+      leds: l_Led_unbended_b_18
+    profile: banana_belt_profile
+  shot_l_unbended_19:
+    show_tokens:
+      leds: l_Led_unbended_b_19
+    profile: banana_belt_profile
+  shot_l_unbended_20:
+    show_tokens:
+      leds: l_Led_unbended_b_20
+    profile: banana_belt_profile
+  shot_l_unbended_21:
+    show_tokens:
+      leds: l_Led_unbended_b_21
+    profile: banana_belt_profile
+  shot_l_unbended_22:
+    show_tokens:
+      leds: l_Led_unbended_b_22
+    profile: banana_belt_profile
+  shot_l_unbended_23:
+    show_tokens:
+      leds: l_Led_unbended_b_23
+    profile: banana_belt_profile
+  shot_l_unbended_24:
+    show_tokens:
+      leds: l_Led_unbended_b_24
+    profile: banana_belt_profile
+  shot_l_unbended_25:
+    show_tokens:
+      leds: l_Led_unbended_b_25
+    profile: banana_belt_profile
+
   shot_rotate_target:
     switch: s_rotation_target
     profile: rotate_profile
@@ -81,18 +126,20 @@ shot_groups:
     shots: shot_l_unbended_1,shot_l_unbended_2,shot_l_unbended_3,
            shot_l_unbended_4, shot_l_unbended_5, shot_l_unbended_6, shot_l_unbended_7, shot_l_unbended_8, 
            shot_l_unbended_9, shot_l_unbended_10, shot_l_unbended_11, shot_l_unbended_12, 
-           shot_l_unbended_13,shot_l_unbended_14 
+           shot_l_unbended_13,shot_l_unbended_14,shot_l_unbended_15,shot_l_unbended_16,shot_l_unbended_17,
+           shot_l_unbended_18,shot_l_unbended_19,shot_l_unbended_20,shot_l_unbended_21,shot_l_unbended_22,
+           shot_l_unbended_23,shot_l_unbended_24,shot_l_unbended_25 
     rotate_right_events: shot_rotate_target_rotate_right_hit
     rotate_left_events: shot_rotate_target_rotate_left_hit
 
 
 shot_profiles:
-  banana_led_profile:
+  banana_belt_profile:
     states:
       - name: off
         show: off
       - name: on
-        show: led_flash
+        show: hit_flash
         show_tokens:
           color: white
   rotate_profile:
@@ -102,30 +149,13 @@ shot_profiles:
     loop: true
     advance_on_hit: false
 
-shows:
-  led_flash:
-  - time: 0
-    lights:
-      (leds): (color)
-  - time: +.2s
-    lights:
-      (leds): off
-  - time: +.2s
-    lights:
-      (leds): (color)
-  - time: +.2s
-    lights:
-      (leds): off
-  - time: +.2s
-    duration: -1
-    lights:
-      (leds): (color)
 
 counters:
   change_banana_belt: 
     count_events: shot_rotate_target_hit
     starting_count: 0
-    count_complete_value: 5
+    # Permet d'inverser le sens de rotation si nécessaire. Valeur à 10000 pour désactiver
+    count_complete_value: 10000
     count_interval: 1
     direction: up
     events_when_complete: change_banana_belt_count_complete
@@ -142,12 +172,12 @@ counters:
     disable_on_complete: false
 
 event_player:
-  counter_banana_belt_count_hit{device.counters.banana_belt_count.value==unbended_bananas_to_complete}: toto_event
+  counter_banana_belt_count_hit{device.counters.banana_belt_count.value>=current_player.unbended_bananas_to_complete}: start_mode_banana_bend
 
 variable_player:
   mode_banana_belt_started:
     unbended_bananas_count:
-      int: device.counters.banana_belt_count.value * 1
+      int: 0
       action: set
   counter_banana_belt_count_hit:
     unbended_bananas_count:
