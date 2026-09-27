@@ -141,6 +141,15 @@ counters:
     reset_on_complete: true
     disable_on_complete: false
 
-
 event_player:
-  counter_banana_belt_count_hit{device.counters.banana_belt_count.value==10}: toto_event
+  counter_banana_belt_count_hit{device.counters.banana_belt_count.value==unbended_bananas_to_complete}: toto_event
+
+variable_player:
+  mode_banana_belt_started:
+    unbended_bananas_count:
+      int: device.counters.banana_belt_count.value * 1
+      action: set
+  counter_banana_belt_count_hit:
+    unbended_bananas_count:
+      int: device.counters.banana_belt_count.value * 1
+      action: set
