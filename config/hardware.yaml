@@ -418,6 +418,21 @@ lights:
         type: grb
         subtype: led
         tags: inserts
+    l_led_bend_state:
+        previous: l_led_bend_bananas #number: 0-0-50
+        type: grb
+        subtype: led
+        tags: inserts
+    l_led_load_state:
+        previous: l_led_bend_state #number: 0-0-51
+        type: grb
+        subtype: led
+        tags: inserts
+    l_led_control_state:
+        previous: l_led_load_state #number: 0-0-52
+        type: grb
+        subtype: led
+        tags: inserts
 
 # keyboard:
 #    1:

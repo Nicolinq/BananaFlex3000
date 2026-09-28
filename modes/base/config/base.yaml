@@ -58,8 +58,11 @@ shows:
     duration: -1
     lights:
       (leds): (color)
-
-
+  insert_on:
+  - time: 0
+    duration: -1
+    lights:
+      (leds): (color)
 
 variable_player:
   shot_left_bank_hit:
