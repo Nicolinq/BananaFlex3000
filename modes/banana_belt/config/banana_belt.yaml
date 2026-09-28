@@ -2,7 +2,7 @@
 
 mode:
   start_events: start_mode_banana_belt
-  stop_events: stop_mode_banana_belt,start_mode_banana_bend
+  stop_events: stop_mode_banana_belt
   priority: 200
 
 # modes/banana_belt/config/banana_belt.yaml
@@ -119,11 +119,6 @@ shots:
     switch: s_rotation_target
     profile: rotate_profile
     advance_events: change_banana_belt_count_complete
-  shot_l_load_mode_start:
-    show_tokens:
-        leds: l_led_load_state
-    profile: banana_load_profile_on
-    hit_events: mode_banana_belt_started
 
 shot_groups:
   banana_belt_group:
@@ -146,14 +141,6 @@ shot_profiles:
         show: hit_flash
         show_tokens:
           color: white
-  banana_load_profile_on:
-    states:
-      - name: off
-        show: off
-      - name: on
-        show: insert_on
-        show_tokens:
-          color: tt_red
   rotate_profile:
     states:
       - name: rotate_right
@@ -182,9 +169,6 @@ counters:
     #events_when_complete: start_bending_mode
     reset_on_complete: true
     disable_on_complete: false
-
-event_player:
-  counter_banana_belt_count_hit{device.counters.banana_belt_count.value>=current_player.unbended_bananas_to_complete}: start_mode_banana_bend
 
 variable_player:
   mode_banana_belt_started:

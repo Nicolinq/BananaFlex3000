@@ -10,10 +10,12 @@ event_player:
       - start_mode_bumper
       - start_mode_slingshot
       - start_mode_banana_belt
+      - start_mode_banana_load
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_slingshot
       - stop_mode_banana_belt
+      - stop_mode_banana_load
       - stop_mode_banana_bend
 
 slide_player:
@@ -38,7 +40,7 @@ shows:
   - time: 0
     lights:
       (leds): (color)
-  - time: +.5s
+  - time: +.3s
     lights:
       (leds): off
   hit_flash:
