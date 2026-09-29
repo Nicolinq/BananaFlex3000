@@ -130,6 +130,7 @@ shot_groups:
            shot_l_unbended_23,shot_l_unbended_24,shot_l_unbended_25 
     rotate_right_events: shot_rotate_target_rotate_right_hit
     rotate_left_events: shot_rotate_target_rotate_left_hit
+    reset_events: reset_banana_belt
 
 
 shot_profiles:
@@ -160,22 +161,25 @@ counters:
     events_when_complete: change_banana_belt_count_complete
     reset_on_complete: true
     disable_on_complete: false
+    persist_state: true
   banana_belt_count: 
     count_events: banana_belt_group_off_hit
     starting_count: 0
-    #count_complete_value: 10
+    count_complete_value: current_player.unbended_bananas_to_complete
     count_interval: 1
     direction: up
-    #events_when_complete: start_bending_mode
-    reset_on_complete: true
+    events_when_complete: start_mode_banana_bend
+    reset_on_complete: false
     disable_on_complete: false
+    persist_state: true
+    reset_events: reset_banana_belt
 
 variable_player:
   mode_banana_belt_started:
     unbended_bananas_count:
-      int: 0
+      int: device.counters.banana_belt_count.value * 1
       action: set
-  counter_banana_belt_count_hit:
+  logicblock_banana_belt_count_updated:
     unbended_bananas_count:
       int: device.counters.banana_belt_count.value * 1
       action: set
