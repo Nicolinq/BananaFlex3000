@@ -13,17 +13,26 @@ shots:
       leds: l_led_bend_bananas_start
     profile: banana_bend_profile_flash
     hit_events: mode_banana_bend_started
+    disable_events: bend_bananas_completed, mode_banana_bend_will_stop
   shot_l_bend_arrow_start:
     show_tokens:
       leds: l_led_arrow_top_right
     profile: banana_bend_profile_flash
     hit_events: mode_banana_bend_started
+    disable_events: bend_bananas_completed, mode_banana_bend_will_stop
   shot_l_bend_mode_start:
     show_tokens:
         leds: l_led_bend_state
     profile: banana_bend_profile_on
     hit_events: mode_banana_bend_started
-
+    disable_events: bend_bananas_completed, mode_banana_bend_will_stop
+  shot_l_bend_mode_completed:
+    show_tokens:
+        leds: l_led_bend_state
+    profile: banana_bend_profile_flash
+    hit_events: bend_bananas_completed
+    disable_events: mode_banana_bend_will_stop
+  
 shot_profiles:
   banana_bend_profile_flash:
     states:
@@ -45,3 +54,8 @@ shot_profiles:
 
 event_player:
   mode_banana_bend_started: enable_lock_diverter,enable_top_left_gate_diverter
+  balldevice_bd_lock_ball_entered: bend_bananas_completed
+
+variable_player:
+  bend_bananas_completed:
+    score: 100000 * current_player.playfield_multiplier
