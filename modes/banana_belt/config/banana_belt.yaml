@@ -119,6 +119,7 @@ shots:
     switch: s_rotation_target
     profile: rotate_profile
     advance_events: change_banana_belt_count_complete
+    hit_events: spinner_stack_complete
 
 shot_groups:
   banana_belt_group:
