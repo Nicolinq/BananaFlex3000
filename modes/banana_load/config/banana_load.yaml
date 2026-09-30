@@ -34,3 +34,4 @@ shot_profiles:
 
 event_player:
   mode_banana_load_started{device.counters.banana_belt_count.value>=current_player.unbended_bananas_to_complete}: start_mode_banana_bend
+  mode_banana_load_started: disable_lock_diverter, disable_top_left_gate_diverter

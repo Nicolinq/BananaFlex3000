@@ -2,7 +2,7 @@
 
 coils:
     c_outhole:
-       number: 0-0-7
+       number: 0-0-1
        default_pulse_ms: 22
        default_pulse_power: 0.55
        default_hold_power: 0.075
@@ -32,7 +32,23 @@ coils:
        default_recycle: True
        platform_settings:
             recycle_factor: 1
-        
+    c_top_left_gate:
+       number: 0-0-5
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_lock_divertor:
+       number: 0-0-6
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_lock_release:
+       number: 0-0-7
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_left_diverter:
+       number: 0-0-8
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+
 switches:
     #Cabinet Switches
    s_start_button:
@@ -161,6 +177,24 @@ autofire_coils:
         switch: s_bumper_done
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
+
+diverters:
+  lock_diverter:
+    activation_coil: c_lock_divertor
+    type: hold
+    activation_time: 3s
+    activation_switches: s_left_orbit
+    enable_events: ball_started, enable_lock_diverter
+    disable_events: ball_ended, disable_lock_diverter
+    targets_when_active: bd_lock
+  top_left_gate_diverter:
+    activation_coil: c_top_left_gate
+    type: hold
+    activation_time: 3s
+    activation_switches: s_right_orbit
+    enable_events: ball_started, enable_top_left_gate_diverter
+    disable_events: ball_ended, disable_top_left_gate_diverter
+    targets_when_active: playfield
 
 lights:
     l_Led_unbended_b_1:
@@ -478,6 +512,7 @@ lights:
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
+
 
 # keyboard:
 #    1:

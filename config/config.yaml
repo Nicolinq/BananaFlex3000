@@ -35,7 +35,21 @@ ball_devices:
         tags: trough, home, drain
         eject_coil_jam_pulse: 15ms
         eject_timeouts: 3s
-            
+    bd_lock:
+        ball_switches: s_lock_1,s_lock_2,s_lock_3
+        eject_coil: c_lock_release
+        tags: lock
+        eject_targets: playfield
+        eject_timeouts: 10s
+
+ball_holds:
+  bh_lock_scoop:
+    balls_to_hold: 3
+    hold_devices: bd_lock
+    enable_events: mode_banana_bend_started
+    disable_events: mode_banana_bend_will_stop
+    release_one_events: mode_banana_bend_started
+
 playfields:
   playfield:
     tags: default
