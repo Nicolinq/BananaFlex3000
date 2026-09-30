@@ -478,7 +478,7 @@ lights:
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
-        
+
 # keyboard:
 #    1:
 #      event: led_off

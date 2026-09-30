@@ -22,6 +22,7 @@ modes:
 - base
 - bumper
 - slingshot
+- spinner
 - banana_belt
 - banana_load
 - banana_bend
