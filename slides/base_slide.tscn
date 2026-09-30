@@ -1,24 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cibjxbk0tikbb"]
+[gd_scene load_steps=4 format=3 uid="uid://cibjxbk0tikbb"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_a4vdr"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_2jp88"]
+[ext_resource type="Texture2D" uid="uid://b213r6o1witea" path="res://gabarit_ecran_round_bananaflex1024x1024.jpg" id="2_3761s"]
 
 [node name="BaseSlide" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1280.0
+offset_right = 1027.0
 offset_bottom = 1024.0
 script = ExtResource("1_a4vdr")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.13725491, 0.21568628, 1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(521, 521)
+texture = ExtResource("2_3761s")
 
 [node name="player_score" type="Label" parent="."]
 layout_mode = 1
@@ -57,13 +53,14 @@ theme_override_constants/margin_bottom = 40
 [node name="HFlowContainer" type="HFlowContainer" parent="BottomMarginContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 30
+alignment = 1
 
 [node name="player_number" type="Label" parent="BottomMarginContainer/HFlowContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.95686275, 0.12156863, 0.9098039, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 40
 text = "PLAYER 1"
 script = ExtResource("2_2jp88")
 variable_name = "number"
@@ -76,7 +73,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.95686275, 0.12156863, 0.9098039, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 40
 text = "BALL 1"
 script = ExtResource("2_2jp88")
 variable_name = "ball"
@@ -89,8 +86,8 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 733.0
 grow_vertical = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 130
 theme_override_constants/margin_right = 0
 
 [node name="VFlowContainer" type="VFlowContainer" parent="LeftMarginContainer"]
@@ -102,7 +99,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.95478195, 0.39243633, 0.21187225, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 40
 text = "Base Bonus 1,000"
 script = ExtResource("2_2jp88")
 variable_name = "base_bonus"
@@ -115,7 +112,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.95478195, 0.39243633, 0.21187225, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 40
 text = "Bonus x2"
 script = ExtResource("2_2jp88")
 variable_name = "bonus_multiplier"
@@ -133,7 +130,7 @@ offset_left = -352.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_top = 120
 theme_override_constants/margin_right = 40
 
 [node name="VFlowContainer" type="VFlowContainer" parent="RightMarginContainer"]
@@ -145,7 +142,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 30
 text = "1,000,000"
 horizontal_alignment = 2
 script = ExtResource("2_2jp88")
@@ -160,7 +157,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 30
 text = "1,000,000"
 script = ExtResource("2_2jp88")
 variable_type = 5
@@ -174,7 +171,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 30
 text = "1,000,000"
 script = ExtResource("2_2jp88")
 variable_type = 6
@@ -188,7 +185,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 30
 text = "1,000,000"
 script = ExtResource("2_2jp88")
 variable_type = 7
@@ -208,8 +205,9 @@ offset_left = -40.0
 offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 220
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
