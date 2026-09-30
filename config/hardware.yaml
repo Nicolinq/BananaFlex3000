@@ -413,27 +413,72 @@ lights:
         type: grb
         subtype: led
         tags: banana_belt
-    l_led_bend_bananas:
+    l_led_arrow_top_right:
         previous: l_Led_bended_b_25 #number: 0-0-49
         type: grb
         subtype: led
-        tags: inserts
+        tags: inserts,right_column_inserts
+    l_led_jackpot_top_right:
+        previous: l_led_arrow_top_right #number: 0-0-50
+        type: grb
+        subtype: led
+        tags: inserts,right_column_inserts
+    l_led_lock_start:
+        previous: l_led_jackpot_top_right #number: 0-0-51
+        type: grb
+        subtype: led
+        tags: inserts,right_column_inserts
+    l_led_mission_start:
+        previous: l_led_lock_start #number: 0-0-52
+        type: grb
+        subtype: led
+        tags: inserts,right_column_inserts
+    l_led_bend_bananas_start:
+        previous: l_led_mission_start #number: 0-0-53
+        type: grb
+        subtype: led
+        tags: inserts,right_column_inserts     
+    l_led_hyperloop_start:
+        previous: l_led_bend_bananas_start #number: 0-0-54
+        type: grb
+        subtype: led
+        tags: inserts,right_column_inserts  
     l_led_bend_state:
-        previous: l_led_bend_bananas #number: 0-0-50
+        previous: l_led_hyperloop_start #number: 0-0-55
         type: grb
         subtype: led
-        tags: inserts
+        tags: inserts,states_inserts
     l_led_load_state:
-        previous: l_led_bend_state #number: 0-0-51
+        previous: l_led_bend_state #number: 0-0-56
         type: grb
         subtype: led
-        tags: inserts
+        tags: inserts,states_inserts
     l_led_control_state:
-        previous: l_led_load_state #number: 0-0-52
+        previous: l_led_load_state #number: 0-0-57
         type: grb
         subtype: led
-        tags: inserts
-
+        tags: inserts,states_inserts
+    l_led_spinner_square_top_1:
+        previous: l_led_control_state #number: 0-0-58
+        type: grb
+        subtype: led
+        tags: inserts,spinner_inserts
+    l_led_spinner_square_top_2:
+        previous: l_led_spinner_square_top_1 #number: 0-0-59
+        type: grb
+        subtype: led
+        tags: inserts,spinner_inserts
+    l_led_spinner_square_top_3:
+        previous: l_led_spinner_square_top_2 #number: 0-0-60
+        type: grb
+        subtype: led
+        tags: inserts,spinner_inserts
+    l_led_spinner_arrow:
+        previous: l_led_spinner_square_top_3 #number: 0-0-61
+        type: grb
+        subtype: led
+        tags: inserts,spinner_inserts
+        
 # keyboard:
 #    1:
 #      event: led_off

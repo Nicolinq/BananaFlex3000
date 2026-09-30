@@ -10,7 +10,7 @@ mode:
 shots:
   shot_l_bend_start:
     show_tokens:
-      leds: l_led_bend_bananas
+      leds: l_led_bend_bananas_start
     profile: banana_bend_profile_flash
     hit_events: mode_banana_bend_started
   shot_l_bend_mode_start:
