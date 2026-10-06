@@ -535,6 +535,46 @@ lights:
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
+    l_led_bank3_1_round:
+        previous: l_led_bank4_4_arrow #number: 0-0-70
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_bank3_2_round:
+        previous: l_led_bank3_1_round #number: 0-0-71
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_bank3_3_round:
+        previous: l_led_bank3_2_round #number: 0-0-72
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_bank3_1_arrow:
+        previous: l_led_bank3_3_round #number: 0-0-73
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_bank3_2_arrow:
+        previous: l_led_bank3_1_arrow #number: 0-0-74
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_bank3_3_arrow:
+        previous: l_led_bank3_2_arrow #number: 0-0-75
+        type: grb
+        subtype: led
+        tags: inserts,bank3_inserts
+    l_led_upper_left_lane:
+        previous: l_led_bank3_3_arrow #number: 0-0-76
+        type: grb
+        subtype: led
+        tags: inserts,upper_lanes_inserts
+    l_led_upper_right_lane:
+        previous: l_led_upper_left_lane #number: 0-0-77
+        type: grb
+        subtype: led
+        tags: inserts,upper_lanes_inserts
 
 # keyboard:
 #    1:
