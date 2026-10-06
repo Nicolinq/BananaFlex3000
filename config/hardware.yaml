@@ -18,13 +18,6 @@ coils:
         default_hold_power: 0.08
         default_pulse_power: 1.0
         default_pulse_ms: 35
-    c_right_sling:
-       number: 0-0-3
-       default_pulse_ms: 22
-       default_pulse_power: 0.55
-       default_recycle: True
-       platform_settings:
-            recycle_factor: 4
     c_bump:
        number: 0-0-4
        default_pulse_ms: 22
@@ -52,14 +45,13 @@ coils:
 switches:
     #Cabinet Switches
    s_start_button:
- #     number: 0-0-16
       number: 1-0-32
       tags: start
       ignore_window_ms: 500ms 
-   s_left_flipper:
+   s_flipper_left_button:
       number: 0-0-17
       tags: left_flipper
-   s_right_flipper:
+   s_flipper_right_button:
       number: 0-0-18
       tags: right_flipper
     #Playfield Switches (Matrix)
@@ -87,7 +79,7 @@ switches:
    s_bank4_2:
       number: 1-0-43  
    s_bank4_3:
-      number: 1-0-44  
+      number: 1-0-44
    s_bank4_4:
       number: 1-0-45  
    s_left_lane:
@@ -110,8 +102,6 @@ switches:
       number: 1-0-54  
    s_spinner:
       number: 1-0-55  
-   s_slingshot_done:
-      number: 1-0-56  
    s_left_inlane:
       number: 1-0-57  
    s_right_inlane:
@@ -137,8 +127,6 @@ switches:
       number: 0-0-11   
    s_bumper_spe:
       number: 0-0-16 
-   s_slingshot_spe:
-      number: 0-0-19 
    s_lock_1:
       number: 0-0-24 
    s_lock_2:
@@ -155,23 +143,18 @@ switches:
 flippers:
   left_flipper:
         main_coil: c_flipper_left
-        activation_switch: s_left_flipper
+        activation_switch: s_flipper_left_button
         eos_switch : s_left_EOS
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
   right_flipper:
         main_coil: c_flipper_right
-        activation_switch: s_right_flipper
+        activation_switch: s_flipper_right_button
         eos_switch : s_right_EOS
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
 
 autofire_coils:
-    slingshot_right:
-        coil: c_right_sling
-        switch: s_slingshot_done
-        enable_events: ball_started, enableAutofire
-        disable_events: ball_will_end, disableAutofire, shutdown
     pop_bumper:
         coil: c_bump
         switch: s_bumper_done
@@ -512,7 +495,46 @@ lights:
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
-
+    l_led_bank4_1_round:
+        previous: l_led_spinner_arrow #number: 0-0-62
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_2_round:
+        previous: l_led_bank4_1_round #number: 0-0-63
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_3_round:
+        previous: l_led_bank4_2_round #number: 0-0-64
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_4_round:
+        previous: l_led_bank4_3_round #number: 0-0-65
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_1_arrow:
+        previous: l_led_bank4_4_round #number: 0-0-66
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_2_arrow:
+        previous: l_led_bank4_1_arrow #number: 0-0-67
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_3_arrow:
+        previous: l_led_bank4_2_arrow #number: 0-0-68
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
+    l_led_bank4_4_arrow:
+        previous: l_led_bank4_3_arrow #number: 0-0-69
+        type: grb
+        subtype: led
+        tags: inserts,bank4_inserts
 
 # keyboard:
 #    1:

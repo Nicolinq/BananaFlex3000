@@ -247,7 +247,7 @@ shot_profiles:
       - name: on
         show: hit_flash
         show_tokens:
-          color: white
+          color: tt_yellow
   rotate_profile:
     states:
       - name: rotate_right

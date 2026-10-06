@@ -21,7 +21,6 @@ modes:
 - attract
 - base
 - bumper
-- slingshot
 - spinner
 - banana_belt
 - banana_load
@@ -35,6 +34,7 @@ ball_devices:
         tags: trough, home, drain
         eject_coil_jam_pulse: 15ms
         eject_timeouts: 3s
+        player_controlled_eject_event: s_launch_button_active
     bd_lock:
         ball_switches: s_lock_1,s_lock_2,s_lock_3
         eject_coil: c_lock_release
