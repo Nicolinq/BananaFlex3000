@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: ball_starting
+  start_events: balldevice_playfield_ball_enter
   stop_events: skill_shot_awarded, skill_shot_missed, ball_will_end
   priority: 500
 
@@ -36,40 +36,40 @@ shots:
   # ---- OPTION B — bank4 arrows ----
   shot_bank4_1:
     switch: s_bank4_1
-    profile: sp_skill_shot_profile
+    profile: sp_skill_bank
     show_tokens:
       leds: l_bank4_1_arrow
-      color: tt_orange
+      color: tt_yellow
     advance_events: advance_shot_bank4_1
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
   shot_bank4_2:
     switch: s_bank4_2
-    profile: sp_skill_shot_profile
+    profile: sp_skill_bank
     show_tokens:
       leds: l_bank4_2_arrow
-      color: tt_orange
+      color: tt_yellow
     advance_events: advance_shot_bank4_2
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
   shot_bank4_3:
     switch: s_bank4_3
-    profile: sp_skill_shot_profile
+    profile: sp_skill_bank
     show_tokens:
       leds: l_bank4_3_arrow
-      color: tt_orange
+      color: tt_yellow
     advance_events: advance_shot_bank4_3
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
   shot_bank4_4:
     switch: s_bank4_4
-    profile: sp_skill_shot_profile
+    profile: sp_skill_bank
     show_tokens:
       leds: l_bank4_4_arrow
-      color: tt_orange
+      color: tt_yellow
     advance_events: advance_shot_bank4_4
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
@@ -86,6 +86,7 @@ shot_groups:
   # Option B: groups bank4 shots so the group-level flashing_hit event fires
   sg_skill_bank4:
     shots: shot_bank4_1, shot_bank4_2, shot_bank4_3, shot_bank4_4
+    rotate_events: timer_tim_target_rotator_tick
     enable_events: skill_shot_option_b_ready
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
@@ -97,6 +98,13 @@ shot_profiles:
         show: off
       - name: flashing
         show: sh_led_flash
+  sp_skill_bank:
+    rotation_pattern: r, r, r, r, l, l, l, l
+    states:
+    - name: unlit
+      show: off
+    - name: flashing
+      show: sh_led_flash
 
 # =====================================================================
 # Event flow:
@@ -129,9 +137,12 @@ event_player:
   # Award → stop the mode
   sg_skill_upper_lanes_flashing_hit:
     - skill_shot_awarded
+  sg_skill_upper_lanes_unlit_hit:
+    - skill_shot_awarded
   sg_skill_bank4_flashing_hit:
     - skill_shot_awarded
-
+  sg_skill_bank4_unlit_hit:
+    - skill_shot_missed
   # ================================================================
   # Miss detection via switch _active events.
   # Safe for Option A: s_right_orbit only.
@@ -160,34 +171,6 @@ event_player:
   s_right_inlane_active:
     - skill_shot_missed
 
-  # Miss in Option A only (left_orbit and left_inlane safe in Option B)
-  s_left_orbit_active{device.shots.shot_upper_left_lane.state_name=='flashing' or device.shots.shot_upper_right_lane.state_name=='flashing'}:
-    - skill_shot_missed
-  s_left_inlane_active{device.shots.shot_upper_left_lane.state_name=='flashing' or device.shots.shot_upper_right_lane.state_name=='flashing'}:
-    - skill_shot_missed
-
-  # Unlit upper lane in Option A = miss (the flashing one triggers award above)
-  s_upper_left_lane_active{device.shots.shot_upper_left_lane.state_name=='unlit'}:
-    - skill_shot_missed
-  s_upper_right_lane_active{device.shots.shot_upper_right_lane.state_name=='unlit'}:
-    - skill_shot_missed
-
-  # Upper lanes not a skill target in Option B = miss
-  s_upper_left_lane_active{device.shots.shot_bank4_1.state_name=='flashing' or device.shots.shot_bank4_2.state_name=='flashing' or device.shots.shot_bank4_3.state_name=='flashing' or device.shots.shot_bank4_4.state_name=='flashing'}:
-    - skill_shot_missed
-  s_upper_right_lane_active{device.shots.shot_bank4_1.state_name=='flashing' or device.shots.shot_bank4_2.state_name=='flashing' or device.shots.shot_bank4_3.state_name=='flashing' or device.shots.shot_bank4_4.state_name=='flashing'}:
-    - skill_shot_missed
-
-  # Unlit bank4 in Option B = miss
-  s_bank4_1_active{device.shots.shot_bank4_1.state_name=='unlit' and (device.shots.shot_bank4_2.state_name=='flashing' or device.shots.shot_bank4_3.state_name=='flashing' or device.shots.shot_bank4_4.state_name=='flashing')}:
-    - skill_shot_missed
-  s_bank4_2_active{device.shots.shot_bank4_2.state_name=='unlit' and (device.shots.shot_bank4_1.state_name=='flashing' or device.shots.shot_bank4_3.state_name=='flashing' or device.shots.shot_bank4_4.state_name=='flashing')}:
-    - skill_shot_missed
-  s_bank4_3_active{device.shots.shot_bank4_3.state_name=='unlit' and (device.shots.shot_bank4_1.state_name=='flashing' or device.shots.shot_bank4_2.state_name=='flashing' or device.shots.shot_bank4_4.state_name=='flashing')}:
-    - skill_shot_missed
-  s_bank4_4_active{device.shots.shot_bank4_4.state_name=='unlit' and (device.shots.shot_bank4_1.state_name=='flashing' or device.shots.shot_bank4_2.state_name=='flashing' or device.shots.shot_bank4_3.state_name=='flashing')}:
-    - skill_shot_missed
-
 # =====================================================================
 # Random selection: advance one shot to flashing state.
 # Fires after mode_skill_shot_started, shots are already enabled.
@@ -209,6 +192,14 @@ random_event_player:
       - advance_shot_bank4_2
       - advance_shot_bank4_3
       - advance_shot_bank4_4
+
+# =====================================================================
+# Timers to rotate
+# =====================================================================
+timers:
+  tim_target_rotator:
+    start_running: true
+    tick_interval: 1s
 
 # =====================================================================
 # Scoring
