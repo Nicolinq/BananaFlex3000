@@ -30,7 +30,7 @@ ball_devices:
     bd_trough:
         ball_switches: s_ball_trough_1,s_ball_trough_2,s_ball_trough_3
         jam_switch: s_ball_trough_jam
-        eject_coil: c_outhole
+        eject_coil: c_ball_trough
         tags: trough, home, drain
         eject_coil_jam_pulse: 15ms
         eject_timeouts: 3s

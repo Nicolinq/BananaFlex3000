@@ -1,24 +1,24 @@
 #config_version=6
 
 coils:
-    c_outhole:
+    c_ball_trough:
        number: 0-0-1
        default_pulse_ms: 22
        default_pulse_power: 0.55
        default_hold_power: 0.075
-    c_flipper_left:
+    c_flipper_left_main:
         number: 0-0-14
         #allow_enable: true
         default_hold_power: 0.08
         default_pulse_power: 1.0
         default_pulse_ms: 35
-    c_flipper_right:
+    c_flipper_right_main:
         number: 0-0-13
         #allow_enable: true
         default_hold_power: 0.08
         default_pulse_power: 1.0
         default_pulse_ms: 35
-    c_bump:
+    c_bumper:
        number: 0-0-4
        default_pulse_ms: 22
        default_pulse_power: 0.55
@@ -29,23 +29,44 @@ coils:
        number: 0-0-5
        default_pulse_ms: 25
        default_hold_power: 0.2   # keep this low 
-    c_lock_divertor:
+    c_top_right_gate:
        number: 0-0-6
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_lock_divertor:
+       number: 1-0-10
        default_pulse_ms: 25
        default_hold_power: 0.2   # keep this low 
     c_lock_release:
        number: 0-0-7
        default_pulse_ms: 25
        default_hold_power: 0.2   # keep this low 
-    c_left_diverter:
+    c_knocker:
        number: 0-0-8
        default_pulse_ms: 25
        default_hold_power: 0.2   # keep this low 
+    c_magnet:
+       number: 0-0-9
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_left_diverter:
+       number: 1-0-9
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_wall_up_down:
+       number: 1-0-11
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+    c_red_monkey:
+       number: 1-0-8
+       default_pulse_ms: 25
+       default_hold_power: 0.2   # keep this low 
+
 
 switches:
     #Cabinet Switches
    s_start_button:
-      number: 1-0-32
+      number: 1-0-84
       tags: start
       ignore_window_ms: 500ms 
    s_flipper_left_button:
@@ -56,58 +77,58 @@ switches:
       tags: right_flipper
     #Playfield Switches (Matrix)
    s_launch_button:
-      number: 1-0-33
+      number: 1-0-85
    s_setup_button:
-      number: 1-0-34
+      number: 1-0-92
    s_plus_button:
-      number: 1-0-35
+      number: 1-0-94
    s_minus_button:
-      number: 1-0-36
+      number: 1-0-93
    s_enter_button:
-      number: 1-0-37
+      number: 1-0-95
    s_tilt:
-      number: 1-0-38
+      number: 1-0-86
       tags: tilt_warning
    s_coin:
       number: 1-0-39
    s_red_monkey:
-      number: 1-0-40 
+      number: 1-0-59 
    s_bank4_1:
-      number: 1-0-42  
+      number: 1-0-32  
    s_bank4_2:
-      number: 1-0-43  
+      number: 1-0-33  
    s_bank4_3:
-      number: 1-0-44
+      number: 1-0-34
    s_bank4_4:
-      number: 1-0-45  
+      number: 1-0-35  
    s_upper_left_lane:
-      number: 1-0-46  
+      number: 1-0-41  
    s_upper_right_lane:
-      number: 1-0-47  
+      number: 1-0-42  
    s_left_orbit:
-      number: 1-0-48  
+      number: 1-0-40  
    s_right_orbit:
-      number: 1-0-49  
+      number: 1-0-43  
    s_bank3_1:
-      number: 1-0-50  
+      number: 1-0-48  
    s_bank3_2:
-      number: 1-0-51  
+      number: 1-0-49  
    s_bank3_3:
-      number: 1-0-52  
+      number: 1-0-50  
    s_right_target:
-      number: 1-0-53  
+      number: 1-0-65  
    s_left_target:
-      number: 1-0-54  
-   s_spinner:
-      number: 1-0-55  
-   s_left_inlane:
       number: 1-0-57  
-   s_right_inlane:
+   s_spinner:
       number: 1-0-58  
+   s_left_inlane:
+      number: 1-0-56  
+   s_right_inlane:
+      number: 1-0-64  
    s_wall_target:
-      number: 1-0-59  
+      number: 1-0-51  
    s_bumper_target:
-      number: 1-0-60
+      number: 1-0-66
 
 
     #Playfield Switches (Direct)
@@ -138,13 +159,13 @@ switches:
 
 flippers:
   left_flipper:
-        main_coil: c_flipper_left
+        main_coil: c_flipper_left_main
         activation_switch: s_flipper_left_button
         eos_switch : s_flipper_left_EOS
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
   right_flipper:
-        main_coil: c_flipper_right
+        main_coil: c_flipper_right_main
         activation_switch: s_flipper_right_button
         eos_switch : s_flipper_right_EOS
         enable_events: ball_started, enableAutofire
@@ -152,7 +173,7 @@ flippers:
 
 autofire_coils:
     pop_bumper:
-        coil: c_bump
+        coil: c_bumper
         switch: s_bumper
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
@@ -171,6 +192,14 @@ diverters:
     type: hold
     activation_time: 3s
     activation_switches: s_right_orbit
+    enable_events: ball_started, enable_top_left_gate_diverter
+    disable_events: ball_ended, disable_top_left_gate_diverter
+    targets_when_active: playfield
+  top_right_gate_diverter:
+    activation_coil: c_top_right_gate
+    type: hold
+    activation_time: 3s
+    activation_switches: s_left_orbit
     enable_events: ball_started, enable_top_left_gate_diverter
     disable_events: ball_ended, disable_top_left_gate_diverter
     targets_when_active: playfield
