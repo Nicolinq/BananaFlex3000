@@ -68,12 +68,10 @@ switches:
    s_tilt:
       number: 1-0-38
       tags: tilt_warning
-   s_coin_mech:
+   s_coin:
       number: 1-0-39
-   s_red_monkey_target:
-      number: 1-0-40
-   s_bumper_done:
-      number: 1-0-41    
+   s_red_monkey:
+      number: 1-0-40 
    s_bank4_1:
       number: 1-0-42  
    s_bank4_2:
@@ -82,9 +80,9 @@ switches:
       number: 1-0-44
    s_bank4_4:
       number: 1-0-45  
-   s_left_lane:
+   s_upper_left_lane:
       number: 1-0-46  
-   s_right_lane:
+   s_upper_right_lane:
       number: 1-0-47  
    s_left_orbit:
       number: 1-0-48  
@@ -96,9 +94,9 @@ switches:
       number: 1-0-51  
    s_bank3_3:
       number: 1-0-52  
-   s_right_mini_target:
+   s_right_target:
       number: 1-0-53  
-   s_left_mini_target:
+   s_left_target:
       number: 1-0-54  
    s_spinner:
       number: 1-0-55  
@@ -106,16 +104,16 @@ switches:
       number: 1-0-57  
    s_right_inlane:
       number: 1-0-58  
-   s_bank3_target:
+   s_wall_target:
       number: 1-0-59  
-   s_rotation_target:
+   s_bumper_target:
       number: 1-0-60
 
 
     #Playfield Switches (Direct)
-   s_left_EOS:
+   s_flipper_left_EOS:
       number: 0-0-1
-   s_right_EOS:
+   s_flipper_right_EOS:
       number: 0-0-2
    s_ball_trough_1:
       number: 0-0-8    
@@ -125,7 +123,7 @@ switches:
       number: 0-0-10   
    s_ball_trough_jam:
       number: 0-0-11   
-   s_bumper_spe:
+   s_bumper:
       number: 0-0-16 
    s_lock_1:
       number: 0-0-24 
@@ -133,10 +131,8 @@ switches:
       number: 0-0-25 
    s_lock_3:
       number: 0-0-26 
-   s_magnet_1:
+   s_magnet:
       number: 0-0-27 
-   s_magnet_2:
-      number: 1-0-1 
    s_ramp_begin:
       number: 0-0-3
 
@@ -144,20 +140,20 @@ flippers:
   left_flipper:
         main_coil: c_flipper_left
         activation_switch: s_flipper_left_button
-        eos_switch : s_left_EOS
+        eos_switch : s_flipper_left_EOS
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
   right_flipper:
         main_coil: c_flipper_right
         activation_switch: s_flipper_right_button
-        eos_switch : s_right_EOS
+        eos_switch : s_flipper_right_EOS
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
 
 autofire_coils:
     pop_bumper:
         coil: c_bump
-        switch: s_bumper_done
+        switch: s_bumper
         enable_events: ball_started, enableAutofire
         disable_events: ball_will_end, disableAutofire, shutdown
 

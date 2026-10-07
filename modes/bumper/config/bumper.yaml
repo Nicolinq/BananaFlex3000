@@ -7,7 +7,7 @@ mode:
 
 shots:
   bumper_center:
-    switch: s_bumper_done
+    switch: s_bumper
 
 
 variable_player:

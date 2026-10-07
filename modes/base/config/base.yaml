@@ -29,11 +29,11 @@ shots:
   shot_right_bank:
     switch: s_bank3_1, s_bank3_2, s_bank3_3
   shot_top_lanes:
-    switch: s_left_lane, s_right_lane
+    switch: s_upper_left_lane, s_upper_right_lane
   shot_orbits:
     switch: s_left_orbit, s_right_orbit
-  shot_mini_targets:
-    switch: s_right_mini_target, s_left_mini_target
+  shot_bottom_targets:
+    switch: s_right_target, s_left_target
    
 shows:
   led_flash:

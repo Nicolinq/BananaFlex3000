@@ -216,7 +216,7 @@ shots:
       leds: l_led_belt_b_50
     profile: banana_belt_profile_hit
   shot_rotate_target:
-    switch: s_rotation_target
+    switch: s_bumper_target
     profile: rotate_profile
     advance_events: change_banana_belt_count_complete
     hit_events: spinner_stack_complete
