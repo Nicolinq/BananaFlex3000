@@ -13,10 +13,10 @@ mode:
 
 event_player:
   # ---- Branch on start ----
-  mode_skill_shot_started{switches.s_flipper_left_button.state==0}:
+  mode_skill_shot_started{device.switches.s_flipper_left_button.state==0}:
     - skill_shot_option_a_start
 
-  mode_skill_shot_started{switches.s_flipper_left_button.state==1}:
+  mode_skill_shot_started{device.switches.s_flipper_left_button.state==1}:
     - skill_shot_option_b_start
     - enable_top_left_gate_diverter
 
@@ -56,46 +56,46 @@ event_player:
     - skill_shot_missed
 
   # Option A only: left_orbit and left_inlane are safe in Option B
-  "s_left_orbit_active{device.shots.sh_upper_left_lane.enabled}":
+  s_left_orbit_active{device.shots.shot_upper_left_lane.enabled}:
     - skill_shot_missed
-  "s_left_inlane_active{device.shots.sh_upper_left_lane.enabled}":
+  s_left_inlane_active{device.shots.shot_upper_left_lane.enabled}:
     - skill_shot_missed
 
   # Hitting the unlit upper lane in Option A = miss
-  "s_upper_left_lane_active{device.shots.sh_upper_left_lane.enabled and device.shots.sh_upper_left_lane.state_name=='unlit'}":
+  s_upper_left_lane_active{device.shots.shot_upper_left_lane.enabled and device.shots.shot_upper_left_lane.state_name=='unlit'}:
     - skill_shot_missed
-  "s_upper_right_lane_active{device.shots.sh_upper_right_lane.enabled and device.shots.sh_upper_right_lane.state_name=='unlit'}":
+  s_upper_right_lane_active{device.shots.shot_upper_right_lane.enabled and device.shots.shot_upper_right_lane.state_name=='unlit'}:
     - skill_shot_missed
 
-  # Upper lanes not a skill target in Option B → miss
-  "s_upper_left_lane_active{device.shots.sh_bank4_1.enabled}":
+  # Upper lanes not a skill target in Option B = miss
+  s_upper_left_lane_active{device.shots.shot_bank4_1.enabled}:
     - skill_shot_missed
-  "s_upper_right_lane_active{device.shots.sh_bank4_1.enabled}":
+  s_upper_right_lane_active{device.shots.shot_bank4_1.enabled}:
     - skill_shot_missed
 
   # Hitting an unlit bank4 target in Option B = miss
-  "s_bank4_1_active{device.shots.sh_bank4_1.enabled and device.shots.sh_bank4_1.state_name=='unlit'}":
+  s_bank4_1_active{device.shots.shot_bank4_1.enabled and device.shots.shot_bank4_1.state_name=='unlit'}:
     - skill_shot_missed
-  "s_bank4_2_active{device.shots.sh_bank4_2.enabled and device.shots.sh_bank4_2.state_name=='unlit'}":
+  s_bank4_2_active{device.shots.shot_bank4_2.enabled and device.shots.shot_bank4_2.state_name=='unlit'}:
     - skill_shot_missed
-  "s_bank4_3_active{device.shots.sh_bank4_3.enabled and device.shots.sh_bank4_3.state_name=='unlit'}":
+  s_bank4_3_active{device.shots.shot_bank4_3.enabled and device.shots.shot_bank4_3.state_name=='unlit'}:
     - skill_shot_missed
-  "s_bank4_4_active{device.shots.sh_bank4_4.enabled and device.shots.sh_bank4_4.state_name=='unlit'}":
+  s_bank4_4_active{device.shots.shot_bank4_4.enabled and device.shots.shot_bank4_4.state_name=='unlit'}:
     - skill_shot_missed
 
 shots:
-  sh_upper_left_lane:
+  shot_upper_left_lane:
     switch: s_upper_left_lane
-    profile: skill_shot_lane_profile
+    profile: sp_skill_shot_lane_profile
     show_tokens:
       leds: l_upper_left_lane
       color: tt_yellow
     enable_events: skill_shot_option_a_start
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
-  sh_upper_right_lane:
+  shot_upper_right_lane:
     switch: s_upper_right_lane
-    profile: skill_shot_lane_profile
+    profile: sp_skill_shot_lane_profile
     show_tokens:
       leds: l_upper_right_lane
       color: tt_yellow
@@ -103,36 +103,36 @@ shots:
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
   # ---- OPTION B — bank4 arrows ----
-  sh_bank4_1:
+  shot_bank4_1:
     switch: s_bank4_1
-    profile: skill_shot_bank_profile
+    profile: sp_skill_shot_bank_profile
     show_tokens:
       leds: l_bank4_1_arrow
       color: tt_orange
     enable_events: skill_shot_option_b_start
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
-  sh_bank4_2:
+  shot_bank4_2:
     switch: s_bank4_2
-    profile: skill_shot_bank_profile
+    profile: sp_skill_shot_bank_profile
     show_tokens:
       leds: l_bank4_2_arrow
       color: tt_orange
     enable_events: skill_shot_option_b_start
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
-  sh_bank4_3:
+  shot_bank4_3:
     switch: s_bank4_3
-    profile: skill_shot_bank_profile
+    profile: sp_skill_shot_bank_profile
     show_tokens:
       leds: l_bank4_3_arrow
       color: tt_orange
     enable_events: skill_shot_option_b_start
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
-  sh_bank4_4:
+  shot_bank4_4:
     switch: s_bank4_4
-    profile: skill_shot_bank_profile
+    profile: sp_skill_shot_bank_profile
     show_tokens:
       leds: l_bank4_4_arrow
       color: tt_orange
@@ -142,7 +142,7 @@ shots:
 shot_groups:
   # Option A group: rotate lit state between lanes with flipper buttons
   sg_skill_upper_lanes:
-    shots: sh_upper_left_lane, sh_upper_right_lane
+    shots: shot_upper_left_lane, shot_upper_right_lane
     rotate_left_events: s_flipper_left_button_active
     rotate_right_events: s_flipper_right_button_active
     enable_events: skill_shot_option_a_start
@@ -150,12 +150,12 @@ shot_groups:
 
   # Option B group: just groups the shots so the group-level hit event fires
   sg_skill_bank4:
-    shots: sh_bank4_1, sh_bank4_2, sh_bank4_3, sh_bank4_4
+    shots: shot_bank4_1, shot_bank4_2, shot_bank4_3, shot_bank4_4
     enable_events: skill_shot_option_b_start
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
 
 shot_profiles:
-  skill_shot_lane_profile:
+  sp_skill_shot_lane_profile:
     advance_on_hit: false   # hitting only posts hit event, doesn't advance
     states:
       - name: unlit
@@ -163,7 +163,7 @@ shot_profiles:
       - name: flashing
         show: skill_shot_flashing
 
-  skill_shot_bank_profile:
+  sp_skill_shot_bank_profile:
     advance_on_hit: false
     states:
       - name: unlit
@@ -182,17 +182,17 @@ random_event_player:
     force_all: false
     force_different: false
     events:
-      - sh_upper_left_lane_advance
-      - sh_upper_right_lane_advance
+      - shot_upper_left_lane_advance
+      - shot_upper_right_lane_advance
 
   skill_shot_option_b_start:
     force_all: false
     force_different: false
     events:
-      - sh_bank4_1_advance
-      - sh_bank4_2_advance
-      - sh_bank4_3_advance
-      - sh_bank4_4_advance
+      - shot_bank4_1_advance
+      - shot_bank4_2_advance
+      - shot_bank4_3_advance
+      - shot_bank4_4_advance
 
 # =====================================================================
 # Scoring on lit shot hit (state "flashing")
