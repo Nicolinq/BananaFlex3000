@@ -42,7 +42,7 @@ shows:
   - time: 0
     lights:
       (leds): (color)
-  - time: +.1s
+  - time: +.5s
     lights:
       (leds): off
   sh_hit_flash:
