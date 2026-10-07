@@ -233,7 +233,7 @@ theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/font_size = 20
 text = "1 "
 script = ExtResource("2_2jp88")
-variable_name = "unbended_bananas_count"
+variable_name = "pv_unbended_bananas_count"
 template_string = "%s "
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
@@ -244,7 +244,7 @@ theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/font_size = 20
 text = "/ 10"
 script = ExtResource("2_2jp88")
-variable_name = "unbended_bananas_to_complete"
+variable_name = "pv_unbended_bananas_to_complete"
 template_string = "/ %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
@@ -263,6 +263,6 @@ theme_override_font_sizes/font_size = 20
 text = "1 "
 horizontal_alignment = 1
 script = ExtResource("2_2jp88")
-variable_name = "spinner_stack_hits"
+variable_name = "pv_spinner_stack_hits"
 template_string = "%s "
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"

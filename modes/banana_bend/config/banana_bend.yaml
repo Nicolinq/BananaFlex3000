@@ -10,44 +10,44 @@ mode:
 shots:
   shot_l_bend_start:
     show_tokens:
-      leds: l_led_bend_bananas_start
-    profile: banana_bend_profile_flash
+      leds: l_bend_bananas_start
+    profile: sp_banana_bend_profile_flash
     hit_events: mode_banana_bend_started
     disable_events: bend_bananas_completed, mode_banana_bend_will_stop
   shot_l_bend_arrow_start:
     show_tokens:
-      leds: l_led_arrow_top_right
-    profile: banana_bend_profile_flash
+      leds: l_arrow_top_right
+    profile: sp_banana_bend_profile_flash
     hit_events: mode_banana_bend_started
     disable_events: bend_bananas_completed, mode_banana_bend_will_stop
   shot_l_bend_mode_start:
     show_tokens:
-        leds: l_led_bend_state
-    profile: banana_bend_profile_on
+        leds: l_bend_state
+    profile: sp_banana_bend_profile_on
     hit_events: mode_banana_bend_started
     disable_events: bend_bananas_completed, mode_banana_bend_will_stop
   shot_l_bend_mode_completed:
     show_tokens:
-        leds: l_led_bend_state
-    profile: banana_bend_profile_flash
+        leds: l_bend_state
+    profile: sp_banana_bend_profile_flash
     hit_events: bend_bananas_completed
     disable_events: mode_banana_bend_will_stop
   
 shot_profiles:
-  banana_bend_profile_flash:
+  sp_banana_bend_profile_flash:
     states:
       - name: off
         show: off
       - name: on
-        show: led_flash
+        show: sh_led_flash
         show_tokens:
           color: white
-  banana_bend_profile_on:
+  sp_banana_bend_profile_on:
     states:
       - name: off
         show: off
       - name: on
-        show: insert_on
+        show: sh_insert_on
         show_tokens:
           color: tt_red
 
@@ -58,4 +58,4 @@ event_player:
 
 variable_player:
   bend_bananas_completed:
-    score: 100000 * current_player.playfield_multiplier
+    score: 100000 * current_player.pv_playfield_multiplier

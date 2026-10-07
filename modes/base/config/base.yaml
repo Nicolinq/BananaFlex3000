@@ -34,16 +34,18 @@ shots:
     switch: s_left_orbit, s_right_orbit
   shot_bottom_targets:
     switch: s_right_target, s_left_target
+  magnet:
+      switches: s_magnet
    
 shows:
-  led_flash:
+  sh_led_flash:
   - time: 0
     lights:
       (leds): (color)
   - time: +.1s
     lights:
       (leds): off
-  hit_flash:
+  sh_hit_flash:
   - time: 0
     lights:
       (leds): (color)
@@ -60,7 +62,7 @@ shows:
     duration: -1
     lights:
       (leds): (color)
-  insert_on:
+  sh_insert_on:
   - time: 0
     duration: -1
     lights:
@@ -68,12 +70,15 @@ shows:
 
 variable_player:
   shot_left_bank_hit:
-    score: 2000 * current_player.playfield_multiplier
+    score: 2000 * current_player.pv_playfield_multiplier
   shot_right_bank_hit:
-    score: 2000 * current_player.playfield_multiplier
+    score: 2000 * current_player.pv_playfield_multiplier
   shot_top_lanes_hit:
-    score: 1500 * current_player.playfield_multiplier
+    score: 1500 * current_player.pv_playfield_multiplier
   shot_orbits_hit:
-    score: 1500 * current_player.playfield_multiplier
+    score: 1500 * current_player.pv_playfield_multiplier
   shot_mini_targets_hit:
-    score: 1500 * current_player.playfield_multiplier
+    score: 1500 * current_player.pv_playfield_multiplier
+
+coil_player:
+  magnet_hit: c_magnet

@@ -7,7 +7,7 @@ mode:
 
 # ---- Counter: 4 hits fills the stack ----
 counters:
-  spinner_fill:
+  co_spinner_fill:
     count_events: s_spinner_active
     count_complete_value: 5
     starting_count: 0
@@ -21,31 +21,31 @@ counters:
 # ---- Light up one LED per hit, clear all on completion ----
 light_player:
   # count=1 : sq1 lights up
-  logicblock_spinner_fill_hit{count==1}:
-    l_led_spinner_square_top_1: tt_yellow
+  logicblock_co_spinner_fill_hit{count==1}:
+    l_spinner_square_top_1: tt_yellow
   # count=2 : sq2 lights up (sq1 stays on - no re-off command)
-  logicblock_spinner_fill_hit{count==2}:
-    l_led_spinner_square_top_2: tt_yellow
+  logicblock_co_spinner_fill_hit{count==2}:
+    l_spinner_square_top_2: tt_yellow
   # count=3 : sq3 lights up
-  logicblock_spinner_fill_hit{count==3}:
-    l_led_spinner_square_top_3: tt_yellow
+  logicblock_co_spinner_fill_hit{count==3}:
+    l_spinner_square_top_3: tt_yellow
   # count=4 : arrow lights up, then spinner_stack_complete fires (reset to 0)
-  logicblock_spinner_fill_hit{count==4}:
-    l_led_spinner_arrow: tt_orange
+  logicblock_co_spinner_fill_hit{count==4}:
+    l_spinner_arrow: tt_orange
   # On complete: reset resets counter to 0, clear all lights
   spinner_stack_complete:
-    l_led_spinner_square_top_1: off
-    l_led_spinner_square_top_2: off
-    l_led_spinner_square_top_3: off
-    l_led_spinner_arrow: off
+    l_spinner_square_top_1: off
+    l_spinner_square_top_2: off
+    l_spinner_square_top_3: off
+    l_spinner_arrow: off
   # When mode stops, clear lights
   mode_spinner_stopping:
-    l_led_spinner_square_top_1: off
-    l_led_spinner_square_top_2: off
-    l_led_spinner_square_top_3: off
-    l_led_spinner_arrow: off
+    l_spinner_square_top_1: off
+    l_spinner_square_top_2: off
+    l_spinner_square_top_3: off
+    l_spinner_arrow: off
 
 # ---- Player variable: increment on stack completion ----
 variable_player:
   spinner_stack_complete:
-    spinner_stack_hits: 1
+    pv_spinner_stack_hits: 1

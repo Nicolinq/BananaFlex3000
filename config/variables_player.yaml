@@ -1,11 +1,11 @@
 #config_version=6
 
 player_vars:
-    playfield_multiplier:
+    pv_playfield_multiplier:
         initial_value: 1
-    unbended_bananas_to_complete:
+    pv_unbended_bananas_to_complete:
         initial_value: 10
-    unbended_bananas_count:
+    pv_unbended_bananas_count:
         initial_value: 0
-    spinner_stack_hits:
+    pv_spinner_stack_hits:
         initial_value: 0

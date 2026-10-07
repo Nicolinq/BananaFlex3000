@@ -10,28 +10,28 @@ mode:
 shots:
   shot_l_load_start:
     show_tokens:
-      leds: l_led_load_state
-    profile: banana_load_profile_on
+      leds: l_load_state
+    profile: sp_banana_load_profile_on
     hit_events: mode_banana_load_started
 
 shot_profiles:
-  banana_load_profile_flash:
+  sp_banana_load_profile_flash:
     states:
       - name: off
         show: off
       - name: on
-        show: led_flash
+        show: sh_led_flash
         show_tokens:
           color: white
-  banana_load_profile_on:
+  sp_banana_load_profile_on:
     states:
       - name: off
         show: off
       - name: on
-        show: insert_on
+        show: sh_insert_on
         show_tokens:
           color: tt_red
 
 event_player:
-  mode_banana_load_started{device.counters.banana_belt_count.value>=current_player.unbended_bananas_to_complete}: start_mode_banana_bend
+  mode_banana_load_started{device.counters.co_banana_belt_count.value>=current_player.pv_unbended_bananas_to_complete}: start_mode_banana_bend
   mode_banana_load_started: disable_lock_diverter, disable_top_left_gate_diverter
