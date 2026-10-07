@@ -21,6 +21,7 @@ modes:
 - attract
 - base
 - bumper
+- skill_shot
 - spinner
 - banana_belt
 - banana_load

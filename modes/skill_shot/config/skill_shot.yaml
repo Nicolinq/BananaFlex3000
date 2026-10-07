@@ -1,0 +1,260 @@
+#config_version=6
+
+mode:
+  start_events: balldevice_bd_trough_ejecting_ball
+  stop_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+  priority: 500
+
+# =====================================================================
+# Branch on mode start:
+#   Left flipper held → Option B (bank4 arrow + open gate)
+#   Not held          → Option A (upper lanes)
+# =====================================================================
+
+event_player:
+  # ---- Branch on start ----
+  mode_skill_shot_started{switches.s_flipper_left_button.state==0}:
+    - skill_shot_option_a_start
+
+  mode_skill_shot_started{switches.s_flipper_left_button.state==1}:
+    - skill_shot_option_b_start
+    - enable_top_left_gate_diverter
+
+  # Award events → stop the mode
+  sg_skill_upper_lanes_flashing_hit:
+    - skill_shot_awarded
+  sg_skill_bank4_flashing_hit:
+    - skill_shot_awarded
+
+  # ================================================================
+  # Miss detection via switch _active events (switch_player is
+  # machine-only; in modes we listen to the posted switch events).
+  # Safe for Option A: s_right_orbit only.
+  # Safe for Option B: s_right_orbit, s_left_orbit, s_left_inlane.
+  # ================================================================
+
+  # Miss in BOTH options
+  s_bank3_1_active:
+    - skill_shot_missed
+  s_bank3_2_active:
+    - skill_shot_missed
+  s_bank3_3_active:
+    - skill_shot_missed
+  s_left_target_active:
+    - skill_shot_missed
+  s_right_target_active:
+    - skill_shot_missed
+  s_spinner_active:
+    - skill_shot_missed
+  s_wall_target_active:
+    - skill_shot_missed
+  s_bumper_active:
+    - skill_shot_missed
+  s_red_monkey_active:
+    - skill_shot_missed
+  s_right_inlane_active:
+    - skill_shot_missed
+
+  # Option A only: left_orbit and left_inlane are safe in Option B
+  "s_left_orbit_active{device.shots.sh_upper_left_lane.enabled}":
+    - skill_shot_missed
+  "s_left_inlane_active{device.shots.sh_upper_left_lane.enabled}":
+    - skill_shot_missed
+
+  # Hitting the unlit upper lane in Option A = miss
+  "s_upper_left_lane_active{device.shots.sh_upper_left_lane.enabled and device.shots.sh_upper_left_lane.state_name=='unlit'}":
+    - skill_shot_missed
+  "s_upper_right_lane_active{device.shots.sh_upper_right_lane.enabled and device.shots.sh_upper_right_lane.state_name=='unlit'}":
+    - skill_shot_missed
+
+  # Upper lanes not a skill target in Option B → miss
+  "s_upper_left_lane_active{device.shots.sh_bank4_1.enabled}":
+    - skill_shot_missed
+  "s_upper_right_lane_active{device.shots.sh_bank4_1.enabled}":
+    - skill_shot_missed
+
+  # Hitting an unlit bank4 target in Option B = miss
+  "s_bank4_1_active{device.shots.sh_bank4_1.enabled and device.shots.sh_bank4_1.state_name=='unlit'}":
+    - skill_shot_missed
+  "s_bank4_2_active{device.shots.sh_bank4_2.enabled and device.shots.sh_bank4_2.state_name=='unlit'}":
+    - skill_shot_missed
+  "s_bank4_3_active{device.shots.sh_bank4_3.enabled and device.shots.sh_bank4_3.state_name=='unlit'}":
+    - skill_shot_missed
+  "s_bank4_4_active{device.shots.sh_bank4_4.enabled and device.shots.sh_bank4_4.state_name=='unlit'}":
+    - skill_shot_missed
+
+shots:
+  sh_upper_left_lane:
+    switch: s_upper_left_lane
+    profile: skill_shot_lane_profile
+    show_tokens:
+      leds: l_upper_left_lane
+      color: tt_yellow
+    enable_events: skill_shot_option_a_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  sh_upper_right_lane:
+    switch: s_upper_right_lane
+    profile: skill_shot_lane_profile
+    show_tokens:
+      leds: l_upper_right_lane
+      color: tt_yellow
+    enable_events: skill_shot_option_a_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  # ---- OPTION B — bank4 arrows ----
+  sh_bank4_1:
+    switch: s_bank4_1
+    profile: skill_shot_bank_profile
+    show_tokens:
+      leds: l_bank4_1_arrow
+      color: tt_orange
+    enable_events: skill_shot_option_b_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  sh_bank4_2:
+    switch: s_bank4_2
+    profile: skill_shot_bank_profile
+    show_tokens:
+      leds: l_bank4_2_arrow
+      color: tt_orange
+    enable_events: skill_shot_option_b_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  sh_bank4_3:
+    switch: s_bank4_3
+    profile: skill_shot_bank_profile
+    show_tokens:
+      leds: l_bank4_3_arrow
+      color: tt_orange
+    enable_events: skill_shot_option_b_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  sh_bank4_4:
+    switch: s_bank4_4
+    profile: skill_shot_bank_profile
+    show_tokens:
+      leds: l_bank4_4_arrow
+      color: tt_orange
+    enable_events: skill_shot_option_b_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+shot_groups:
+  # Option A group: rotate lit state between lanes with flipper buttons
+  sg_skill_upper_lanes:
+    shots: sh_upper_left_lane, sh_upper_right_lane
+    rotate_left_events: s_flipper_left_button_active
+    rotate_right_events: s_flipper_right_button_active
+    enable_events: skill_shot_option_a_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+  # Option B group: just groups the shots so the group-level hit event fires
+  sg_skill_bank4:
+    shots: sh_bank4_1, sh_bank4_2, sh_bank4_3, sh_bank4_4
+    enable_events: skill_shot_option_b_start
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+
+shot_profiles:
+  skill_shot_lane_profile:
+    advance_on_hit: false   # hitting only posts hit event, doesn't advance
+    states:
+      - name: unlit
+        show: off
+      - name: flashing
+        show: skill_shot_flashing
+
+  skill_shot_bank_profile:
+    advance_on_hit: false
+    states:
+      - name: unlit
+        show: off
+      - name: flashing
+        show: skill_shot_flashing
+
+# =====================================================================
+# Random selection: advance one shot to "flashing" state at start.
+# random_event_player picks one event from the list to post.
+# Shots respond to their own {name}_advance control event.
+# =====================================================================
+
+random_event_player:
+  skill_shot_option_a_start:
+    force_all: false
+    force_different: false
+    events:
+      - sh_upper_left_lane_advance
+      - sh_upper_right_lane_advance
+
+  skill_shot_option_b_start:
+    force_all: false
+    force_different: false
+    events:
+      - sh_bank4_1_advance
+      - sh_bank4_2_advance
+      - sh_bank4_3_advance
+      - sh_bank4_4_advance
+
+# =====================================================================
+# Scoring on lit shot hit (state "flashing")
+# =====================================================================
+
+variable_player:
+  sg_skill_upper_lanes_flashing_hit:
+    score: 100000
+    pv_playfield_multiplier: 1
+
+  sg_skill_bank4_flashing_hit:
+    score: 200000
+    pv_playfield_multiplier: 1
+
+
+
+# =====================================================================
+# Clear lights when mode ends
+# =====================================================================
+
+light_player:
+  skill_shot_awarded:
+    l_upper_left_lane: off
+    l_upper_right_lane: off
+    l_bank4_1_arrow: off
+    l_bank4_2_arrow: off
+    l_bank4_3_arrow: off
+    l_bank4_4_arrow: off
+  skill_shot_missed:
+    l_upper_left_lane: off
+    l_upper_right_lane: off
+    l_bank4_1_arrow: off
+    l_bank4_2_arrow: off
+    l_bank4_3_arrow: off
+    l_bank4_4_arrow: off
+
+# =====================================================================
+# Shows
+# =====================================================================
+
+shows:
+  skill_shot_flashing:
+  - time: 0
+    lights:
+      (leds): (color)
+  - time: +.25s
+    lights:
+      (leds): off
+  - time: +.25s
+    lights:
+      (leds): (color)
+  - time: +.25s
+    lights:
+      (leds): off
+  - time: +.25s
+    lights:
+      (leds): (color)
+  - time: +.25s
+    lights:
+      (leds): off
+  - time: +.25s
+    duration: -1
+    lights:
+      (leds): (color)
+

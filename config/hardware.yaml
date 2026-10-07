@@ -204,6 +204,14 @@ diverters:
     enable_events: ball_started, enable_top_right_gate_diverter
     disable_events: ball_ended, disable_top_right_gate_diverter
     targets_when_active: playfield
+  left_diverter:
+    activation_coil: c_left_diverter
+    type: hold
+    activation_time: 3s
+    activation_switches: s_left_orbit
+    enable_events: ball_started, enable_left_diverter
+    disable_events: ball_ended, disable_left_diverter
+    targets_when_active: playfield
 
 lights:
     l_belt_b_1:
