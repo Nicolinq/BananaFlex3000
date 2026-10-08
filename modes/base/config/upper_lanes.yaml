@@ -1,0 +1,75 @@
+#config_version=6
+
+shots:
+  shot_upper_left_lane:
+    switch: s_upper_left_lane
+    profile: sp_upper_lanes_profile_hit
+    show_tokens:
+      leds: l_upper_left_lane
+  shot_upper_right_lane:
+    switch: s_upper_right_lane
+    profile: sp_upper_lanes_profile_hit
+    show_tokens:
+      leds: l_upper_right_lane
+
+shot_groups:
+  upper_lanes_shots:
+    shots: shot_upper_left_lane,shot_upper_right_lane
+    reset_events: 
+      upper_lanes_shots_done: 2s
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+
+shot_profiles:
+  sp_upper_lanes_profile_hit:
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: sh_hit_flash
+        show_tokens:
+          color: tt_yellow
+
+counters:
+  co_upper_lanes_complete_count:
+    count_events: upper_lanes_shots_on_complete
+    events_when_hit: upper_lanes_shots_done
+    starting_count: 1
+    direction: up
+    persist_state: false
+
+variable_player:
+  upper_lanes_shots_hit:
+    score: 2_000 * current_player.bonus_multiplier
+    base_bonus: 1_000
+  mode_base_started:
+    bonus_multiplier:
+      int: 1
+      action: set
+  upper_lanes_shots_done{count==2}:
+    bonus_multiplier:
+      int: 2
+      action: set
+  upper_lanes_shots_done{count==3}:
+    bonus_multiplier:
+      int: 3
+      action: set
+  upper_lanes_shots_done{count==4}:
+    bonus_multiplier:
+      int: 4
+      action: set
+  upper_lanes_shots_done{count>=5}:
+    bonus_multiplier:
+      int: 5
+      action: set
+  upper_lanes_shots_complete:
+    score: 10_000
+    #score: 10_000 * current_player.pf_multiplier
+
+show_player:
+  upper_lanes_shots_complete:
+    flash:
+      loops: 4
+      speed: 4
+      show_tokens:
+        lights: l_upper_right_lane, l_upper_left_lane

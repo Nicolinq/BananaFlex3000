@@ -1,5 +1,8 @@
 #config_version=6
 
+config:
+- upper_lanes.yaml
+
 mode:
   start_events: ball_started
   stop_events: ball_will_end
@@ -28,15 +31,15 @@ shots:
     switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4
   shot_right_bank:
     switch: s_bank3_1, s_bank3_2, s_bank3_3
-  shot_top_lanes:
-    switch: s_upper_left_lane, s_upper_right_lane
   shot_orbits:
     switch: s_left_orbit, s_right_orbit
   shot_bottom_targets:
     switch: s_right_target, s_left_target
-  magnet:
+  shot_magnet:
       switches: s_magnet
-   
+
+
+
 shows:
   sh_led_flash:
   - time: 0
@@ -73,12 +76,11 @@ variable_player:
     score: 2000 * current_player.bonus_multiplier
   shot_right_bank_hit:
     score: 2000 * current_player.bonus_multiplier
-  shot_top_lanes_hit:
-    score: 1500 * current_player.bonus_multiplier
   shot_orbits_hit:
     score: 1500 * current_player.bonus_multiplier
   shot_mini_targets_hit:
     score: 1500 * current_player.bonus_multiplier
 
+
 coil_player:
-  magnet_hit: c_magnet
+  shot_magnet_hit: c_magnet
