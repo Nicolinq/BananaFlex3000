@@ -12,42 +12,52 @@ shots:
     show_tokens:
       leds: l_belt_b_1
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_1
   shot_l_wrong_control_2:
     show_tokens:
       leds: l_belt_b_2
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_2
   shot_l_wrong_control_3:
     show_tokens:
       leds: l_belt_b_3
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_3
   shot_l_wrong_control_4:
     show_tokens:
       leds: l_belt_b_4
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_4
   shot_l_wrong_control_5:
     show_tokens:
       leds: l_belt_b_5
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_5
   shot_l_wrong_control_6:
     show_tokens:
       leds: l_belt_b_6
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_6
   shot_l_wrong_control_7:
     show_tokens:
       leds: l_belt_b_7
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_7
   shot_l_wrong_control_8:
     show_tokens:
       leds: l_belt_b_8
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_8
   shot_l_wrong_control_9:
     show_tokens:
       leds: l_belt_b_9
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_9
   shot_l_wrong_control_10:
     show_tokens:
       leds: l_belt_b_10
     profile: sp_banana_wrong_control_profile
+    advance_events: wrong_control_10
   shot_l_wrong_control_11:
     show_tokens:
       leds: l_belt_b_11
@@ -267,16 +277,16 @@ random_event_player:
     force_all: false
     force_different: false
     events:
-      shot_l_wrong_control_1_hit{device.shots.shot_l_unbended_1.state=="on"}: 2
-      shot_l_wrong_control_2_hit{device.shots.shot_l_unbended_2.state=="on"}: 4
-      shot_l_wrong_control_3_hit{device.shots.shot_l_unbended_3.state=="on"}: 6
-      shot_l_wrong_control_4_hit{device.shots.shot_l_unbended_4.state=="on"}: 8
-      shot_l_wrong_control_5_hit{device.shots.shot_l_unbended_5.state=="on"}: 10
-      shot_l_wrong_control_6_hit{device.shots.shot_l_unbended_6.state=="on"}: 9
-      shot_l_wrong_control_7_hit{device.shots.shot_l_unbended_7.state=="on"}: 7
-      shot_l_wrong_control_8_hit{device.shots.shot_l_unbended_8.state=="on"}: 5
-      shot_l_wrong_control_9_hit{device.shots.shot_l_unbended_9.state=="on"}: 3
-      shot_l_wrong_control_10_hit{device.shots.shot_l_unbended_10.state=="on"}: 1
+      wrong_control_1{device.shots.shot_l_unbended_1.state=="on"}: 2
+      wrong_control_2{device.shots.shot_l_unbended_2.state=="on"}: 4
+      wrong_control_3{device.shots.shot_l_unbended_3.state=="on"}: 6
+      wrong_control_4{device.shots.shot_l_unbended_4.state=="on"}: 8
+      wrong_control_5{device.shots.shot_l_unbended_5.state=="on"}: 10
+      wrong_control_6{device.shots.shot_l_unbended_6.state=="on"}: 9
+      wrong_control_7{device.shots.shot_l_unbended_7.state=="on"}: 7
+      wrong_control_8{device.shots.shot_l_unbended_8.state=="on"}: 5
+      wrong_control_9{device.shots.shot_l_unbended_9.state=="on"}: 3
+      wrong_control_10{device.shots.shot_l_unbended_10.state=="on"}: 1
   choose_wrong_bananas_11_20:
      force_all: false
      force_different: false
