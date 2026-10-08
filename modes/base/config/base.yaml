@@ -70,15 +70,15 @@ shows:
 
 variable_player:
   shot_left_bank_hit:
-    score: 2000 * current_player.pv_playfield_multiplier
+    score: 2000 * current_player.bonus_multiplier
   shot_right_bank_hit:
-    score: 2000 * current_player.pv_playfield_multiplier
+    score: 2000 * current_player.bonus_multiplier
   shot_top_lanes_hit:
-    score: 1500 * current_player.pv_playfield_multiplier
+    score: 1500 * current_player.bonus_multiplier
   shot_orbits_hit:
-    score: 1500 * current_player.pv_playfield_multiplier
+    score: 1500 * current_player.bonus_multiplier
   shot_mini_targets_hit:
-    score: 1500 * current_player.pv_playfield_multiplier
+    score: 1500 * current_player.bonus_multiplier
 
 coil_player:
   magnet_hit: c_magnet

@@ -58,4 +58,4 @@ event_player:
 
 variable_player:
   bend_bananas_completed:
-    score: 100000 * current_player.pv_playfield_multiplier
+    score: 100000 * current_player.bonus_multiplier

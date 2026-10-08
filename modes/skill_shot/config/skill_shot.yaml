@@ -6,9 +6,9 @@ mode:
   priority: 500
 
 # =====================================================================
-# Enable all shots immediately when mode starts (before branching).
-# This ensures shots are ready to accept advance control events.
-# Then branch to determine which option applies.
+# Skill shot option A is the normal skill shot, with the upper lanes
+# Skill shot option B is the super skill shot, activated by the left flipper
+# and will consist in hitting the target banks.
 # =====================================================================
 
 shots:
@@ -22,6 +22,7 @@ shots:
     advance_events: advance_shot_upper_left_lane
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
   shot_upper_right_lane:
     switch: s_upper_right_lane
@@ -32,8 +33,9 @@ shots:
     advance_events: advance_shot_upper_right_lane
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
-  # ---- OPTION B — bank4 arrows ----
+  # ---- OPTION B — bank4 arrows and bank3 arrows----
   shot_bank4_1:
     switch: s_bank4_1
     profile: sp_skill_bank
@@ -43,6 +45,7 @@ shots:
     advance_events: advance_shot_bank4_1
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
   shot_bank4_2:
     switch: s_bank4_2
@@ -53,6 +56,7 @@ shots:
     advance_events: advance_shot_bank4_2
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
   shot_bank4_3:
     switch: s_bank4_3
@@ -63,6 +67,7 @@ shots:
     advance_events: advance_shot_bank4_3
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
   shot_bank4_4:
     switch: s_bank4_4
@@ -73,6 +78,40 @@ shots:
     advance_events: advance_shot_bank4_4
     enable_events: mode_skill_shot_started
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
+
+  shot_bank3_1:
+    switch: s_bank3_1
+    profile: sp_skill_bank
+    show_tokens:
+      leds: l_bank3_1_arrow
+      color: tt_yellow
+    advance_events: advance_shot_bank3_1
+    enable_events: mode_skill_shot_started
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
+
+  shot_bank3_2:
+    switch: s_bank3_2
+    profile: sp_skill_bank
+    show_tokens:
+      leds: l_bank3_2_arrow
+      color: tt_yellow
+    advance_events: advance_shot_bank3_2
+    enable_events: mode_skill_shot_started
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
+
+  shot_bank3_3:
+    switch: s_bank3_3
+    profile: sp_skill_bank
+    show_tokens:
+      leds: l_bank3_3_arrow
+      color: tt_yellow
+    advance_events: advance_shot_bank3_3
+    enable_events: mode_skill_shot_started
+    disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
 shot_groups:
   # Option A: flipper buttons rotate the flashing state between lanes
@@ -82,13 +121,15 @@ shot_groups:
     rotate_right_events: s_flipper_right_button_active
     enable_events: skill_shot_option_a_ready
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
   # Option B: groups bank4 shots so the group-level flashing_hit event fires
   sg_skill_bank4:
-    shots: shot_bank4_1, shot_bank4_2, shot_bank4_3, shot_bank4_4
+    shots: shot_bank4_1, shot_bank4_2, shot_bank4_3, shot_bank4_4, shot_bank3_1, shot_bank3_2, shot_bank3_3
     rotate_events: timer_tim_target_rotator_tick
     enable_events: skill_shot_option_b_ready
     disable_events: skill_shot_awarded, skill_shot_missed, ball_will_end
+    reset_events: mode_skill_shot_will_stop
 
 shot_profiles:
   sp_skill_shot_profile:
@@ -99,7 +140,7 @@ shot_profiles:
       - name: flashing
         show: sh_led_flash
   sp_skill_bank:
-    rotation_pattern: r, r, r, r, l, l, l, l
+    rotation_pattern: r, r, r, r, r, r, r, l, l, l, l, l, l, l
     states:
     - name: unlit
       show: off
@@ -109,16 +150,16 @@ shot_profiles:
 # =====================================================================
 # Event flow:
 #   mode_skill_shot_started
-#     → shots enabled (above)
-#     → event_player: check flipper state → post skill_shot_option_A/B_start
+#     - shots enabled (above)
+#     - event_player: check flipper state → post skill_shot_option_A/B_start
 #   skill_shot_option_a_start
-#     → random_event_player: advance one lane to flashing
-#     → event_player: enable sg_skill_upper_lanes (posted as option_a_ready)
+#     - random_event_player: advance one lane to flashing
+#     - event_player: enable sg_skill_upper_lanes (posted as option_a_ready)
 #   skill_shot_option_b_start → same pattern
 # =====================================================================
 
 event_player:
-  # Step 1: shots are already enabled. Now branch.
+  # Step 1: shots are already enabled.
   mode_skill_shot_started{device.switches.s_flipper_left_button.state==0}:
     - skill_shot_option_a_start
 
@@ -138,24 +179,12 @@ event_player:
   sg_skill_upper_lanes_flashing_hit:
     - skill_shot_awarded
   sg_skill_upper_lanes_unlit_hit:
-    - skill_shot_awarded
+    - skill_shot_missed
   sg_skill_bank4_flashing_hit:
     - skill_shot_awarded
   sg_skill_bank4_unlit_hit:
     - skill_shot_missed
-  # ================================================================
-  # Miss detection via switch _active events.
-  # Safe for Option A: s_right_orbit only.
-  # Safe for Option B: s_right_orbit, s_left_orbit, s_left_inlane.
-  # ================================================================
-
   # Miss in BOTH options
-  s_bank3_1_active:
-    - skill_shot_missed
-  s_bank3_2_active:
-    - skill_shot_missed
-  s_bank3_3_active:
-    - skill_shot_missed
   s_left_target_active:
     - skill_shot_missed
   s_right_target_active:
@@ -189,9 +218,13 @@ random_event_player:
     force_different: false
     events:
       - advance_shot_bank4_1
-      - advance_shot_bank4_2
-      - advance_shot_bank4_3
-      - advance_shot_bank4_4
+      # Allows to begin randomly
+      # - advance_shot_bank4_2
+      # - advance_shot_bank4_3
+      # - advance_shot_bank4_4
+      # - advance_shot_bank3_1
+      # - advance_shot_bank3_2
+      # - advance_shot_bank3_3
 
 # =====================================================================
 # Timers to rotate
@@ -211,4 +244,6 @@ variable_player:
 
   sg_skill_bank4_flashing_hit:
     score: 200000
-    pv_playfield_multiplier: 1
+    bonus_multiplier:
+      int: 2
+      action: set
