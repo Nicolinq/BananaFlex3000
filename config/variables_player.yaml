@@ -1,8 +1,6 @@
 #config_version=6
 
 player_vars:
-    pv_playfield_multiplier:
-        initial_value: 1
     pv_unbended_bananas_to_complete:
         initial_value: 10
     pv_unbended_bananas_count:
