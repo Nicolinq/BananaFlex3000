@@ -1,0 +1,32 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_banana_control
+  stop_events: stop_mode_banana_control
+  priority: 200
+
+# modes/banana_belt/config/banana_control.yaml
+
+shots:
+  shot_l_control_mode_start:
+    show_tokens:
+        leds: l_control_state
+    profile: sp_banana_control_profile_on
+    hit_events: mode_banana_control_started
+    disable_events: control_bananas_completed, mode_banana_control_will_stop
+
+shot_profiles:
+  sp_banana_control_profile_on:
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: sh_insert_on
+        show_tokens:
+          color: tt_red
+
+
+
+variable_player:
+  control_bananas_completed:
+    score: 100000 * current_player.bonus_multiplier

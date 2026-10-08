@@ -19,6 +19,7 @@ event_player:
       - stop_mode_banana_belt
       - stop_mode_banana_load
       - stop_mode_banana_bend
+      - stop_mode_banana_control
       - stop_mode_spinner
 
 slide_player:
@@ -37,8 +38,6 @@ shots:
     switch: s_right_target, s_left_target
   shot_magnet:
       switches: s_magnet
-
-
 
 shows:
   sh_led_flash:

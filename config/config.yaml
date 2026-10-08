@@ -26,6 +26,7 @@ modes:
 - banana_belt
 - banana_load
 - banana_bend
+- banana_control
 
 ball_devices:
     bd_trough:
