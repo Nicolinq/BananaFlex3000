@@ -12,252 +12,252 @@ shots:
     show_tokens:
       leds: l_belt_b_1
     profile: sp_banana_control_profile
-    advance_events: advance_control_1
+    hit_events: advance_control_1
   shot_l_banana_control_2:
     show_tokens:
       leds: l_belt_b_2
     profile: sp_banana_control_profile
-    advance_events: advance_control_2
+    hit_events: advance_control_2
   shot_l_banana_control_3:
     show_tokens:
       leds: l_belt_b_3
     profile: sp_banana_control_profile
-    advance_events: advance_control_3
+    hit_events: advance_control_3
   shot_l_banana_control_4:
     show_tokens:
       leds: l_belt_b_4
     profile: sp_banana_control_profile
-    advance_events: advance_control_4
+    hit_events: advance_control_4
   shot_l_banana_control_5:
     show_tokens:
       leds: l_belt_b_5
     profile: sp_banana_control_profile
-    advance_events: advance_control_5
+    hit_events: advance_control_5
   shot_l_banana_control_6:
     show_tokens:
       leds: l_belt_b_6
     profile: sp_banana_control_profile
-    advance_events: advance_control_6
+    hit_events: advance_control_6
   shot_l_banana_control_7:
     show_tokens:
       leds: l_belt_b_7
     profile: sp_banana_control_profile
-    advance_events: advance_control_7
+    hit_events: advance_control_7
   shot_l_banana_control_8:
     show_tokens:
       leds: l_belt_b_8
     profile: sp_banana_control_profile
-    advance_events: advance_control_8
+    hit_events: advance_control_8
   shot_l_banana_control_9:
     show_tokens:
       leds: l_belt_b_9
     profile: sp_banana_control_profile
-    advance_events: advance_control_9
+    hit_events: advance_control_9
   shot_l_banana_control_10:
     show_tokens:
       leds: l_belt_b_10
     profile: sp_banana_control_profile
-    advance_events: advance_control_10
+    hit_events: advance_control_10
   shot_l_banana_control_11:
     show_tokens:
       leds: l_belt_b_11
     profile: sp_banana_control_profile
-    advance_events: advance_control_11
+    hit_events: advance_control_11
   shot_l_banana_control_12:
     show_tokens:
       leds: l_belt_b_12
     profile: sp_banana_control_profile
-    advance_events: advance_control_12
+    hit_events: advance_control_12
   shot_l_banana_control_13:
     show_tokens:
       leds: l_belt_b_13
     profile: sp_banana_control_profile
-    advance_events: advance_control_13
+    hit_events: advance_control_13
   shot_l_banana_control_14:
     show_tokens:
       leds: l_belt_b_14
     profile: sp_banana_control_profile
-    advance_events: advance_control_14
+    hit_events: advance_control_14
   shot_l_banana_control_15:
     show_tokens:
       leds: l_belt_b_15
     profile: sp_banana_control_profile
-    advance_events: advance_control_15
+    hit_events: advance_control_15
   shot_l_banana_control_16:
     show_tokens:
       leds: l_belt_b_16
     profile: sp_banana_control_profile
-    advance_events: advance_control_16
+    hit_events: advance_control_16
   shot_l_banana_control_17:
     show_tokens:
       leds: l_belt_b_17
     profile: sp_banana_control_profile
-    advance_events: advance_control_17
+    hit_events: advance_control_17
   shot_l_banana_control_18:
     show_tokens:
       leds: l_belt_b_18
     profile: sp_banana_control_profile
-    advance_events: advance_control_18
+    hit_events: advance_control_18
   shot_l_banana_control_19:
     show_tokens:
       leds: l_belt_b_19
     profile: sp_banana_control_profile
-    advance_events: advance_control_19
+    hit_events: advance_control_19
   shot_l_banana_control_20:
     show_tokens:
       leds: l_belt_b_20
     profile: sp_banana_control_profile
-    advance_events: advance_control_20
+    hit_events: advance_control_20
   shot_l_banana_control_21:
     show_tokens:
       leds: l_belt_b_21
     profile: sp_banana_control_profile
-    advance_events: advance_control_21
+    hit_events: advance_control_21
   shot_l_banana_control_22:
     show_tokens:
       leds: l_belt_b_22
     profile: sp_banana_control_profile   
-    advance_events: advance_control_22
+    hit_events: advance_control_22
   shot_l_banana_control_23:
     show_tokens:
       leds: l_belt_b_23
     profile: sp_banana_control_profile
-    advance_events: advance_control_23   
+    hit_events: advance_control_23   
   shot_l_banana_control_24:
     show_tokens:
       leds: l_belt_b_24
     profile: sp_banana_control_profile
-    advance_events: advance_control_24   
+    hit_events: advance_control_24   
   shot_l_banana_control_25:
     show_tokens:
       leds: l_belt_b_25
     profile: sp_banana_control_profile
-    advance_events: advance_control_25   
+    hit_events: advance_control_25   
   shot_l_banana_control_26:
     show_tokens:
       leds: l_belt_b_26
     profile: sp_banana_control_profile
-    advance_events: advance_control_26   
+    hit_events: advance_control_26   
   shot_l_banana_control_27:
     show_tokens:
       leds: l_belt_b_27
     profile: sp_banana_control_profile
-    advance_events: advance_control_27   
+    hit_events: advance_control_27   
   shot_l_banana_control_28:
     show_tokens:
       leds: l_belt_b_28
     profile: sp_banana_control_profile
-    advance_events: advance_control_28   
+    hit_events: advance_control_28   
   shot_l_banana_control_29:
     show_tokens:
       leds: l_belt_b_29
     profile: sp_banana_control_profile
-    advance_events: advance_control_29   
+    hit_events: advance_control_29   
   shot_l_banana_control_30:
     show_tokens:
       leds: l_belt_b_30
     profile: sp_banana_control_profile
-    advance_events: advance_control_30     
+    hit_events: advance_control_30     
   shot_l_banana_control_31:
     show_tokens:
       leds: l_belt_b_31
     profile: sp_banana_control_profile
-    advance_events: advance_control_31
+    hit_events: advance_control_31
   shot_l_banana_control_32:
     show_tokens:
       leds: l_belt_b_32
     profile: sp_banana_control_profile  
-    advance_events: advance_control_32
+    hit_events: advance_control_32
   shot_l_banana_control_33:
     show_tokens:
       leds: l_belt_b_33
     profile: sp_banana_control_profile
-    advance_events: advance_control_33
+    hit_events: advance_control_33
   shot_l_banana_control_34:
     show_tokens:
       leds: l_belt_b_34
     profile: sp_banana_control_profile  
-    advance_events: advance_control_34
+    hit_events: advance_control_34
   shot_l_banana_control_35:
     show_tokens:
       leds: l_belt_b_35
     profile: sp_banana_control_profile 
-    advance_events: advance_control_35 
+    hit_events: advance_control_35 
   shot_l_banana_control_36:
     show_tokens:
       leds: l_belt_b_36
     profile: sp_banana_control_profile 
-    advance_events: advance_control_36 
+    hit_events: advance_control_36 
   shot_l_banana_control_37:
     show_tokens:
       leds: l_belt_b_37
     profile: sp_banana_control_profile
-    advance_events: advance_control_37  
+    hit_events: advance_control_37  
   shot_l_banana_control_38:
     show_tokens:
       leds: l_belt_b_38
     profile: sp_banana_control_profile
-    advance_events: advance_control_38  
+    hit_events: advance_control_38  
   shot_l_banana_control_39:
     show_tokens:
       leds: l_belt_b_39
     profile: sp_banana_control_profile
-    advance_events: advance_control_39  
+    hit_events: advance_control_39  
   shot_l_banana_control_40:
     show_tokens:
       leds: l_belt_b_40
     profile: sp_banana_control_profile 
-    advance_events: advance_control_40      
+    hit_events: advance_control_40      
   shot_l_banana_control_41:
     show_tokens:
       leds: l_belt_b_41
     profile: sp_banana_control_profile    
-    advance_events: advance_control_41
+    hit_events: advance_control_41
   shot_l_banana_control_42:
     show_tokens:
       leds: l_belt_b_42
     profile: sp_banana_control_profile    
-    advance_events: advance_control_42
+    hit_events: advance_control_42
   shot_l_banana_control_43:
     show_tokens: 
       leds: l_belt_b_43
     profile: sp_banana_control_profile   
-    advance_events: advance_control_43 
+    hit_events: advance_control_43 
   shot_l_banana_control_44:
     show_tokens:
       leds: l_belt_b_44
     profile: sp_banana_control_profile    
-    advance_events: advance_control_44
+    hit_events: advance_control_44
   shot_l_banana_control_45:
     show_tokens:
       leds: l_belt_b_45
     profile: sp_banana_control_profile   
-    advance_events: advance_control_45 
+    hit_events: advance_control_45 
   shot_l_banana_control_46:
     show_tokens:
       leds: l_belt_b_46
     profile: sp_banana_control_profile  
-    advance_events: advance_control_46  
+    hit_events: advance_control_46  
   shot_l_banana_control_47:
     show_tokens:
       leds: l_belt_b_47
     profile: sp_banana_control_profile    
-    advance_events: advance_control_47
+    hit_events: advance_control_47
   shot_l_banana_control_48:
     show_tokens:
       leds: l_belt_b_48
     profile: sp_banana_control_profile
-    advance_events: advance_control_48    
+    hit_events: advance_control_48    
   shot_l_banana_control_49:
     show_tokens:
       leds: l_belt_b_49
     profile: sp_banana_control_profile
-    advance_events: advance_control_49   
+    hit_events: advance_control_49   
   shot_l_banana_control_50:
     show_tokens:
       leds: l_belt_b_50
     profile: sp_banana_control_profile  
-    advance_events: advance_control_50                                                                                                                                                                          
+    hit_events: advance_control_50                                                                                                                                                                          
   shot_l_control_mode_start:
     show_tokens:
         leds: l_control_state
@@ -269,10 +269,15 @@ shots:
     profile: sp_banana_control_rotate_profile
     advance_events: co_change_banana_control_direction_count_complete
     hit_events: spinner_stack_complete
+  shot_control_hyperloop:
+    show_tokens:
+      leds: l_hyperloop_start
+    profile: sp_banana_control_profile_flash
+    hit_events: control_completed
 
 shot_groups:
   sg_banana_control_group:
-    shots: shot_l_banana_control_1,shot_l_banana_control_2,shot_l_unbended_3,
+    shots: shot_l_banana_control_1,shot_l_banana_control_2,shot_l_banana_control_3,
            shot_l_banana_control_4, shot_l_banana_control_5, shot_l_banana_control_6, shot_l_banana_control_7, shot_l_banana_control_8, 
            shot_l_banana_control_9, shot_l_banana_control_10, shot_l_banana_control_11, shot_l_banana_control_12, 
            shot_l_banana_control_13,shot_l_banana_control_14,shot_l_banana_control_15,shot_l_banana_control_16,shot_l_banana_control_17,
@@ -291,7 +296,7 @@ shot_profiles:
   sp_banana_control_profile:
     block: true
     loop: false
-    advance_on_hit: false
+    advance_on_hit: true
     states:
       - name: off
         show: off
@@ -303,6 +308,10 @@ shot_profiles:
         show: sh_hit_flash
         show_tokens:
           color: tt_red
+      - name: control_was_nok
+        show: sh_hit_flash
+        show_tokens:
+          color: tt_green
   sp_banana_control_profile_on:
     states:
       - name: off
@@ -317,6 +326,16 @@ shot_profiles:
       - name: rotate_left
     loop: true
     advance_on_hit: false
+  sp_banana_control_profile_flash:
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: sh_led_flash
+        show_tokens:
+          color: tt_yellow
+    loop: false
+    advance_on_hit: true
 
 
 counters:
@@ -463,6 +482,33 @@ event_player:
 
   mode_banana_control_started: choose_wrong_bananas_1_10, choose_wrong_bananas_11_20, choose_wrong_bananas_21_30, 
                                choose_wrong_bananas_31_40, choose_wrong_bananas_41_50, stop_mode_banana_load, stop_mode_banana_bend
+  
+  # match between switches and targets and validate green only if red
+  s_bank4_1_active{device.shots.shot_l_banana_control_1.state==2}: advance_control_1
+  s_bank4_2_active{device.shots.shot_l_banana_control_2.state==2}: advance_control_2
+  s_bank4_3_active{device.shots.shot_l_banana_control_3.state==2}: advance_control_3
+  s_bank4_4_active{device.shots.shot_l_banana_control_4.state==2}: advance_control_4
+  s_bank3_1_active{device.shots.shot_l_banana_control_12.state==2}: advance_control_12
+  s_bank3_2_active{device.shots.shot_l_banana_control_13.state==2}: advance_control_13
+  s_bank3_3_active{device.shots.shot_l_banana_control_14.state==2}: advance_control_14
+
+  #verify completion
+  sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_1.state!=2 and device.shots.shot_l_banana_control_2.state!=2 and device.shots.shot_l_banana_control_3.state!=2 and device.shots.shot_l_banana_control_4.state!=2 and device.shots.shot_l_banana_control_5.state!=2 and device.shots.shot_l_banana_control_6.state!=2 and device.shots.shot_l_banana_control_7.state!=2 and device.shots.shot_l_banana_control_8.state!=2 and device.shots.shot_l_banana_control_9.state!=2 and device.shots.shot_l_banana_control_10.state!=2}: control_1_10_completed
+  sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_11.state!=2 and device.shots.shot_l_banana_control_12.state!=2 and device.shots.shot_l_banana_control_13.state!=2 and device.shots.shot_l_banana_control_14.state!=2 and device.shots.shot_l_banana_control_15.state!=2 and device.shots.shot_l_banana_control_16.state!=2 and device.shots.shot_l_banana_control_17.state!=2 and device.shots.shot_l_banana_control_18.state!=2 and device.shots.shot_l_banana_control_19.state!=2 and device.shots.shot_l_banana_control_20.state!=2}: control_11_20_completed
+  sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_21.state!=2 and device.shots.shot_l_banana_control_22.state!=2 and device.shots.shot_l_banana_control_23.state!=2 and device.shots.shot_l_banana_control_24.state!=2 and device.shots.shot_l_banana_control_25.state!=2 and device.shots.shot_l_banana_control_26.state!=2 and device.shots.shot_l_banana_control_27.state!=2 and device.shots.shot_l_banana_control_28.state!=2 and device.shots.shot_l_banana_control_29.state!=2 and device.shots.shot_l_banana_control_30.state!=2}: control_21_30_completed
+  sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_31.state!=2 and device.shots.shot_l_banana_control_32.state!=2 and device.shots.shot_l_banana_control_33.state!=2 and device.shots.shot_l_banana_control_34.state!=2 and device.shots.shot_l_banana_control_35.state!=2 and device.shots.shot_l_banana_control_36.state!=2 and device.shots.shot_l_banana_control_37.state!=2 and device.shots.shot_l_banana_control_38.state!=2 and device.shots.shot_l_banana_control_39.state!=2 and device.shots.shot_l_banana_control_40.state!=2}: control_31_40_completed
+  sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_41.state!=2 and device.shots.shot_l_banana_control_42.state!=2 and device.shots.shot_l_banana_control_43.state!=2 and device.shots.shot_l_banana_control_44.state!=2 and device.shots.shot_l_banana_control_45.state!=2 and device.shots.shot_l_banana_control_46.state!=2 and device.shots.shot_l_banana_control_47.state!=2 and device.shots.shot_l_banana_control_48.state!=2 and device.shots.shot_l_banana_control_49.state!=2 and device.shots.shot_l_banana_control_50.state!=2}: control_41_50_completed
+
+
+accruals:
+  acc_verify_all_controls_ok:
+    events:
+      - control_1_10_completed
+      - control_11_20_completed
+      - control_21_30_completed
+      - control_31_40_completed
+      - control_41_50_completed
+    events_when_complete: control_completed
 
 variable_player:
   control_bananas_completed:
