@@ -301,10 +301,12 @@ shot_profiles:
         show_tokens:
           color: tt_red
   sp_banana_control_profile:
-    block: true
+    block: false
     loop: false
     advance_on_hit: false
     states:
+      - name: off
+        show: off
       - name: control_ok
         show: sh_hit_flash
         show_tokens:
