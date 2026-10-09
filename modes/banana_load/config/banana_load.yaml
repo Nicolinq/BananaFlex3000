@@ -2,7 +2,7 @@
 
 mode:
   start_events: start_mode_banana_load
-  stop_events: stop_mode_banana_load,start_mode_banana_bend
+  stop_events: stop_mode_banana_load,start_mode_banana_control
   priority: 200
 
 # modes/banana_load/config/banana_load.yaml
