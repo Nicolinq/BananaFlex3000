@@ -264,6 +264,28 @@ shots:
     profile: sp_banana_control_profile_on
     hit_events: mode_banana_control_started
     disable_events: control_bananas_completed, mode_banana_control_will_stop
+  shot_control_rotate_target:
+    switch: s_bumper_target
+    profile: sp_banana_control_rotate_profile
+    advance_events: co_change_banana_control_direction_count_complete
+    hit_events: spinner_stack_complete
+
+shot_groups:
+  sg_banana_control_group:
+    shots: shot_l_banana_control_1,shot_l_banana_control_2,shot_l_unbended_3,
+           shot_l_banana_control_4, shot_l_banana_control_5, shot_l_banana_control_6, shot_l_banana_control_7, shot_l_banana_control_8, 
+           shot_l_banana_control_9, shot_l_banana_control_10, shot_l_banana_control_11, shot_l_banana_control_12, 
+           shot_l_banana_control_13,shot_l_banana_control_14,shot_l_banana_control_15,shot_l_banana_control_16,shot_l_banana_control_17,
+           shot_l_banana_control_18,shot_l_banana_control_19,shot_l_banana_control_20,shot_l_banana_control_21,shot_l_banana_control_22,
+           shot_l_banana_control_23,shot_l_banana_control_24,shot_l_banana_control_25,shot_l_banana_control_26,shot_l_banana_control_27,
+           shot_l_banana_control_28,shot_l_banana_control_29,shot_l_banana_control_30,shot_l_banana_control_31,shot_l_banana_control_32,
+           shot_l_banana_control_33,shot_l_banana_control_34,shot_l_banana_control_35,shot_l_banana_control_36,shot_l_banana_control_37,
+           shot_l_banana_control_38,shot_l_banana_control_39,shot_l_banana_control_40,shot_l_banana_control_41,shot_l_banana_control_42,
+           shot_l_banana_control_43,shot_l_banana_control_44,shot_l_banana_control_45,shot_l_banana_control_46,shot_l_banana_control_47,
+           shot_l_banana_control_48,shot_l_banana_control_49,shot_l_banana_control_50
+    rotate_right_events: shot_control_rotate_target_rotate_right_hit
+    rotate_left_events: shot_control_rotate_target_rotate_left_hit
+    reset_events: reset_banana_belt
 
 shot_profiles:
   sp_banana_control_profile:
@@ -289,8 +311,26 @@ shot_profiles:
         show: sh_insert_on
         show_tokens:
           color: tt_red
+  sp_banana_control_rotate_profile:
+    states:
+      - name: rotate_right
+      - name: rotate_left
+    loop: true
+    advance_on_hit: false
 
 
+counters:
+  co_change_banana_control_direction: 
+    count_events: shot_rotate_target_hit
+    starting_count: 0
+    # Permet d'inverser le sens de rotation si nécessaire. Valeur à 10000 pour désactiver
+    count_complete_value: 10000
+    count_interval: 1
+    direction: up
+    events_when_complete: co_change_banana_control_direction_count_complete
+    reset_on_complete: true
+    disable_on_complete: false
+    persist_state: true
 
 # when bending : 1 on 10 will not pass control
 random_event_player:
@@ -421,7 +461,8 @@ event_player:
   mode_banana_control_started{device.shots.shot_l_unbended_49.state==1}: advance_control_49
   mode_banana_control_started{device.shots.shot_l_unbended_50.state==1}: advance_control_50
 
-  mode_banana_control_started: choose_wrong_bananas_1_10, choose_wrong_bananas_11_20, choose_wrong_bananas_21_30, choose_wrong_bananas_31_40, choose_wrong_bananas_41_50
+  mode_banana_control_started: choose_wrong_bananas_1_10, choose_wrong_bananas_11_20, choose_wrong_bananas_21_30, 
+                               choose_wrong_bananas_31_40, choose_wrong_bananas_41_50, stop_mode_banana_load, stop_mode_banana_bend
 
 variable_player:
   control_bananas_completed:

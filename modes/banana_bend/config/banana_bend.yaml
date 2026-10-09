@@ -2,10 +2,10 @@
 
 mode:
   start_events: start_mode_banana_bend
-  stop_events: stop_mode_banana_bend, start_mode_banana_control
+  stop_events: stop_mode_banana_bend
   priority: 200
 
-# modes/banana_belt/config/banana_bend.yaml
+# modes/banana_bend/config/banana_bend.yaml
 
 shots:
   shot_l_bend_start:
