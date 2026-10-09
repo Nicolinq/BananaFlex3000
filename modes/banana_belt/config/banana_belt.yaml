@@ -248,6 +248,7 @@ shot_profiles:
         show: sh_hit_flash
         show_tokens:
           color: tt_yellow
+    loop: false
   sp_rotate_profile:
     states:
       - name: rotate_right
