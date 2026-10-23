@@ -15,10 +15,11 @@ timers:
     tick_interval: 1s
     control_events:
       - event: shot_ramp_begin_hit
-        action: start
+        action: restart
       - event: shot_ramp_end_hit
         action: stop
     start_running: false
+
 
 variable_player:
   ramp_shot_done:

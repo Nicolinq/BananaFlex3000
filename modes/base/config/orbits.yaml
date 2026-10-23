@@ -17,7 +17,7 @@ timers:
     tick_interval: 1s
     control_events:
       - event: shot_orbit_left_hit
-        action: start
+        action: restart
       - event: orbit_left_to_right_done
         action: stop
       - event: orbit_right_to_left_done
@@ -31,7 +31,7 @@ timers:
     tick_interval: 1s
     control_events:
       - event: shot_orbit_right_hit
-        action: start
+        action: restart
       - event: orbit_left_to_right_done
         action: stop
       - event: orbit_right_to_left_done

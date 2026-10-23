@@ -286,8 +286,8 @@ shot_groups:
            shot_l_unbended_38,shot_l_unbended_39,shot_l_unbended_40,shot_l_unbended_41,shot_l_unbended_42,
            shot_l_unbended_43,shot_l_unbended_44,shot_l_unbended_45,shot_l_unbended_46,shot_l_unbended_47,
            shot_l_unbended_48,shot_l_unbended_49,shot_l_unbended_50
-    rotate_right_events: shot_load_rotate_target_rotate_right_hit, shot_random_rotate_target_rotate_right_hit,tim_rotate_multiple_times_right_tick
-    rotate_left_events: shot_load_rotate_target_rotate_left_hit, shot_random_rotate_target_rotate_left_hit,tim_rotate_multiple_times_left_tick
+    rotate_right_events: shot_load_rotate_target_rotate_right_hit, shot_random_rotate_target_rotate_right_hit,timer_tim_rotate_multiple_times_right_tick
+    rotate_left_events: shot_load_rotate_target_rotate_left_hit, shot_random_rotate_target_rotate_left_hit,timer_tim_rotate_multiple_times_left_tick
     reset_events: reset_banana_belt
 
 shot_profiles:
@@ -361,7 +361,7 @@ timers:
     tick_interval: 500ms
     control_events:
       - event: orbit_right_to_left_done
-        action: start
+        action: restart
     start_running: false
   
   tim_rotate_multiple_times_right:
@@ -371,9 +371,9 @@ timers:
     tick_interval: 500ms
     control_events:
       - event: orbit_left_to_right_done
-        action: start
+        action: restart
       - event: ramp_shot_done
-        action: start
+        action: restart
     start_running: false
 
 random_event_player:
