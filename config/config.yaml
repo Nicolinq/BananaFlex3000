@@ -20,6 +20,7 @@ player_vars:
 modes:
 - attract
 - base
+- bonus
 - bumper
 - skill_shot
 - spinner
