@@ -81,12 +81,16 @@ switches:
       number: 1-0-85
    s_setup_button:
       number: 1-0-92
+      tags: service_esc
    s_plus_button:
       number: 1-0-94
+      tags: service_up
    s_minus_button:
       number: 1-0-93
+      tags: service_down
    s_enter_button:
       number: 1-0-95
+      tags: service_enter
    s_tilt:
       number: 1-0-86
       tags: tilt_warning

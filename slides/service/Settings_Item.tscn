@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca5u3gjdihkyq"]
+
+[ext_resource type="Script" uid="uid://btcnbaglgl1bu" path="res://slides/service/Settings_Item.gd" id="1_5kkmg"]
+[ext_resource type="PackedScene" uid="uid://datxchj3ma24x" path="res://slides/service/List_Button.tscn" id="2_n8ak1"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(500, 2.08165e-12)
+size_flags_horizontal = 2
+focus_mode = 2
+script = ExtResource("1_5kkmg")
+
+[node name="Setting" parent="." instance=ExtResource("2_n8ak1")]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Option" type="Button" parent="."]
+layout_mode = 2
+alignment = 2

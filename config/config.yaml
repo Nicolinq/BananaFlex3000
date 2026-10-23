@@ -27,6 +27,7 @@ modes:
 - banana_load
 - banana_bend
 - banana_control
+- service
 
 ball_devices:
     bd_trough:
