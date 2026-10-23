@@ -10,22 +10,22 @@ mode:
 shots:
   shot_l_unbended_1:
     show_tokens:
-      leds: l_belt_b_1
+      leds: l_belt_b_1, l_bank4_1_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_1
   shot_l_unbended_2:
     show_tokens:
-      leds: l_belt_b_2
+      leds: l_belt_b_2, l_bank4_2_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_2
   shot_l_unbended_3:
     show_tokens:
-      leds: l_belt_b_3
+      leds: l_belt_b_3, l_bank4_3_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_3
   shot_l_unbended_4:
     show_tokens:
-      leds: l_belt_b_4
+      leds: l_belt_b_4, l_bank4_4_arrow
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_4
   shot_l_unbended_5:
@@ -65,17 +65,17 @@ shots:
     hit_events: advance_load_11
   shot_l_unbended_12:
     show_tokens:
-      leds: l_belt_b_12
+      leds: l_belt_b_12, l_bank3_1_arrow
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_12
   shot_l_unbended_13:
     show_tokens:
-      leds: l_belt_b_13
+      leds: l_belt_b_13, l_bank3_2_arrow
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_13
   shot_l_unbended_14:
     show_tokens:
-      leds: l_belt_b_14
+      leds: l_belt_b_14, l_bank3_3_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_14
   shot_l_unbended_15:
@@ -263,6 +263,10 @@ shots:
     profile: sp_load_rotate_profile
     advance_events: co_change_banana_belt_direction_count_complete
     hit_events: spinner_stack_complete
+  shot_random_rotate_target:
+    switch: s_bumper
+    profile: sp_load_rotate_profile
+    advance_events: advance_banana_belt
   shot_l_load_start:
     show_tokens:
       leds: l_load_state
@@ -282,8 +286,8 @@ shot_groups:
            shot_l_unbended_38,shot_l_unbended_39,shot_l_unbended_40,shot_l_unbended_41,shot_l_unbended_42,
            shot_l_unbended_43,shot_l_unbended_44,shot_l_unbended_45,shot_l_unbended_46,shot_l_unbended_47,
            shot_l_unbended_48,shot_l_unbended_49,shot_l_unbended_50
-    rotate_right_events: shot_load_rotate_target_rotate_right_hit
-    rotate_left_events: shot_load_rotate_target_rotate_left_hit
+    rotate_right_events: shot_load_rotate_target_rotate_right_hit, shot_random_rotate_target_rotate_right_hit
+    rotate_left_events: shot_load_rotate_target_rotate_left_hit, shot_random_rotate_target_rotate_left_hit
     reset_events: reset_banana_belt
 
 shot_profiles:
@@ -314,6 +318,17 @@ shot_profiles:
 
 
 counters:
+  co_change_random_banana_belt_direction: 
+    count_events: shot_random_rotate_target_hit
+    starting_count: 0
+    # Permet d'inverser le sens de rotation de manière random
+    count_complete_value: 1
+    count_interval: 1
+    direction: up
+    events_when_complete: choose_random_value
+    reset_on_complete: true
+    disable_on_complete: false
+    persist_state: true
   co_change_banana_belt_direction: 
     count_events: shot_load_rotate_target_hit
     starting_count: 0
@@ -337,6 +352,14 @@ counters:
     persist_state: true
     reset_events: reset_banana_belt
 
+random_event_player:
+  # random inversion on bumper
+  choose_random_value:
+    force_all: false
+    force_different: false
+    events:
+      - advance_banana_belt
+      - do_not_advance_banana_belt
 
 event_player:
   mode_banana_load_started{device.counters.co_banana_load_count.value>=current_player.pv_unbended_bananas_to_complete}: start_mode_banana_bend

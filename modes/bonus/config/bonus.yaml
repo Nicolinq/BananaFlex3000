@@ -4,16 +4,6 @@ mode:
   priority: 500
   # use_wait_queue: true
 
-
-# mode_settings:
-#   display_delay_ms: 1000ms
-#   hurry_up_delay_ms: 200ms
-#   rounding_value: 100
-#   rounding_direction: up
-#   bonus_entries:
-#     - event: bonus_reputation
-#       score: machine.base_points // 1000 * (current_player.reputation + current_player.paragon + current_player.renegade)
-
 mode_settings:
   display_delay_ms: 1000ms
   hurry_up_delay_ms: 200ms
