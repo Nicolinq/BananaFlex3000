@@ -2,6 +2,7 @@
 
 config:
 - upper_lanes.yaml
+- orbits.yaml
 
 mode:
   start_events: ball_started
@@ -30,8 +31,6 @@ shots:
     switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4
   shot_right_bank:
     switch: s_bank3_1, s_bank3_2, s_bank3_3
-  shot_orbits:
-    switch: s_left_orbit, s_right_orbit
   shot_bottom_targets:
     switch: s_right_target, s_left_target
   shot_magnet:
@@ -76,9 +75,6 @@ variable_player:
     base_bonus: 1_000
   shot_right_bank_hit:
     score: 2000 * current_player.bonus_multiplier
-    base_bonus: 1_000
-  shot_orbits_hit:
-    score: 1500 * current_player.bonus_multiplier
     base_bonus: 1_000
   shot_mini_targets_hit:
     score: 1500 * current_player.bonus_multiplier

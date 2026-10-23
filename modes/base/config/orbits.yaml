@@ -1,0 +1,56 @@
+#config_version=6
+
+# manages right or left orbits long shots
+shots:
+  shot_orbit_left:
+    switch: s_left_orbit
+  shot_orbit_right:
+    switch: s_right_orbit
+  shot_orbits:
+    switch: s_left_orbit, s_right_orbit
+
+timers:
+  tim_left_to_right_orbit:
+    start_value: 0
+    end_value: 5
+    direction: up
+    tick_interval: 1s
+    control_events:
+      - event: shot_orbit_left_hit
+        action: start
+      - event: orbit_left_to_right_done
+        action: stop
+      - event: orbit_right_to_left_done
+        action: stop
+    start_running: false
+
+  tim_right_to_left_orbit:
+    start_value: 0
+    end_value: 5
+    direction: up
+    tick_interval: 1s
+    control_events:
+      - event: shot_orbit_right_hit
+        action: start
+      - event: orbit_left_to_right_done
+        action: stop
+      - event: orbit_right_to_left_done
+        action: stop
+    start_running: false
+
+variable_player:
+  shot_orbits_hit:
+    score: 1500 * current_player.bonus_multiplier
+  orbit_right_to_left_done:
+    score: 5000 * current_player.bonus_multiplier
+    base_bonus: 1_000
+  orbit_left_to_right_done:
+    score: 5000 * current_player.bonus_multiplier
+    base_bonus: 1_000
+
+event_player:
+  shot_orbit_left_hit{device.timers.tim_right_to_left_orbit.running==True}:
+    orbit_right_to_left_done
+  shot_orbit_right_hit{device.timers.tim_left_to_right_orbit.running==True}:
+    orbit_left_to_right_done
+

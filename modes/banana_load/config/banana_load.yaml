@@ -262,7 +262,7 @@ shots:
     switch: s_bumper_target
     profile: sp_load_rotate_profile
     advance_events: co_change_banana_belt_direction_count_complete
-    hit_events: spinner_stack_complete
+    hit_events: spinner_stack_complete, 
   shot_random_rotate_target:
     switch: s_bumper
     profile: sp_load_rotate_profile

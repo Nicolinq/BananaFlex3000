@@ -233,6 +233,9 @@ timers:
   tim_target_rotator:
     start_running: true
     tick_interval: 1s
+    control_events:
+      - event: mode_skill_shot_will_stop
+        action: stop
 
 # =====================================================================
 # Scoring
