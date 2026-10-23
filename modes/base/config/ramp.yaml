@@ -1,0 +1,30 @@
+#config_version=6
+
+# manages right or left orbits long shots
+shots:
+  shot_ramp_begin:
+    switch: s_ramp_begin
+  shot_ramp_end:
+    switch: s_ramp_end
+
+timers:
+  tim_ramp_done:
+    start_value: 0
+    end_value: 10
+    direction: up
+    tick_interval: 1s
+    control_events:
+      - event: shot_ramp_begin_hit
+        action: start
+      - event: shot_ramp_end_hit
+        action: stop
+    start_running: false
+
+variable_player:
+  ramp_shot_done:
+    score: 5000 * current_player.bonus_multiplier
+    base_bonus: 1_000
+
+event_player:
+  shot_ramp_end_hit{device.timers.tim_ramp_done.running==True}:
+    ramp_shot_done

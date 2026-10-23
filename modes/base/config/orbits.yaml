@@ -53,4 +53,3 @@ event_player:
     orbit_right_to_left_done
   shot_orbit_right_hit{device.timers.tim_left_to_right_orbit.running==True}:
     orbit_left_to_right_done
-
