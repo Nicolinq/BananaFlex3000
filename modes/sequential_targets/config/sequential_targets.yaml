@@ -9,7 +9,7 @@ mode:
 shots:
   shot_bank4_1:
     advance_events: advance_shot_1, shot_bank4_1_lit_hit
-    reset_events: reset_shot_sequence
+    reset_events: reset_shot_sequence, disable_shot_sequence
     switch: s_bank4_1
     profile: shot_sequence
     show_tokens:
@@ -17,7 +17,7 @@ shots:
       color: tt_yellow
   shot_bank4_2:
     advance_events: shot_bank4_1_lit_hit, shot_bank4_2_lit_hit
-    reset_events: reset_shot_sequence
+    reset_events: reset_shot_sequence, disable_shot_sequence
     switch: s_bank4_2
     profile: shot_sequence
     show_tokens:
@@ -25,7 +25,7 @@ shots:
       color: tt_yellow
   shot_bank4_3:
     advance_events: shot_bank4_2_lit_hit, shot_bank4_3_lit_hit
-    reset_events: reset_shot_sequence
+    reset_events: reset_shot_sequence, disable_shot_sequence
     switch: s_bank4_3
     profile: shot_sequence
     show_tokens:
@@ -33,7 +33,7 @@ shots:
       color: tt_yellow
   shot_bank4_4:
     advance_events: shot_bank4_3_lit_hit, shot_bank4_4_lit_hit
-    reset_events: reset_shot_sequence
+    reset_events: reset_shot_sequence, disable_shot_sequence
     switch: s_bank4_4
     profile: shot_sequence
     show_tokens:
@@ -54,6 +54,8 @@ shot_profiles:
 sequences:
   shot_sequence:
     restart_events: reset_shot_sequence
+    enable_events: enable_shot_sequence
+    disable_events: disable_shot_sequence
     events:
       - shot_bank4_1_lit_hit
       - shot_bank4_2_lit_hit
@@ -62,7 +64,7 @@ sequences:
 
 event_player:
   # When the mode starts, reset the shot sequence
-  mode_sequential_targets_started: reset_shot_sequence
+  mode_sequential_targets_started: enable_shot_sequence,reset_shot_sequence
 
   # When the sequence is completed, reset the shot sequence and post event 
   logicblock_shot_sequence_complete: sequential_targets_done

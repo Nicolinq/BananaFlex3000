@@ -30,13 +30,20 @@ multiball_locks:
     disable_events: multiball_lock_classic_mb_lock_locked_ball, ball_will_end
 
 event_player:
-  # 3rd ball locked → lock is full → start multiball
+  # 3rd ball locked → lock is full -> start multiball
   multiball_lock_classic_mb_lock_full:
+    - disable_shot_sequence
     - start_classic_multiball
+
+  # after loss => restart shot_sequence
+  multiball_lock_classic_mb_lock_ended:
+    - reset_shot_sequence
+    - enable_shot_sequence
 
   # After each ball is locked, reset the sequential shot sequence
   multiball_lock_classic_mb_lock_locked_ball:
     - reset_shot_sequence
+    - enable_shot_sequence
   
   # open diverters
   sequential_targets_done:
