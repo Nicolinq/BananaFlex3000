@@ -28,6 +28,7 @@ modes:
 - banana_bend
 - banana_control
 - sequential_targets
+- classic_multiball
 - service
 
 ball_devices:

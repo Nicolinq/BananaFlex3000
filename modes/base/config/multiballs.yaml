@@ -1,0 +1,15 @@
+#config_version=6
+
+multiballs:
+  classic_multiball:
+    ball_count: 3
+    ball_count_type: add
+    shoot_again: current_player.ball_save_multi_timer_value
+    hurry_up_time: 2s
+    grace_period: 2s
+    start_events: start_classic_multiball
+    add_a_ball_events: mb_add_a_ball_event
+    add_a_ball_shoot_again: current_player.ball_save_multi_timer_value
+    add_a_ball_hurry_up_time: 5s
+    add_a_ball_grace_period: 3s
+    ball_locks: bd_lock

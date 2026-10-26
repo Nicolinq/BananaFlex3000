@@ -1,0 +1,70 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_classic_multiball
+  stop_events: ball_will_end
+  priority: 250
+
+# =====================================================================
+# CLASSIC MULTIBALL — lock 3 balls to start
+#
+# Flow:
+#   sequential_targets_done
+#     - multiball_lock enabled for ONE ball
+#     - l_lock_start flashes orange
+#   Ball enters bd_lock → multiball_lock_classic_mb_lock_locked_ball fires
+#     - sequential targets reset (player must do the sequence again)
+#     - l_lock_start lights red (steady) to show one ball is locked
+#   When 3rd ball locked → multiball_lock_classic_mb_lock_full fires
+#     - start_classic_multiball -> multiball device kicks off the MB
+# =====================================================================
+
+multiball_locks:
+  classic_mb_lock:
+    lock_devices: bd_lock
+    balls_to_lock: 3
+    # Enabled one at a time, after each sequential_targets completion.
+    # Disables itself as soon as one ball is accepted, so the player
+    # must re-complete the sequence to enable the next lock slot.
+    enable_events: sequential_targets_done
+    disable_events: multiball_lock_classic_mb_lock_locked_ball, ball_will_end
+
+event_player:
+  # 3rd ball locked → lock is full → start multiball
+  multiball_lock_classic_mb_lock_full:
+    - start_classic_multiball
+
+  # After each ball is locked, reset the sequential shot sequence
+  multiball_lock_classic_mb_lock_locked_ball:
+    - reset_shot_sequence
+  
+  # open diverters
+  sequential_targets_done:
+    - enable_lock_diverter
+    - enable_top_left_gate_diverter
+
+# =====================================================================
+# Light: flash l_lock_start while lock is available;
+#        light steady red once a ball is locked.
+# =====================================================================
+
+show_player:
+  # Lock available → flash orange
+  sequential_targets_done:
+    sh_led_flash:
+      action: play
+      loops: -1
+      show_tokens:
+        leds: l_lock_start
+        color: tt_orange
+
+  # Ball locked → stop flash, light red steady
+  multiball_lock_classic_mb_lock_locked_ball:
+    sh_led_flash:
+      action: stop
+
+  # Mode stopping → clear the light
+  mode_classic_multiball_will_stop:
+    sh_led_flash:
+      action: stop
+

@@ -4,6 +4,7 @@ config:
 - upper_lanes.yaml
 - orbits.yaml
 - ramp.yaml
+- multiballs.yaml
 
 mode:
   start_events: ball_started
@@ -23,8 +24,10 @@ event_player:
       - stop_mode_banana_control
       - stop_mode_spinner
       - stop_mode_sequential_targets
+      - stop_mode_classic_multiball
    mode_skill_shot_will_stop:
       - start_mode_sequential_targets
+      - start_mode_classic_multiball
 
 slide_player:
    mode_base_started: base_slide

@@ -65,16 +65,17 @@ coils:
         number: 1-0-9
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
-    c_wall_up_down:
-        label: "MUR 3 CIBLES"
-        number: 1-0-11
-        default_pulse_ms: 25
-        default_hold_power: 0.2   # keep this low 
     c_red_monkey:
         label: "CIBLE SINGE ROUGE"
         number: 1-0-8
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
+    c_wall_up_down:
+        label: "MUR 3 CIBLES"
+        number: 1-0-11
+        default_pulse_ms: 25
+        default_hold_power: 0.2   # keep this low 
+
 
 
 switches:
@@ -231,6 +232,23 @@ diverters:
     enable_events: ball_started, enable_left_diverter
     disable_events: ball_ended, disable_left_diverter
     targets_when_active: playfield
+
+# digital_outputs:
+#   c_motorized_drop_target_bank_run:
+#     number: 1-0-11
+#     type: driver
+#     label: "MUR 3 CIBLES"
+    
+# motors:
+#   motorized_drop_target_bank:
+#     motor_left_output: c_motorized_drop_target_bank_run
+#     position_switches: !!omap
+#       - up: s_motorized_drop_target_bank_position_up
+#       - down: s_motorized_drop_target_bank_position_down
+#     reset_position: down
+#     go_to_position:
+#       move_bank_up: up
+#       move_bank_down: down
 
 lights:
     l_belt_b_1:
