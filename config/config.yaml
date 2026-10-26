@@ -27,6 +27,7 @@ modes:
 - banana_load
 - banana_bend
 - banana_control
+- sequential_targets
 - service
 
 ball_devices:

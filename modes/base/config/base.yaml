@@ -21,6 +21,9 @@ event_player:
       - stop_mode_banana_bend
       - stop_mode_banana_control
       - stop_mode_spinner
+      - stop_mode_sequential_targets
+   mode_skill_shot_will_stop:
+      - start_mode_sequential_targets
 
 slide_player:
    mode_base_started: base_slide

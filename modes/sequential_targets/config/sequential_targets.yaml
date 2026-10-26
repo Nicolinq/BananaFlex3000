@@ -1,0 +1,78 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_sequential_targets
+  stop_events: stop_mode_sequential_targets
+  priority: 300
+
+
+shots:
+  shot_bank4_1:
+    advance_events: advance_shot_1, shot_bank4_1_lit_hit
+    reset_events: reset_shot_sequence
+    switch: s_bank4_1
+    profile: shot_sequence
+    show_tokens:
+      leds: l_bank4_1_round
+      color: tt_yellow
+  shot_bank4_2:
+    advance_events: shot_bank4_1_lit_hit, shot_bank4_2_lit_hit
+    reset_events: reset_shot_sequence
+    switch: s_bank4_2
+    profile: shot_sequence
+    show_tokens:
+      leds: l_bank4_2_round
+      color: tt_yellow
+  shot_bank4_3:
+    advance_events: shot_bank4_2_lit_hit, shot_bank4_3_lit_hit
+    reset_events: reset_shot_sequence
+    switch: s_bank4_3
+    profile: shot_sequence
+    show_tokens:
+      leds: l_bank4_3_round
+      color: tt_yellow
+  shot_bank4_4:
+    advance_events: shot_bank4_3_lit_hit, shot_bank4_4_lit_hit
+    reset_events: reset_shot_sequence
+    switch: s_bank4_4
+    profile: shot_sequence
+    show_tokens:
+      leds: l_bank4_4_round
+      color: tt_yellow
+
+shot_profiles:
+  shot_sequence:
+    advance_on_hit: false
+    states:
+      - name: off
+        show: off
+      - name: lit
+        show: sh_led_flash
+      - name: done
+        show: on
+
+sequences:
+  shot_sequence:
+    restart_events: reset_shot_sequence
+    events:
+      - shot_bank4_1_lit_hit
+      - shot_bank4_2_lit_hit
+      - shot_bank4_3_lit_hit
+      - shot_bank4_4_lit_hit
+
+event_player:
+  # When the mode starts, reset the shot sequence
+  mode_sequential_targets_started: reset_shot_sequence
+
+  # When the sequence is completed, reset the shot sequence and post event 
+  logicblock_shot_sequence_complete: sequential_targets_done
+
+  # When the sequence resets, advance the first target
+  reset_shot_sequence: advance_shot_1
+
+
+variable_player:
+  logicblock_shot_sequence_hit:
+    score: 1_000
+  logicblock_shot_sequence_complete:
+    score: 50_000
