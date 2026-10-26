@@ -53,3 +53,8 @@ event_player:
     orbit_right_to_left_done
   shot_orbit_right_hit{device.timers.tim_left_to_right_orbit.running==True}:
     orbit_left_to_right_done
+  #activate gates following flippers
+  s_flipper_left_button_active{device.timers.tim_right_to_left_orbit.running==True}:
+    enable_top_left_gate_diverter
+  s_flipper_right_button_active{device.timers.tim_left_to_right_orbit.running==True}:
+    enable_top_right_gate_diverter
