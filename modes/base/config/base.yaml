@@ -15,6 +15,7 @@ event_player:
       - start_mode_bumper
       - start_mode_banana_load
       - start_mode_spinner
+      - start_mode_skill_shot
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_banana_load
@@ -41,6 +42,8 @@ shots:
       switches: s_magnet
   shot_top_lanes:
     switch: s_upper_left_lane, s_upper_right_lane
+  shot_launch_button:
+    switch: s_launch_button
 
 shows:
   sh_led_flash:
