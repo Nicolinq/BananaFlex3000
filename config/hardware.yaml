@@ -551,176 +551,178 @@ lights:
         subtype: led
         tags: banana_belt
         label: "l_belt_b_50"
+
+#Inserts on second neopixels
     l_arrow_top_right:
-        previous: l_belt_b_50 #number: 0-0-49
+        number: 1-0-0
         type: grb
         subtype: led
         tags: inserts,right_column_inserts
         label: "l_arrow_top_right"
     l_jackpot_top_right:
-        previous: l_arrow_top_right #number: 0-0-50
+        previous: l_arrow_top_right #number: 1-0-1
         type: grb
         subtype: led
         tags: inserts,right_column_inserts
         label: "l_jackpot_top_right"
     l_lock_start:
-        previous: l_jackpot_top_right #number: 0-0-51
+        previous: l_jackpot_top_right #number: 1-0-2
         type: grb
         subtype: led
         tags: inserts,right_column_inserts
         label: "l_lock_start"
     l_mission_start:
-        previous: l_lock_start #number: 0-0-52
+        previous: l_lock_start #number: 1-0-3
         type: grb
         subtype: led
         tags: inserts,right_column_inserts
         label: "l_mission_start"
     l_bend_bananas_start:
-        previous: l_mission_start #number: 0-0-53
+        previous: l_mission_start #number: 1-0-4
         type: grb
         subtype: led
         tags: inserts,right_column_inserts     
         label: "l_bend_bananas_start"
     l_hyperloop_start:
-        previous: l_bend_bananas_start #number: 0-0-54
+        previous: l_bend_bananas_start #number: 1-0-5
         type: grb
         subtype: led
         tags: inserts,right_column_inserts  
         label: "l_hyperloop_start"
     l_bend_state:
-        previous: l_hyperloop_start #number: 0-0-55
+        previous: l_hyperloop_start #number: 1-0-6
         type: grb
         subtype: led
         tags: inserts,states_inserts
         label: "l_bend_state"
     l_load_state:
-        previous: l_bend_state #number: 0-0-56
+        previous: l_bend_state #number: 1-0-7
         type: grb
         subtype: led
         tags: inserts,states_inserts
         label: "l_load_state"
     l_control_state:
-        previous: l_load_state #number: 0-0-57
+        previous: l_load_state #number: 1-0-8
         type: grb
         subtype: led
         tags: inserts,states_inserts
         label: "l_control_state"
     l_spinner_square_top_1:
-        previous: l_control_state #number: 0-0-58
+        previous: l_control_state #number: 1-0-9
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
         label: "l_spinner_square_top_1"
     l_spinner_square_top_2:
-        previous: l_spinner_square_top_1 #number: 0-0-59
+        previous: l_spinner_square_top_1 #number: 1-0-10
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
         label: "l_spinner_square_top_2"
     l_spinner_square_top_3:
-        previous: l_spinner_square_top_2 #number: 0-0-60
+        previous: l_spinner_square_top_2 #number: 1-0-11
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
         label: "l_spinner_square_top_3"
     l_spinner_arrow:
-        previous: l_spinner_square_top_3 #number: 0-0-61
+        previous: l_spinner_square_top_3 #number: 1-0-12
         type: grb
         subtype: led
         tags: inserts,spinner_inserts
         label: "l_spinner_arrow"
     l_bank4_1_round:
-        previous: l_spinner_arrow #number: 0-0-62
+        previous: l_spinner_arrow #number: 1-0-13
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_1_round"
     l_bank4_2_round:
-        previous: l_bank4_1_round #number: 0-0-63
+        previous: l_bank4_1_round #number: 1-0-14
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_2_round"
     l_bank4_3_round:
-        previous: l_bank4_2_round #number: 0-0-64
+        previous: l_bank4_2_round #number: 1-0-15
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_3_round"
     l_bank4_4_round:
-        previous: l_bank4_3_round #number: 0-0-65
+        previous: l_bank4_3_round #number: 1-0-16
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_4_round"
     l_bank4_1_arrow:
-        previous: l_bank4_4_round #number: 0-0-66
+        previous: l_bank4_4_round #number: 1-0-17
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_1_arrow"
     l_bank4_2_arrow:
-        previous: l_bank4_1_arrow #number: 0-0-67
+        previous: l_bank4_1_arrow #number: 1-0-18
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_2_arrow"
     l_bank4_3_arrow:
-        previous: l_bank4_2_arrow #number: 0-0-68
+        previous: l_bank4_2_arrow #number: 1-0-19
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_3_arrow"
     l_bank4_4_arrow:
-        previous: l_bank4_3_arrow #number: 0-0-69
+        previous: l_bank4_3_arrow #number: 1-0-20
         type: grb
         subtype: led
         tags: inserts,bank4_inserts
         label: "l_bank4_4_arrow"
     l_bank3_1_round:
-        previous: l_bank4_4_arrow #number: 0-0-70
+        previous: l_bank4_4_arrow #number: 1-0-21
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_1_round"
     l_bank3_2_round:
-        previous: l_bank3_1_round #number: 0-0-71
+        previous: l_bank3_1_round #number: 1-0-22
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_2_round"
     l_bank3_3_round:
-        previous: l_bank3_2_round #number: 0-0-72
+        previous: l_bank3_2_round #number: 1-0-23
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_3_round"
     l_bank3_1_arrow:
-        previous: l_bank3_3_round #number: 0-0-73
+        previous: l_bank3_3_round #number: 1-0-24
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_1_arrow"
     l_bank3_2_arrow:
-        previous: l_bank3_1_arrow #number: 0-0-74
+        previous: l_bank3_1_arrow #number: 1-0-25
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_2_arrow"
     l_bank3_3_arrow:
-        previous: l_bank3_2_arrow #number: 0-0-75
+        previous: l_bank3_2_arrow #number: 1-0-26
         type: grb
         subtype: led
         tags: inserts,bank3_inserts
         label: "l_bank3_3_arrow"
     l_upper_left_lane:
-        previous: l_bank3_3_arrow #number: 0-0-76
+        previous: l_bank3_3_arrow #number: 1-0-27
         type: grb
         subtype: led
         tags: inserts,upper_lanes_inserts
         label: "l_upper_left_lane"
     l_upper_right_lane:
-        previous: l_upper_left_lane #number: 0-0-77
+        previous: l_upper_left_lane #number: 1-0-28
         type: grb
         subtype: led
         tags: inserts,upper_lanes_inserts
