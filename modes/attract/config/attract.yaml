@@ -18,6 +18,10 @@ sound_player:
     vishiv-the-banana-song-346071:
       bus:  music
 
+show_player:
+  mode_attract_started:
+    attract_display_loop:
+      speed: 50
 
 timers:
   tim_attract_carousel_timer:

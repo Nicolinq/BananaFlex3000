@@ -1,0 +1,3660 @@
+#show_version=6
+- time: 0
+  lights:
+    l_belt_b_19: 'FE0000'
+    l_belt_b_28: 'FE0000'
+    l_belt_b_45: 'FE0000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_28: 'F00000'
+    l_belt_b_45: 'DF0000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: 'F90100'
+    l_belt_b_27: '920100'
+    l_belt_b_28: '420000'
+    l_belt_b_45: '400000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: 'EF0100'
+    l_belt_b_27: 'FD0100'
+    l_belt_b_28: '000000'
+    l_belt_b_44: '3B0000'
+    l_belt_b_45: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '8D0100'
+    l_belt_b_27: 'FC0200'
+    l_belt_b_44: 'D90200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '020000'
+    l_belt_b_44: 'F50200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '000000'
+    l_belt_b_44: 'FC0200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '300100'
+    l_belt_b_27: 'FB0300'
+    l_belt_b_44: 'FB0300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'D30300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'FA0400'
+    l_belt_b_27: 'FA0400'
+    l_belt_b_44: 'FA0400'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'F90500'
+    l_belt_b_27: 'F90500'
+    l_belt_b_44: 'F90500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: 'F70500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '5D0200'
+    l_belt_b_27: 'E80500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'F80600'
+    l_belt_b_26: 'F80600'
+    l_belt_b_27: '280100'
+    l_belt_b_44: 'F80600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'F70700'
+    l_belt_b_26: 'F70700'
+    l_belt_b_44: 'F70700'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_43: '600300'
+    l_belt_b_44: 'A20500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'F60800'
+    l_belt_b_26: 'F60800'
+    l_belt_b_43: 'E70800'
+    l_belt_b_44: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_43: 'F40800'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'F10900'
+    l_belt_b_26: 'F50900'
+    l_belt_b_43: 'F50900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'E60800'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '690400'
+    l_belt_b_26: 'F40A00'
+    l_belt_b_43: 'F40A00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '000000'
+    l_belt_b_26: 'F30A00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: 'E50900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '720500'
+    l_belt_b_26: '4F0400'
+    l_belt_b_43: 'F30B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'F30B00'
+    l_belt_b_25: '890600'
+    l_belt_b_26: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'F20C00'
+    l_belt_b_25: 'F20C00'
+    l_belt_b_43: 'F20C00'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'F10D00'
+    l_belt_b_25: 'F10D00'
+    l_belt_b_42: '1E0200'
+    l_belt_b_43: 'F10D00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: 'CE0B00'
+    l_belt_b_43: '730600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'F00E00'
+    l_belt_b_25: 'F00E00'
+    l_belt_b_42: 'EB0E00'
+    l_belt_b_43: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: 'F00E00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'EF0F00'
+    l_belt_b_25: 'EF0F00'
+    l_belt_b_42: 'EF0F00'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'EE1000'
+    l_belt_b_25: 'EE1000'
+    l_belt_b_42: 'EE1000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '510500'
+    l_belt_b_17: 'E40F00'
+    l_belt_b_25: 'EA1000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'ED1100'
+    l_belt_b_17: '970B00'
+    l_belt_b_25: 'DD1000'
+    l_belt_b_42: 'ED1100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '000000'
+    l_belt_b_25: '470500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'EC1200'
+    l_belt_b_41: '180200'
+    l_belt_b_42: 'EC1200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '140200'
+    l_belt_b_41: 'D01000'
+    l_belt_b_42: '960B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'EB1300'
+    l_belt_b_24: 'AF0E00'
+    l_belt_b_41: 'E71300'
+    l_belt_b_42: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: 'EB1300'
+    l_belt_b_41: 'EB1300'
+    l_belt_b_50: '2A0300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'EA1400'
+    l_belt_b_24: 'EA1400'
+    l_belt_b_41: 'EA1400'
+    l_belt_b_50: 'B40F00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_50: 'E11300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_50: 'EA1400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '6D0A00'
+    l_belt_b_16: 'E91500'
+    l_belt_b_24: 'E91500'
+    l_belt_b_41: 'E91500'
+    l_belt_b_50: 'E91500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'E91500'
+    l_belt_b_16: 'E21400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'E81600'
+    l_belt_b_16: 'B21100'
+    l_belt_b_24: 'E81600'
+    l_belt_b_41: 'E81600'
+    l_belt_b_50: 'E81600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '0F0100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'E71700'
+    l_belt_b_24: 'E71700'
+    l_belt_b_41: 'C51400'
+    l_belt_b_50: 'E71700'
+    
+- time: '+1'
+  lights:
+    l_belt_b_41: '040000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'E61800'
+    l_belt_b_24: 'E61800'
+    l_belt_b_41: '000000'
+    l_belt_b_50: 'E61800'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: 'E11700'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'E51900'
+    l_belt_b_24: 'D51700'
+    l_belt_b_50: 'E51900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '200400'
+    l_belt_b_24: '4D0800'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'E51900'
+    l_belt_b_15: 'DE1800'
+    l_belt_b_23: '330600'
+    l_belt_b_24: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'E41A00'
+    l_belt_b_15: 'A21300'
+    l_belt_b_23: 'C01600'
+    l_belt_b_49: '160200'
+    l_belt_b_50: '8A1000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '000000'
+    l_belt_b_23: 'E41A00'
+    l_belt_b_49: '961100'
+    l_belt_b_50: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'E31B00'
+    l_belt_b_23: 'E31B00'
+    l_belt_b_40: '770E00'
+    l_belt_b_49: 'D81A00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: 'DB1A00'
+    l_belt_b_49: 'E21B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: 'E31B00'
+    l_belt_b_49: 'E31B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'E21C00'
+    l_belt_b_23: 'E21C00'
+    l_belt_b_40: 'E21C00'
+    l_belt_b_49: 'E21C00'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '310600'
+    l_belt_b_14: 'E11D00'
+    l_belt_b_23: 'E11D00'
+    l_belt_b_40: 'E11D00'
+    l_belt_b_49: 'E11D00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'E11D00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'E01E00'
+    l_belt_b_14: 'D51D00'
+    l_belt_b_23: 'E01E00'
+    l_belt_b_39: 'BF1A00'
+    l_belt_b_40: 'E01E00'
+    l_belt_b_49: 'E01E00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '610D00'
+    l_belt_b_39: 'DF1E00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '000000'
+    l_belt_b_39: 'E01E00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'DF1F00'
+    l_belt_b_23: 'DF1F00'
+    l_belt_b_39: 'DF1F00'
+    l_belt_b_40: 'C11B00'
+    l_belt_b_49: 'DF1F00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'DE2000'
+    l_belt_b_23: 'D61F00'
+    l_belt_b_39: 'DE2000'
+    l_belt_b_49: 'DE2000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: 'B71A00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '140300'
+    l_belt_b_23: '380800'
+    l_belt_b_38: '0F0200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'DD2100'
+    l_belt_b_13: 'D82000'
+    l_belt_b_23: '000000'
+    l_belt_b_38: 'CF1F00'
+    l_belt_b_39: 'DD2100'
+    l_belt_b_49: '8B1500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '991700'
+    l_belt_b_38: 'DD2100'
+    l_belt_b_49: '060100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'DC2200'
+    l_belt_b_13: '000000'
+    l_belt_b_38: 'DC2200'
+    l_belt_b_39: '1F0500'
+    l_belt_b_49: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '060100'
+    l_belt_b_39: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'DB2300'
+    l_belt_b_22: '851500'
+    l_belt_b_38: 'DB2300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: 'DB2300'
+    l_belt_b_48: '130300'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'D92300'
+    l_belt_b_37: '8B1600'
+    l_belt_b_48: '8A1600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'DA2400'
+    l_belt_b_12: 'DA2400'
+    l_belt_b_22: 'DA2400'
+    l_belt_b_37: 'D62300'
+    l_belt_b_38: 'DA2400'
+    l_belt_b_48: 'CF2200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'DA2401'
+    l_belt_b_12: 'DA2401'
+    l_belt_b_22: 'DA2401'
+    l_belt_b_37: 'DA2401'
+    l_belt_b_38: 'DA2401'
+    l_belt_b_48: 'D82401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'D92501'
+    l_belt_b_12: 'CE2301'
+    l_belt_b_22: 'D92501'
+    l_belt_b_37: 'D92501'
+    l_belt_b_38: '6A1200'
+    l_belt_b_48: 'D92501'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '3E0B00'
+    l_belt_b_38: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'D82601'
+    l_belt_b_22: 'D82601'
+    l_belt_b_36: '090200'
+    l_belt_b_37: 'D82601'
+    l_belt_b_48: 'D82601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '530F00'
+    l_belt_b_36: 'CB2401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'D72701'
+    l_belt_b_11: 'D72701'
+    l_belt_b_22: 'D72701'
+    l_belt_b_36: 'D72701'
+    l_belt_b_37: 'D72701'
+    l_belt_b_48: 'D72701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'C92401'
+    l_belt_b_37: '951B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'D62801'
+    l_belt_b_11: '0B0200'
+    l_belt_b_22: 'D62801'
+    l_belt_b_36: 'D62801'
+    l_belt_b_37: '000000'
+    l_belt_b_48: 'D62801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'D52901'
+    l_belt_b_22: 'CF2801'
+    l_belt_b_35: '460D00'
+    l_belt_b_36: 'D52901'
+    l_belt_b_48: 'D52901'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: 'C72601'
+    l_belt_b_35: 'CD2701'
+    l_belt_b_9: '8F1C01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'D42A01'
+    l_belt_b_22: '5C1200'
+    l_belt_b_35: 'D42A01'
+    l_belt_b_36: 'D22A01'
+    l_belt_b_48: 'D42A01'
+    l_belt_b_9: 'D42A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'CB2801'
+    l_belt_b_22: '000000'
+    l_belt_b_36: '000000'
+    l_belt_b_48: 'D32A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4A0F00'
+    l_belt_b_48: '581100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '000000'
+    l_belt_b_35: 'D32B01'
+    l_belt_b_48: '000000'
+    l_belt_b_9: 'D32B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_8: '010000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: 'D22C01'
+    l_belt_b_47: '020000'
+    l_belt_b_8: 'D22C01'
+    l_belt_b_9: 'D22C01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_47: '731801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '781A01'
+    l_belt_b_47: 'C52A01'
+    l_belt_b_8: 'D12D01'
+    l_belt_b_9: 'D02D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '000000'
+    l_belt_b_47: 'CD2C01'
+    l_belt_b_9: 'AE2501'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '6E1801'
+    l_belt_b_47: 'D12D01'
+    l_belt_b_9: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'D02E01'
+    l_belt_b_47: 'D02E01'
+    l_belt_b_7: '1C0600'
+    l_belt_b_8: 'D02E01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '942101'
+    l_belt_b_7: 'D02E01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'CF2F01'
+    l_belt_b_34: 'CD2F01'
+    l_belt_b_47: 'CF2F01'
+    l_belt_b_7: 'CF2F01'
+    l_belt_b_8: 'CF2F01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: 'CF2F01'
+    l_belt_b_8: 'C82D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_8: '591400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'CE3001'
+    l_belt_b_34: 'CE3001'
+    l_belt_b_47: 'CE3001'
+    l_belt_b_7: 'CE3001'
+    l_belt_b_8: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: '020100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'CD3101'
+    l_belt_b_33: 'C02E01'
+    l_belt_b_34: 'CD3101'
+    l_belt_b_47: 'CD3101'
+    l_belt_b_6: '330C00'
+    l_belt_b_7: 'CD3101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: 'CD3101'
+    l_belt_b_6: 'CD3101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'CC3201'
+    l_belt_b_33: 'CC3201'
+    l_belt_b_34: 'CC3201'
+    l_belt_b_47: 'CC3201'
+    l_belt_b_6: 'CC3201'
+    l_belt_b_7: 'C33001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '1F0800'
+    l_belt_b_7: '421000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '000000'
+    l_belt_b_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'CB3301'
+    l_belt_b_33: 'CB3301'
+    l_belt_b_47: 'CB3301'
+    l_belt_b_6: 'CB3301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: 'BD3001'
+    l_belt_b_47: '9E2801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'C43301'
+    l_belt_b_32: 'CA3401'
+    l_belt_b_33: 'CA3401'
+    l_belt_b_47: '270A00'
+    l_belt_b_5: '320D00'
+    l_belt_b_6: 'CA3401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: 'BC3101'
+    l_belt_b_33: '972701'
+    l_belt_b_47: '000000'
+    l_belt_b_5: 'CA3401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '5B1800'
+    l_belt_b_32: 'C93501'
+    l_belt_b_33: '000000'
+    l_belt_b_5: 'C93501'
+    l_belt_b_6: 'C53401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '000000'
+    l_belt_b_6: '7B2101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_6: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_31: '3B1000'
+    l_belt_b_32: 'C83601'
+    l_belt_b_46: '651B01'
+    l_belt_b_5: 'C83601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '731F01'
+    l_belt_b_31: 'BF3301'
+    l_belt_b_46: 'BC3301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C73701'
+    l_belt_b_31: 'C73701'
+    l_belt_b_32: 'C73701'
+    l_belt_b_4: 'B63201'
+    l_belt_b_46: 'C43601'
+    l_belt_b_5: 'C73701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: '4D1500'
+    l_belt_b_4: 'C73701'
+    l_belt_b_46: 'C73701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: '000000'
+    l_belt_b_5: 'C13501'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C63801'
+    l_belt_b_31: 'C63801'
+    l_belt_b_4: 'C63801'
+    l_belt_b_46: 'C63801'
+    l_belt_b_5: '6D1F01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_30: '300E00'
+    l_belt_b_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C53901'
+    l_belt_b_30: 'BA3601'
+    l_belt_b_31: 'C53901'
+    l_belt_b_4: 'C53901'
+    l_belt_b_46: 'C53901'
+    
+- time: '+1'
+  lights:
+    l_belt_b_30: 'C53901'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C43A01'
+    l_belt_b_3: '9E2F01'
+    l_belt_b_30: 'C43A01'
+    l_belt_b_31: 'C43A01'
+    l_belt_b_4: 'C43A01'
+    l_belt_b_46: 'C43A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_3: 'C43A01'
+    l_belt_b_31: '5E1C00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_31: '000000'
+    l_belt_b_4: 'B93701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C33B01'
+    l_belt_b_3: 'C33B01'
+    l_belt_b_30: 'C33B01'
+    l_belt_b_4: '220A00'
+    l_belt_b_46: 'C33B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_4: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C23C01'
+    l_belt_b_3: 'C23C01'
+    l_belt_b_30: 'C23C01'
+    l_belt_b_46: 'C23C01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '7E2701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: 'C03B01'
+    l_belt_b_29: 'BD3A01'
+    l_belt_b_46: '922D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '852A01'
+    l_belt_b_20: 'B73A01'
+    l_belt_b_29: 'C13D01'
+    l_belt_b_3: 'C13D01'
+    l_belt_b_30: '090300'
+    l_belt_b_46: '1D0900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: 'C13D01'
+    l_belt_b_20: '7A2701'
+    l_belt_b_3: 'BC3B01'
+    l_belt_b_30: '000000'
+    l_belt_b_46: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: 'C03E01'
+    l_belt_b_20: '140700'
+    l_belt_b_29: 'C03E01'
+    l_belt_b_3: '772601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '000000'
+    l_belt_b_3: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: 'BF3F01'
+    l_belt_b_29: 'BF3F01'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '090300'
+    l_belt_b_28: '4C1900'
+    l_belt_b_45: '060200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'AD3A01'
+    l_belt_b_2: 'BE4001'
+    l_belt_b_28: 'B43D01'
+    l_belt_b_29: 'BE4001'
+    l_belt_b_45: '772801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BE4001'
+    l_belt_b_19: '662201'
+    l_belt_b_28: 'BE4001'
+    l_belt_b_45: 'B53D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BD4101'
+    l_belt_b_19: 'BD4101'
+    l_belt_b_2: 'BD4101'
+    l_belt_b_28: 'BD4101'
+    l_belt_b_29: '0D0500'
+    l_belt_b_45: 'BC4101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: 'B33E01'
+    l_belt_b_29: '000000'
+    l_belt_b_45: 'BD4101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '3B1400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BC4201'
+    l_belt_b_19: 'BC4201'
+    l_belt_b_2: '000000'
+    l_belt_b_28: 'BC4201'
+    l_belt_b_45: 'BC4201'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BB4301'
+    l_belt_b_19: 'BB4301'
+    l_belt_b_28: 'BB4301'
+    l_belt_b_45: 'BB4301'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BA4401'
+    l_belt_b_19: 'BA4401'
+    l_belt_b_28: 'BA4401'
+    l_belt_b_45: 'BA4401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'B34201'
+    l_belt_b_27: '883201'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '6D2801'
+    l_belt_b_27: 'B44201'
+    l_belt_b_28: '371400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '000000'
+    l_belt_b_19: 'B94501'
+    l_belt_b_27: 'B94501'
+    l_belt_b_28: '000000'
+    l_belt_b_45: 'B94501'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: 'B84601'
+    l_belt_b_27: 'B84601'
+    l_belt_b_45: 'B84601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_45: '863301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: 'B04301'
+    l_belt_b_45: '110600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '843301'
+    l_belt_b_27: 'B74701'
+    l_belt_b_44: '301300'
+    l_belt_b_45: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '1E0C00'
+    l_belt_b_44: 'A54001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '000000'
+    l_belt_b_27: 'B64801'
+    l_belt_b_44: 'B24601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '240E00'
+    l_belt_b_44: 'B64801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '562301'
+    l_belt_b_26: 'A04002'
+    l_belt_b_27: 'B54902'
+    l_belt_b_44: 'B54902'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B54902'
+    l_belt_b_26: 'B14702'
+    l_belt_b_27: '7E3301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: 'B54902'
+    l_belt_b_27: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B44A02'
+    l_belt_b_26: 'B44A02'
+    l_belt_b_44: 'B44A02'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B34B02'
+    l_belt_b_26: 'B34B02'
+    l_belt_b_44: 'B34B02'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B24C02'
+    l_belt_b_26: 'B24C02'
+    l_belt_b_44: 'B24C02'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B14D02'
+    l_belt_b_26: 'B14D02'
+    l_belt_b_44: 'B14D02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_43: '572601'
+    l_belt_b_44: '471F01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'B04E02'
+    l_belt_b_25: '190B00'
+    l_belt_b_26: 'B04E02'
+    l_belt_b_43: 'A74A02'
+    l_belt_b_44: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '873C02'
+    l_belt_b_26: '5C2901'
+    l_belt_b_43: 'B04E02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'A84B02'
+    l_belt_b_25: 'AA4B02'
+    l_belt_b_26: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '793601'
+    l_belt_b_25: 'AF4F02'
+    l_belt_b_43: 'AF4F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '0F0700'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '000000'
+    l_belt_b_25: 'AE5002'
+    l_belt_b_43: 'AE5002'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '763601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'AD5102'
+    l_belt_b_25: 'AD5102'
+    l_belt_b_43: 'AD5102'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'AC5202'
+    l_belt_b_25: 'AC5202'
+    l_belt_b_43: 'AC5202'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'AB5302'
+    l_belt_b_25: 'AB5302'
+    l_belt_b_42: '321801'
+    l_belt_b_43: '944802'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: 'A04E02'
+    l_belt_b_43: '160B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: 'AA5302'
+    l_belt_b_43: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'AA5402'
+    l_belt_b_25: '8B4502'
+    l_belt_b_42: 'AA5402'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '190C00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'A95502'
+    l_belt_b_24: '1A0D00'
+    l_belt_b_25: '000000'
+    l_belt_b_42: 'A95502'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '7A3D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'A65402'
+    l_belt_b_24: 'A25102'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '552B01'
+    l_belt_b_17: '9D5002'
+    l_belt_b_24: 'A85602'
+    l_belt_b_42: 'A85602'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'A85602'
+    l_belt_b_17: '381D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'A75702'
+    l_belt_b_17: '000000'
+    l_belt_b_24: 'A75702'
+    l_belt_b_42: 'A75702'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'A65802'
+    l_belt_b_24: 'A65802'
+    l_belt_b_41: '371D01'
+    l_belt_b_42: 'A65802'
+    
+- time: '+1'
+  lights:
+    l_belt_b_41: '9D5302'
+    l_belt_b_42: '221200'
+    
+- time: '+1'
+  lights:
+    l_belt_b_41: 'A65802'
+    l_belt_b_42: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'A55902'
+    l_belt_b_24: 'A55902'
+    l_belt_b_41: 'A55902'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'A45A02'
+    l_belt_b_24: 'A45A02'
+    l_belt_b_41: 'A45A02'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '633601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'A35B02'
+    l_belt_b_16: '9B5602'
+    l_belt_b_24: 'A35B02'
+    l_belt_b_41: 'A35B02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '502D01'
+    l_belt_b_23: '030200'
+    l_belt_b_50: '070400'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'A25C02'
+    l_belt_b_16: '000000'
+    l_belt_b_23: '583201'
+    l_belt_b_24: '4E2D01'
+    l_belt_b_41: 'A25C02'
+    l_belt_b_50: '673A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: '985702'
+    l_belt_b_24: '000000'
+    l_belt_b_50: 'A25C02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'A15D02'
+    l_belt_b_23: '9E5B02'
+    l_belt_b_41: '392101'
+    l_belt_b_50: 'A15D02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: 'A15D02'
+    l_belt_b_41: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'A05E02'
+    l_belt_b_23: 'A05E02'
+    l_belt_b_50: 'A05E02'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '261700'
+    l_belt_b_15: '9F5F02'
+    l_belt_b_23: '9F5F02'
+    l_belt_b_50: '9F5F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '9F5F02'
+    l_belt_b_15: '975A02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '482B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '9E6002'
+    l_belt_b_15: '000000'
+    l_belt_b_23: '9E6002'
+    l_belt_b_50: '9E6002'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: '8B5402'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '9D6102'
+    l_belt_b_23: '9D6102'
+    l_belt_b_40: '9C6002'
+    l_belt_b_50: '9D6102'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: '9D6102'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '9C6202'
+    l_belt_b_23: '9C6202'
+    l_belt_b_40: '9C6202'
+    l_belt_b_50: '9C6202'
+    
+- time: '+1'
+  lights:
+    l_belt_b_50: '975F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '2E1D01'
+    l_belt_b_49: '362201'
+    l_belt_b_50: '8D5902'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '9B6302'
+    l_belt_b_14: '9A6302'
+    l_belt_b_23: '744A01'
+    l_belt_b_39: '2F1E01'
+    l_belt_b_40: '9B6302'
+    l_belt_b_49: '8C5A02'
+    l_belt_b_50: '382401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '915D02'
+    l_belt_b_23: '1C1200'
+    l_belt_b_39: '945E02'
+    l_belt_b_49: '9B6302'
+    l_belt_b_50: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '9A6402'
+    l_belt_b_14: '1D1300'
+    l_belt_b_23: '000000'
+    l_belt_b_39: '9A6402'
+    l_belt_b_40: '9A6402'
+    l_belt_b_49: '9A6402'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '000000'
+    l_belt_b_22: '0D0900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '5A3A01'
+    l_belt_b_40: '231700'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '996502'
+    l_belt_b_22: '905F02'
+    l_belt_b_39: '996502'
+    l_belt_b_40: '000000'
+    l_belt_b_49: '996502'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '966302'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '986602'
+    l_belt_b_22: '986602'
+    l_belt_b_39: '986602'
+    l_belt_b_49: '986602'
+    
+- time: '+1'
+  lights:
+    l_belt_b_38: '6C4801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '855B02'
+    l_belt_b_13: '936502'
+    l_belt_b_22: '976702'
+    l_belt_b_38: '956602'
+    l_belt_b_39: '976702'
+    l_belt_b_49: '976702'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '976702'
+    l_belt_b_13: '684701'
+    l_belt_b_38: '976702'
+    l_belt_b_39: '221700'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '000000'
+    l_belt_b_39: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '966802'
+    l_belt_b_22: '966802'
+    l_belt_b_38: '966802'
+    l_belt_b_49: '966802'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '956902'
+    l_belt_b_22: '956902'
+    l_belt_b_37: '302201'
+    l_belt_b_38: '956902'
+    l_belt_b_49: '956902'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '745202'
+    l_belt_b_37: '8F6502'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '946A02'
+    l_belt_b_12: '946A02'
+    l_belt_b_22: '946A02'
+    l_belt_b_37: '946A02'
+    l_belt_b_38: '946A02'
+    l_belt_b_49: '906702'
+    
+- time: '+1'
+  lights:
+    l_belt_b_38: '523A01'
+    l_belt_b_49: '8A6302'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '8D6502'
+    l_belt_b_38: '000000'
+    l_belt_b_49: '433001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '936B02'
+    l_belt_b_12: '2E2101'
+    l_belt_b_22: '936B02'
+    l_belt_b_37: '936B02'
+    l_belt_b_49: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '926C02'
+    l_belt_b_22: '816002'
+    l_belt_b_36: '735502'
+    l_belt_b_37: '926C02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '100C00'
+    l_belt_b_22: '342601'
+    l_belt_b_36: '926C02'
+    l_belt_b_48: '3B2C01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '926C02'
+    l_belt_b_22: '000000'
+    l_belt_b_37: '6B4F01'
+    l_belt_b_48: '8B6702'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '916D03'
+    l_belt_b_11: '886603'
+    l_belt_b_36: '916D03'
+    l_belt_b_37: '000000'
+    l_belt_b_48: '916D03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0E0B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '906E03'
+    l_belt_b_11: '000000'
+    l_belt_b_36: '906E03'
+    l_belt_b_48: '906E03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '080600'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '8F6F03'
+    l_belt_b_35: '876903'
+    l_belt_b_36: '8F6F03'
+    l_belt_b_48: '8F6F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '3E3001'
+    l_belt_b_35: '8F6F03'
+    l_belt_b_9: '332801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '826503'
+    l_belt_b_36: '000000'
+    l_belt_b_9: '8F6F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '896C03'
+    l_belt_b_21: '896C03'
+    l_belt_b_35: '8E7003'
+    l_belt_b_48: '8E7003'
+    l_belt_b_9: '8E7003'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '3D3001'
+    l_belt_b_21: '8E7003'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '000000'
+    l_belt_b_21: '8D7103'
+    l_belt_b_35: '8D7103'
+    l_belt_b_48: '8D7103'
+    l_belt_b_9: '8D7103'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_8: '655102'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '8C7203'
+    l_belt_b_35: '4C3E02'
+    l_belt_b_48: '8C7203'
+    l_belt_b_8: '8C7203'
+    l_belt_b_9: '8C7203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '8B7303'
+    l_belt_b_48: '8B7303'
+    l_belt_b_8: '8B7303'
+    l_belt_b_9: '816B03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_48: '856E03'
+    l_belt_b_9: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '8A7403'
+    l_belt_b_34: '493D02'
+    l_belt_b_48: '736002'
+    l_belt_b_8: '8A7403'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '877203'
+    l_belt_b_48: '2E2701'
+    l_belt_b_7: '6F5D02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '8A7403'
+    l_belt_b_48: '000000'
+    l_belt_b_7: '8A7403'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '897503'
+    l_belt_b_34: '897503'
+    l_belt_b_47: '413701'
+    l_belt_b_7: '897503'
+    l_belt_b_8: '867203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_47: '897503'
+    l_belt_b_8: '4E4302'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '887603'
+    l_belt_b_34: '887603'
+    l_belt_b_47: '887603'
+    l_belt_b_7: '887603'
+    l_belt_b_8: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: '7A6A03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: '887603'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '615602'
+    l_belt_b_33: '877703'
+    l_belt_b_34: '877703'
+    l_belt_b_47: '877703'
+    l_belt_b_6: '766803'
+    l_belt_b_7: '877703'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '1B1801'
+    l_belt_b_34: '040300'
+    l_belt_b_6: '877703'
+    l_belt_b_7: '837403'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '070700'
+    l_belt_b_21: '000000'
+    l_belt_b_33: '867803'
+    l_belt_b_34: '000000'
+    l_belt_b_47: '867803'
+    l_belt_b_6: '867803'
+    l_belt_b_7: '423B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '484002'
+    l_belt_b_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '7D7103'
+    l_belt_b_32: '453F02'
+    l_belt_b_33: '857903'
+    l_belt_b_47: '857903'
+    l_belt_b_6: '857903'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '817603'
+    l_belt_b_32: '827603'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '857903'
+    l_belt_b_32: '857903'
+    l_belt_b_33: '837703'
+    l_belt_b_5: '131100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '847A03'
+    l_belt_b_32: '847A03'
+    l_belt_b_33: '000000'
+    l_belt_b_47: '847A03'
+    l_belt_b_5: '847A03'
+    l_belt_b_6: '847A03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_6: '807603'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '837B03'
+    l_belt_b_32: '837B03'
+    l_belt_b_47: '837B03'
+    l_belt_b_5: '837B03'
+    l_belt_b_6: '3A3701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_6: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_31: '6E6703'
+    l_belt_b_47: '827A03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '827C03'
+    l_belt_b_31: '827C03'
+    l_belt_b_32: '827C03'
+    l_belt_b_47: '7C7603'
+    l_belt_b_5: '827C03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: '4B4702'
+    l_belt_b_4: '686302'
+    l_belt_b_47: '5F5B02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '817D03'
+    l_belt_b_31: '817D03'
+    l_belt_b_32: '000000'
+    l_belt_b_4: '817D03'
+    l_belt_b_47: '1E1D01'
+    l_belt_b_5: '817D03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_47: '000000'
+    l_belt_b_5: '7C7803'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '807E03'
+    l_belt_b_31: '807E03'
+    l_belt_b_4: '807E03'
+    l_belt_b_5: '343301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_30: '646202'
+    l_belt_b_46: '363601'
+    l_belt_b_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_30: '7F7D03'
+    l_belt_b_46: '7E7C03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '7F7F03'
+    l_belt_b_30: '7F7F03'
+    l_belt_b_31: '7F7F03'
+    l_belt_b_4: '7F7F03'
+    l_belt_b_46: '7F7F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_3: '535302'
+    l_belt_b_31: '4F4F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '7E8003'
+    l_belt_b_3: '7E8003'
+    l_belt_b_30: '7E8003'
+    l_belt_b_31: '000000'
+    l_belt_b_4: '7E8003'
+    l_belt_b_46: '7E8003'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '404102'
+    l_belt_b_4: '767703'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '000000'
+    l_belt_b_4: '050500'
+    
+- time: '+1'
+  lights:
+    l_belt_b_3: '7D8103'
+    l_belt_b_30: '7D8103'
+    l_belt_b_4: '000000'
+    l_belt_b_46: '7D8103'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '262701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '767B03'
+    l_belt_b_3: '7C8203'
+    l_belt_b_30: '7C8203'
+    l_belt_b_46: '7C8203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '1A1B01'
+    l_belt_b_29: '7C8203'
+    l_belt_b_30: '101100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '585E02'
+    l_belt_b_2: '3D4001'
+    l_belt_b_29: '7B8303'
+    l_belt_b_3: '7B8303'
+    l_belt_b_30: '000000'
+    l_belt_b_46: '7B8303'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '757D03'
+    l_belt_b_2: '7B8303'
+    l_belt_b_3: '777F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '7A8203'
+    l_belt_b_3: '3F4402'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '7A8403'
+    l_belt_b_2: '7A8403'
+    l_belt_b_29: '7A8403'
+    l_belt_b_3: '000000'
+    l_belt_b_46: '7A8403'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '798503'
+    l_belt_b_2: '798503'
+    l_belt_b_28: '0C0D00'
+    l_belt_b_29: '798503'
+    l_belt_b_46: '768203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_28: '6F7A03'
+    l_belt_b_46: '717D03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '545C02'
+    l_belt_b_28: '788403'
+    l_belt_b_46: '3F4502'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '788603'
+    l_belt_b_19: '788603'
+    l_belt_b_2: '788603'
+    l_belt_b_28: '788603'
+    l_belt_b_29: '0D0F00'
+    l_belt_b_46: '010100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '000000'
+    l_belt_b_46: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '778703'
+    l_belt_b_19: '778703'
+    l_belt_b_2: '707F03'
+    l_belt_b_28: '778703'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '1A1E01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '768803'
+    l_belt_b_19: '768803'
+    l_belt_b_2: '000000'
+    l_belt_b_28: '768803'
+    l_belt_b_45: '1E2301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_45: '637203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_45: '768803'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '758903'
+    l_belt_b_19: '758903'
+    l_belt_b_28: '758903'
+    l_belt_b_45: '758903'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: '384201'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '6F8503'
+    l_belt_b_19: '677B03'
+    l_belt_b_27: '6F8403'
+    l_belt_b_28: '202601'
+    l_belt_b_45: '748A03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '3D4802'
+    l_belt_b_19: '282F01'
+    l_belt_b_27: '748A03'
+    l_belt_b_28: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '000000'
+    l_belt_b_19: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '222901'
+    l_belt_b_27: '738B03'
+    l_belt_b_45: '738B03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '617503'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '6E8703'
+    l_belt_b_27: '728C03'
+    l_belt_b_45: '728C03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '728C03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '718D03'
+    l_belt_b_27: '718D03'
+    l_belt_b_45: '718D03'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '708E03'
+    l_belt_b_26: '4C6102'
+    l_belt_b_27: '708E03'
+    l_belt_b_45: '708D03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '6C8903'
+    l_belt_b_27: '475A02'
+    l_belt_b_45: '6B8803'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '6F8F03'
+    l_belt_b_26: '6F8F03'
+    l_belt_b_27: '000000'
+    l_belt_b_44: '171E01'
+    l_belt_b_45: '516802'
+    
+- time: '+1'
+  lights:
+    l_belt_b_44: '5D7803'
+    l_belt_b_45: '151B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_44: '6F8F03'
+    l_belt_b_45: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '6E9003'
+    l_belt_b_26: '6E9003'
+    l_belt_b_44: '6E9003'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '6D9103'
+    l_belt_b_26: '6D9103'
+    l_belt_b_44: '6D9103'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '6C9204'
+    l_belt_b_26: '6C9204'
+    l_belt_b_44: '6C9204'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '465E03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '060800'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '020300'
+    l_belt_b_18: '000000'
+    l_belt_b_26: '6B9304'
+    l_belt_b_44: '6B9304'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '425B02'
+    l_belt_b_25: '405802'
+    l_belt_b_26: '2B3C02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '658D04'
+    l_belt_b_25: '658D04'
+    l_belt_b_26: '000000'
+    l_belt_b_44: '6A9404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '6A9404'
+    l_belt_b_25: '6A9404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_43: '080B00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '699504'
+    l_belt_b_25: '699504'
+    l_belt_b_43: '4F7003'
+    l_belt_b_44: '648E04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_43: '699504'
+    l_belt_b_44: '476503'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '689604'
+    l_belt_b_25: '689604'
+    l_belt_b_43: '689604'
+    l_belt_b_44: '0A0F00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_44: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '679704'
+    l_belt_b_25: '679704'
+    l_belt_b_43: '679704'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '669804'
+    l_belt_b_25: '669804'
+    l_belt_b_43: '669804'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '090E00'
+    l_belt_b_17: '659904'
+    l_belt_b_25: '578303'
+    l_belt_b_43: '659904'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '4A7003'
+    l_belt_b_25: '111A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '609404'
+    l_belt_b_17: '476E03'
+    l_belt_b_25: '000000'
+    l_belt_b_43: '649A04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '649A04'
+    l_belt_b_17: '080C00'
+    l_belt_b_24: '2D4502'
+    l_belt_b_42: '192601'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '000000'
+    l_belt_b_24: '5E9004'
+    l_belt_b_42: '639804'
+    l_belt_b_43: '609404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '639B04'
+    l_belt_b_24: '619804'
+    l_belt_b_42: '639B04'
+    l_belt_b_43: '466E03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '639B04'
+    l_belt_b_43: '080C00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '629C04'
+    l_belt_b_24: '629C04'
+    l_belt_b_42: '629C04'
+    l_belt_b_43: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '619D04'
+    l_belt_b_24: '619D04'
+    l_belt_b_42: '619D04'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '2B4702'
+    l_belt_b_16: '609E04'
+    l_belt_b_24: '609E04'
+    l_belt_b_42: '609E04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '5B9504'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '5F9F04'
+    l_belt_b_16: '5F9F04'
+    l_belt_b_24: '5F9F04'
+    l_belt_b_42: '5F9F04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '375B02'
+    l_belt_b_41: '385E02'
+    l_belt_b_42: '5E9E04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '000000'
+    l_belt_b_41: '5F9F04'
+    l_belt_b_42: '599504'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '5EA004'
+    l_belt_b_24: '5EA004'
+    l_belt_b_41: '5EA004'
+    l_belt_b_42: '243D02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '5DA104'
+    l_belt_b_23: '1B2F01'
+    l_belt_b_24: '294702'
+    l_belt_b_41: '5DA104'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: '4E8703'
+    l_belt_b_24: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: '5A9B04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '5CA204'
+    l_belt_b_23: '5CA204'
+    l_belt_b_41: '5CA204'
+    l_belt_b_50: '254102'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '325902'
+    l_belt_b_50: '5CA204'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '579C04'
+    l_belt_b_15: '5BA304'
+    l_belt_b_23: '5BA304'
+    l_belt_b_41: '5BA304'
+    l_belt_b_50: '5BA304'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '5BA304'
+    l_belt_b_15: '4F8E03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '5AA404'
+    l_belt_b_15: '0C1501'
+    l_belt_b_23: '5AA404'
+    l_belt_b_41: '59A104'
+    l_belt_b_50: '5AA404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '000000'
+    l_belt_b_41: '539704'
+    
+- time: '+1'
+  lights:
+    l_belt_b_41: '112001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '59A504'
+    l_belt_b_23: '59A504'
+    l_belt_b_41: '000000'
+    l_belt_b_50: '59A504'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '58A604'
+    l_belt_b_23: '58A604'
+    l_belt_b_50: '58A604'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '1E3901'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '539D04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '57A704'
+    l_belt_b_14: '57A704'
+    l_belt_b_23: '57A704'
+    l_belt_b_50: '57A704'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '509904'
+    l_belt_b_40: '4E9604'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '56A804'
+    l_belt_b_14: '0B1601'
+    l_belt_b_23: '3B7403'
+    l_belt_b_40: '56A804'
+    l_belt_b_50: '56A804'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '000000'
+    l_belt_b_23: '091200'
+    l_belt_b_50: '52A104'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '55A904'
+    l_belt_b_23: '000000'
+    l_belt_b_40: '55A904'
+    l_belt_b_49: '0A1300'
+    l_belt_b_50: '3E7B03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_49: '3B7603'
+    l_belt_b_50: '0E1B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '1A3401'
+    l_belt_b_49: '55A904'
+    l_belt_b_50: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '54AA04'
+    l_belt_b_22: '458B03'
+    l_belt_b_39: '2B5602'
+    l_belt_b_40: '54AA04'
+    l_belt_b_49: '54AA04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '408203'
+    l_belt_b_22: '51A304'
+    l_belt_b_39: '54AA04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '51A704'
+    l_belt_b_13: '53AB04'
+    l_belt_b_22: '53AB04'
+    l_belt_b_39: '53AB04'
+    l_belt_b_40: '53AB04'
+    l_belt_b_49: '53AB04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '53AB04'
+    l_belt_b_13: '346A02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '000000'
+    l_belt_b_40: '4EA104'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '52AC04'
+    l_belt_b_22: '52AC04'
+    l_belt_b_39: '52AC04'
+    l_belt_b_40: '132701'
+    l_belt_b_49: '52AC04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_40: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '2B5B02'
+    l_belt_b_12: '51AD04'
+    l_belt_b_22: '51AD04'
+    l_belt_b_39: '51AD04'
+    l_belt_b_49: '51AD04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '4EA704'
+    l_belt_b_38: '499D04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '50AE04'
+    l_belt_b_12: '50AE04'
+    l_belt_b_22: '50AE04'
+    l_belt_b_38: '50AE04'
+    l_belt_b_39: '50AE04'
+    l_belt_b_49: '50AE04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_39: '4BA404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_39: '142B01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '4FAF04'
+    l_belt_b_12: '255302'
+    l_belt_b_22: '4FAF04'
+    l_belt_b_38: '4FAF04'
+    l_belt_b_39: '000000'
+    l_belt_b_49: '4FAF04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '000000'
+    l_belt_b_49: '4CA904'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '4EB004'
+    l_belt_b_22: '4EB004'
+    l_belt_b_37: '316F03'
+    l_belt_b_38: '4EB004'
+    l_belt_b_49: '479F04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '377B03'
+    l_belt_b_37: '4EB004'
+    l_belt_b_49: '1C4001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4CAC04'
+    l_belt_b_49: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4DB104'
+    l_belt_b_11: '4DB104'
+    l_belt_b_22: '388003'
+    l_belt_b_37: '4DB104'
+    l_belt_b_38: '49A804'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '1E4602'
+    l_belt_b_22: '0D1E01'
+    l_belt_b_38: '183801'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4CB204'
+    l_belt_b_11: '000000'
+    l_belt_b_22: '000000'
+    l_belt_b_37: '4CB204'
+    l_belt_b_38: '000000'
+    l_belt_b_48: '060F00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_36: '0F2301'
+    l_belt_b_48: '317303'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4BB304'
+    l_belt_b_36: '4BB304'
+    l_belt_b_37: '4BB304'
+    l_belt_b_48: '4BB304'
+    
+- time: '+1'
+  lights:
+    l_belt_b_9: '3D9203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_37: '48AB04'
+    l_belt_b_9: '4AB104'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '4AB404'
+    l_belt_b_36: '4AB404'
+    l_belt_b_37: '1A4001'
+    l_belt_b_48: '4AB404'
+    l_belt_b_9: '4AB404'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '3F9903'
+    l_belt_b_21: '0D2101'
+    l_belt_b_37: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '000000'
+    l_belt_b_21: '327B03'
+    l_belt_b_36: '49B504'
+    l_belt_b_48: '49B504'
+    l_belt_b_9: '49B504'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '45AC04'
+    l_belt_b_35: '2A6902'
+    l_belt_b_8: '0D2001'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '48B204'
+    l_belt_b_35: '49B504'
+    l_belt_b_8: '45AA04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '48B605'
+    l_belt_b_35: '48B605'
+    l_belt_b_36: '45B005'
+    l_belt_b_48: '48B605'
+    l_belt_b_8: '48B605'
+    l_belt_b_9: '48B605'
+    
+- time: '+1'
+  lights:
+    l_belt_b_36: '1F4F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '47B705'
+    l_belt_b_35: '47B705'
+    l_belt_b_36: '000000'
+    l_belt_b_48: '47B705'
+    l_belt_b_8: '47B705'
+    l_belt_b_9: '47B705'
+    
+- time: '+1'
+  lights:
+    l_belt_b_9: '235B02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '46B805'
+    l_belt_b_35: '46B805'
+    l_belt_b_48: '46B805'
+    l_belt_b_7: '112C01'
+    l_belt_b_8: '46B805'
+    l_belt_b_9: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_7: '42AE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_48: '45B605'
+    l_belt_b_7: '46B805'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '45B905'
+    l_belt_b_35: '40AC05'
+    l_belt_b_48: '42B005'
+    l_belt_b_7: '45B905'
+    l_belt_b_8: '45B905'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '000000'
+    l_belt_b_48: '2F7F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '44BA05'
+    l_belt_b_48: '0B1E01'
+    l_belt_b_7: '44BA05'
+    l_belt_b_8: '0B1F01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '030700'
+    l_belt_b_48: '000000'
+    l_belt_b_8: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_34: '44BA05'
+    l_belt_b_47: '0E2701'
+    l_belt_b_6: '143701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '43BB05'
+    l_belt_b_34: '43BB05'
+    l_belt_b_47: '349204'
+    l_belt_b_6: '40B205'
+    l_belt_b_7: '43BB05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_47: '43BB05'
+    l_belt_b_6: '43BB05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '42BC05'
+    l_belt_b_34: '42BC05'
+    l_belt_b_47: '42BC05'
+    l_belt_b_6: '42BC05'
+    l_belt_b_7: '42BC05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '287303'
+    l_belt_b_7: '071401'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '050F00'
+    l_belt_b_33: '184502'
+    l_belt_b_34: '41BD05'
+    l_belt_b_47: '41BD05'
+    l_belt_b_6: '41BD05'
+    l_belt_b_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '000000'
+    l_belt_b_33: '41BD05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '0E2801'
+    l_belt_b_5: '2A7C03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '2E8704'
+    l_belt_b_33: '40BE05'
+    l_belt_b_34: '3EB805'
+    l_belt_b_47: '40BE05'
+    l_belt_b_5: '3EB905'
+    l_belt_b_6: '40BE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3DB505'
+    l_belt_b_34: '1F5C02'
+    l_belt_b_5: '40BE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3EBD05'
+    l_belt_b_33: '3FBF05'
+    l_belt_b_34: '000000'
+    l_belt_b_47: '3FBF05'
+    l_belt_b_5: '3FBF05'
+    l_belt_b_6: '3FBF05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3FBF05'
+    l_belt_b_6: '050E00'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: '3BB205'
+    l_belt_b_6: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3EC005'
+    l_belt_b_32: '3EC005'
+    l_belt_b_33: '3EC005'
+    l_belt_b_4: '1A5002'
+    l_belt_b_47: '3EC005'
+    l_belt_b_5: '3EC005'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: '3CB905'
+    l_belt_b_4: '3BB705'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3DC105'
+    l_belt_b_32: '3DC105'
+    l_belt_b_33: '184D02'
+    l_belt_b_4: '3DC105'
+    l_belt_b_47: '3DC105'
+    l_belt_b_5: '3DC105'
+    
+- time: '+1'
+  lights:
+    l_belt_b_33: '000000'
+    l_belt_b_47: '3CBC05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3CC205'
+    l_belt_b_32: '3CC205'
+    l_belt_b_4: '3CC205'
+    l_belt_b_47: '38B605'
+    l_belt_b_5: '37B205'
+    
+- time: '+1'
+  lights:
+    l_belt_b_31: '0B2201'
+    l_belt_b_47: '1E6103'
+    l_belt_b_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_31: '3CC205'
+    l_belt_b_47: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3BC305'
+    l_belt_b_3: '1A5502'
+    l_belt_b_31: '3BC305'
+    l_belt_b_32: '3BC305'
+    l_belt_b_4: '3BC305'
+    
+- time: '+1'
+  lights:
+    l_belt_b_3: '38BA05'
+    l_belt_b_32: '38B805'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '3AC405'
+    l_belt_b_3: '3AC405'
+    l_belt_b_31: '3AC405'
+    l_belt_b_32: '0A2201'
+    l_belt_b_4: '3AC405'
+    l_belt_b_46: '0E2F01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: '000000'
+    l_belt_b_46: '30A204'
+    
+- time: '+1'
+  lights:
+    l_belt_b_30: '020600'
+    l_belt_b_4: '1D6002'
+    l_belt_b_46: '3AC405'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '39C505'
+    l_belt_b_3: '39C505'
+    l_belt_b_30: '35B905'
+    l_belt_b_31: '39C505'
+    l_belt_b_4: '000000'
+    l_belt_b_46: '39C505'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '1B5E02'
+    l_belt_b_30: '39C505'
+    
+- time: '+1'
+  lights:
+    l_belt_b_20: '000000'
+    l_belt_b_3: '38C605'
+    l_belt_b_30: '38C605'
+    l_belt_b_31: '38C605'
+    l_belt_b_46: '38C605'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '1A5C02'
+    l_belt_b_31: '35BD05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '34BE05'
+    l_belt_b_3: '37C705'
+    l_belt_b_30: '37C705'
+    l_belt_b_31: '144A02'
+    l_belt_b_46: '37C705'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '37C705'
+    l_belt_b_31: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_3: '2FA904'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '0F3601'
+    l_belt_b_2: '36C805'
+    l_belt_b_3: '000000'
+    l_belt_b_30: '36C805'
+    l_belt_b_46: '36C805'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '2BA004'
+    l_belt_b_29: '144902'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '040E00'
+    l_belt_b_19: '33C105'
+    l_belt_b_2: '35C905'
+    l_belt_b_29: '35C905'
+    l_belt_b_30: '35C805'
+    l_belt_b_46: '35C905'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '2BA204'
+    l_belt_b_19: '35C905'
+    l_belt_b_30: '31BB05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '34C405'
+    l_belt_b_30: '071A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '34CA05'
+    l_belt_b_19: '34CA05'
+    l_belt_b_2: '34CA05'
+    l_belt_b_29: '34CA05'
+    l_belt_b_30: '000000'
+    l_belt_b_46: '34C905'
+    
+- time: '+1'
+  lights:
+    l_belt_b_46: '32C105'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '33CB05'
+    l_belt_b_19: '33CB05'
+    l_belt_b_2: '33CB05'
+    l_belt_b_29: '33CB05'
+    l_belt_b_46: '249004'
+    
+- time: '+1'
+  lights:
+    l_belt_b_2: '165902'
+    l_belt_b_46: '092301'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '32CC05'
+    l_belt_b_19: '32CC05'
+    l_belt_b_2: '000000'
+    l_belt_b_29: '32CC05'
+    l_belt_b_46: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_28: '32CC05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '31C605'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '31CD05'
+    l_belt_b_19: '31CD05'
+    l_belt_b_28: '31CD05'
+    l_belt_b_29: '218803'
+    
+- time: '+1'
+  lights:
+    l_belt_b_29: '000000'
+    l_belt_b_45: '000100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '30CE05'
+    l_belt_b_19: '30CE05'
+    l_belt_b_28: '30CE05'
+    l_belt_b_45: '1E8203'
+    
+- time: '+1'
+  lights:
+    l_belt_b_45: '30CE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '0A2C01'
+    l_belt_b_19: '2FCF05'
+    l_belt_b_28: '2FCF05'
+    l_belt_b_45: '2FCF05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '000000'
+    l_belt_b_19: '28AF04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '0D3A01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_19: '000000'
+    l_belt_b_28: '2ED005'
+    l_belt_b_45: '2ED005'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: '1A7703'
+    l_belt_b_28: '2ECE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '115102'
+    l_belt_b_27: '2DD105'
+    l_belt_b_28: '2AC305'
+    l_belt_b_45: '2DD105'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '2AC305'
+    l_belt_b_28: '0C3701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '2CCC05'
+    l_belt_b_28: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '2CD205'
+    l_belt_b_27: '2CD205'
+    l_belt_b_45: '2CD205'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '2BD305'
+    l_belt_b_27: '2BD305'
+    l_belt_b_45: '2BD305'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '2AD405'
+    l_belt_b_27: '2AD405'
+    l_belt_b_45: '29CE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_45: '27C405'
+    
+- time: '+1'
+  lights:
+    l_belt_b_44: '051A01'
+    l_belt_b_45: '0F4A02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '29D505'
+    l_belt_b_26: '197F03'
+    l_belt_b_27: '29D505'
+    l_belt_b_44: '21A904'
+    l_belt_b_45: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '29D505'
+    l_belt_b_27: '28CF05'
+    l_belt_b_44: '29D505'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '28D605'
+    l_belt_b_26: '28D605'
+    l_belt_b_27: '20A904'
+    l_belt_b_44: '28D605'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: '041701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_27: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '27D705'
+    l_belt_b_26: '27D705'
+    l_belt_b_44: '27D705'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '1FAA04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '072701'
+    l_belt_b_26: '26D805'
+    l_belt_b_44: '26D805'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '25D905'
+    l_belt_b_44: '25D905'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '157B03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '23CE05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '24D905'
+    l_belt_b_26: '24DA05'
+    l_belt_b_44: '24DA05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '24DA06'
+    l_belt_b_25: '0C4802'
+    l_belt_b_26: '23D306'
+    l_belt_b_43: '041A01'
+    l_belt_b_44: '23D206'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '23DB06'
+    l_belt_b_25: '21D006'
+    l_belt_b_26: '1DB405'
+    l_belt_b_43: '1DB805'
+    l_belt_b_44: '1AA505'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '23DB06'
+    l_belt_b_26: '072C01'
+    l_belt_b_43: '23DB06'
+    l_belt_b_44: '051D01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: '000000'
+    l_belt_b_44: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '22DC06'
+    l_belt_b_25: '22DC06'
+    l_belt_b_43: '22DC06'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '21DD06'
+    l_belt_b_25: '21DD06'
+    l_belt_b_43: '21DD06'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '20DE06'
+    l_belt_b_25: '20DE06'
+    l_belt_b_43: '20DE06'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '138704'
+    l_belt_b_17: '1FDF06'
+    l_belt_b_25: '1FDF06'
+    l_belt_b_43: '1FDF06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1ED506'
+    l_belt_b_17: '0B5002'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1EE006'
+    l_belt_b_17: '000000'
+    l_belt_b_25: '1EE006'
+    l_belt_b_42: '0C5902'
+    l_belt_b_43: '1DD806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: '1EE006'
+    l_belt_b_43: '16A604'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '1DD606'
+    l_belt_b_43: '021100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1DE106'
+    l_belt_b_25: '15A204'
+    l_belt_b_42: '1DE106'
+    l_belt_b_43: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '041B01'
+    l_belt_b_25: '042101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1CE206'
+    l_belt_b_24: '139A04'
+    l_belt_b_25: '000000'
+    l_belt_b_42: '1CE206'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '1CE206'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1BE306'
+    l_belt_b_24: '1BE306'
+    l_belt_b_42: '1BE306'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '073F02'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '18D506'
+    l_belt_b_16: '1AE406'
+    l_belt_b_24: '1AE406'
+    l_belt_b_42: '1AE406'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '1AE206'
+    l_belt_b_16: '19DB06'
+    l_belt_b_42: '1AE306'
+    l_belt_b_50: '031701'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '19E506'
+    l_belt_b_16: '063701'
+    l_belt_b_24: '19E506'
+    l_belt_b_41: '15BF05'
+    l_belt_b_42: '18D806'
+    l_belt_b_50: '0F8D04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '000000'
+    l_belt_b_41: '19E506'
+    l_belt_b_42: '095602'
+    l_belt_b_50: '18D806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_42: '000000'
+    l_belt_b_50: '19E106'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '18E606'
+    l_belt_b_24: '18E606'
+    l_belt_b_41: '18E606'
+    l_belt_b_50: '18E606'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '17E706'
+    l_belt_b_24: '17E706'
+    l_belt_b_41: '17E706'
+    l_belt_b_50: '17E706'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '16E806'
+    l_belt_b_24: '16E806'
+    l_belt_b_41: '16E806'
+    l_belt_b_50: '16E806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '085002'
+    l_belt_b_24: '16E606'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '15DB06'
+    l_belt_b_23: '074A02'
+    l_belt_b_24: '15DD06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '15E906'
+    l_belt_b_15: '0C8703'
+    l_belt_b_23: '12C505'
+    l_belt_b_24: '0FAA04'
+    l_belt_b_41: '15E606'
+    l_belt_b_50: '15E906'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '000000'
+    l_belt_b_23: '15E906'
+    l_belt_b_24: '043201'
+    l_belt_b_41: '13D806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '14EA06'
+    l_belt_b_23: '14EA06'
+    l_belt_b_24: '000000'
+    l_belt_b_41: '032501'
+    l_belt_b_50: '14EA06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_41: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '13EB06'
+    l_belt_b_23: '13EB06'
+    l_belt_b_49: '021300'
+    l_belt_b_50: '13EB06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_49: '0B8503'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '021801'
+    l_belt_b_14: '12EC06'
+    l_belt_b_23: '12EC06'
+    l_belt_b_49: '11DD06'
+    l_belt_b_50: '12EA06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '11D906'
+    l_belt_b_49: '12E606'
+    l_belt_b_50: '086803'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '11EB06'
+    l_belt_b_14: '11ED06'
+    l_belt_b_23: '11ED06'
+    l_belt_b_40: '064D02'
+    l_belt_b_49: '11ED06'
+    l_belt_b_50: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '11ED06'
+    l_belt_b_14: '0B9A04'
+    l_belt_b_40: '11ED06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '10EE06'
+    l_belt_b_23: '10EE06'
+    l_belt_b_40: '10EE06'
+    l_belt_b_49: '10EE06'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '0FEF06'
+    l_belt_b_23: '0FEF06'
+    l_belt_b_40: '0FEF06'
+    l_belt_b_49: '0FEF06'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_23: '0FEC06'
+    l_belt_b_39: '0DD705'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '077D03'
+    l_belt_b_13: '0EF006'
+    l_belt_b_23: '0DE406'
+    l_belt_b_39: '0EF006'
+    l_belt_b_40: '0EF006'
+    l_belt_b_49: '0EF006'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '0DE706'
+    l_belt_b_23: '0AAB04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '0DF106'
+    l_belt_b_13: '055502'
+    l_belt_b_23: '033801'
+    l_belt_b_39: '0DF106'
+    l_belt_b_40: '0CE206'
+    l_belt_b_49: '0DF106'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '000000'
+    l_belt_b_22: '022101'
+    l_belt_b_23: '000000'
+    l_belt_b_40: '022C01'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '0CF206'
+    l_belt_b_22: '089804'
+    l_belt_b_39: '0CF206'
+    l_belt_b_40: '000000'
+    l_belt_b_49: '0CF206'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '0CF206'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '033D02'
+    l_belt_b_38: '045002'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0AE606'
+    l_belt_b_12: '0BF306'
+    l_belt_b_22: '0BF306'
+    l_belt_b_38: '0BF306'
+    l_belt_b_39: '0BF306'
+    l_belt_b_49: '0BEE06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0BF306'
+    l_belt_b_39: '0AE506'
+    l_belt_b_49: '057003'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0AF406'
+    l_belt_b_12: '0AF406'
+    l_belt_b_22: '0AF406'
+    l_belt_b_38: '0AF406'
+    l_belt_b_39: '023001'
+    l_belt_b_49: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_39: '000000'
+    l_belt_b_48: '023501'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '023301'
+    l_belt_b_48: '07A704'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '09F506'
+    l_belt_b_12: '000000'
+    l_belt_b_22: '09F506'
+    l_belt_b_37: '000B00'
+    l_belt_b_38: '09F506'
+    l_belt_b_48: '09E806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_37: '09F506'
+    l_belt_b_48: '09F106'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '036602'
+    l_belt_b_11: '08F606'
+    l_belt_b_22: '08F606'
+    l_belt_b_37: '08F606'
+    l_belt_b_38: '08F606'
+    l_belt_b_48: '08F606'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '08EC06'
+    l_belt_b_38: '08EA06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '07F706'
+    l_belt_b_11: '07F706'
+    l_belt_b_22: '07F706'
+    l_belt_b_37: '07F706'
+    l_belt_b_38: '024202'
+    l_belt_b_48: '07F706'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '012101'
+    l_belt_b_38: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '06F806'
+    l_belt_b_22: '06F806'
+    l_belt_b_36: '04A904'
+    l_belt_b_37: '06F806'
+    l_belt_b_48: '06F806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_36: '06F806'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '05F906'
+    l_belt_b_22: '05F906'
+    l_belt_b_36: '05F906'
+    l_belt_b_37: '05EE06'
+    l_belt_b_48: '05F906'
+    l_belt_b_9: '037F03'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '05F106'
+    l_belt_b_37: '024B02'
+    l_belt_b_9: '05F106'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '05E906'
+    l_belt_b_37: '000000'
+    l_belt_b_9: '05F906'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '039D04'
+    l_belt_b_22: '028C03'
+    l_belt_b_36: '04FA06'
+    l_belt_b_48: '04FA06'
+    l_belt_b_9: '04FA06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '000000'
+    l_belt_b_22: '001B01'
+    l_belt_b_35: '000100'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '000000'
+    l_belt_b_35: '03FB06'
+    l_belt_b_36: '03FB06'
+    l_belt_b_48: '03FB06'
+    l_belt_b_9: '03FB06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_36: '03F206'
+    l_belt_b_8: '02C205'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '02FC06'
+    l_belt_b_36: '016002'
+    l_belt_b_48: '02FC06'
+    l_belt_b_8: '02F906'
+    l_belt_b_9: '02FC06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_36: '000000'
+    l_belt_b_8: '02FC06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '015B02'
+    l_belt_b_48: '019F04'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '01D305'
+    l_belt_b_35: '01FD06'
+    l_belt_b_47: '005B02'
+    l_belt_b_48: '002101'
+    l_belt_b_8: '01FD06'
+    l_belt_b_9: '004402'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '01FD06'
+    l_belt_b_47: '01D205'
+    l_belt_b_48: '000000'
+    l_belt_b_9: '000000'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '00FE06'
+    l_belt_b_35: '00FE06'
+    l_belt_b_47: '00F306'
+    l_belt_b_7: '00CF05'
+    l_belt_b_8: '00FE06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '00E705'
+    l_belt_b_47: '00FC06'
+    l_belt_b_7: '00FC06'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '000000'
+    l_belt_b_47: '00FE06'
+    l_belt_b_7: '00FE06'
+    
