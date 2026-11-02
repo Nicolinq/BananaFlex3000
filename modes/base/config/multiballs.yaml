@@ -13,3 +13,5 @@ multiballs:
     add_a_ball_hurry_up_time: 5s
     add_a_ball_grace_period: 3s
     ball_locks: bd_lock
+    enable_events: mission_selection_done, mode_base_started
+    disable_events: mission_select_start

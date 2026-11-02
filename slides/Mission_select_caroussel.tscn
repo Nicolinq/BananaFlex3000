@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgek0l0mssdiq"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_1ufqc"]
+[ext_resource type="Texture2D" uid="uid://b213r6o1witea" path="res://gabarit_ecran_round_bananaflex1024x1024.jpg" id="2_m4j53"]
+[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_nnxt2"]
+
+[node name="Attract" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1ufqc")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(521, 515)
+texture = ExtResource("2_m4j53")
+
+[node name="MPFCarousel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_nnxt2")
+carousel_name = "Mission_select_caroussel"
+metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
+
+[node name="MaintenanceMission" type="Label" parent="MPFCarousel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 1033.0
+offset_bottom = 1026.0
+theme_override_font_sizes/font_size = 80
+text = "◀ Maintenance ▶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShippingMission" type="Label" parent="MPFCarousel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 1033.0
+offset_bottom = 1026.0
+theme_override_font_sizes/font_size = 80
+text = "◀ Shipping Mission ▶"
+horizontal_alignment = 1
+vertical_alignment = 1

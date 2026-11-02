@@ -127,7 +127,7 @@ variable_player:
 show_player:
   # Mission running: yellow fast flash
   start_shipping_mission:
-    sh_shipping_running:
+    sh_mission_running:
       action: play
       loops: -1
       show_tokens:
@@ -145,9 +145,9 @@ show_player:
 
   # Mission complete: solid green
   shipping_mission_completed_lights:
-    sh_shipping_running:
+    sh_mission_running:
       action: stop
-    sh_shipping_done:
+    sh_insert_on:
       action: play
       loops: -1
       show_tokens:
@@ -156,14 +156,14 @@ show_player:
 
   # Timeout: stop shows
   shipping_mission_timeout:
-    sh_shipping_running:
+    sh_mission_running:
       action: stop
 
   # Mode stopping: clean up
   mode_shipping_mission_will_stop:
-    sh_shipping_running:
+    sh_mission_running:
       action: stop
-    sh_shipping_done:
+    sh_insert_on:
       action: stop
 
 light_player:
@@ -171,20 +171,6 @@ light_player:
     l_mission_start: off
 
 shows:
-  sh_shipping_running:
-    - time: 0
-      lights:
-        (leds): (color)
-    - time: +.15s
-      lights:
-        (leds): off
-    - time: +.15s
-      lights:
-        (leds): (color)
-    - time: +.15s
-      lights:
-        (leds): off
-
   sh_shipping_truck_pulse:
     - time: 0
       lights:
@@ -192,9 +178,3 @@ shows:
     - time: +.4s
       lights:
         (leds): off
-
-  sh_shipping_done:
-    - time: 0
-      lights:
-        (leds): (color)
-

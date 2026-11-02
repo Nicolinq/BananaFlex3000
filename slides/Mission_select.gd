@@ -117,4 +117,3 @@ func _update_display() -> void:
 		_hint_label.text = "◀ Flipper  |  LANCE pour confirmer  |  Flipper ▶"
 	else:
 		_hint_label.text = "LANCE pour confirmer"
-

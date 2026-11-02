@@ -120,14 +120,14 @@ show_player:
   maintenance_mission_completed:
     sh_mission_running:
       action: stop
-    sh_mission_completed:
+    sh_insert_on:
       action: play
       show_tokens:
         leds: l_mission_start
         color: tt_green
 
   mode_maintenance_mission_started{current_player.pv_maintenance_mission_completed==1}:
-    sh_mission_completed:
+    sh_insert_on:
       action: play
       show_tokens:
         leds: l_mission_start
@@ -140,7 +140,7 @@ show_player:
   mode_maintenance_mission_will_stop:
     sh_mission_running:
       action: stop
-    sh_mission_completed:
+    sh_insert_on:
       action: stop
 
 light_player:
@@ -148,24 +148,3 @@ light_player:
     l_mission_start: off
   mode_maintenance_mission_will_stop{current_player.pv_maintenance_mission_completed==0}:
     l_mission_start: off
-
-shows:
-  sh_mission_running:
-    - time: 0
-      lights:
-        (leds): (color)
-    - time: +.12s
-      lights:
-        (leds): off
-    - time: +.12s
-      lights:
-        (leds): (color)
-    - time: +.12s
-      lights:
-        (leds): off
-
-  sh_mission_completed:
-    - time: 0
-      duration: -1
-      lights:
-        (leds): (color)

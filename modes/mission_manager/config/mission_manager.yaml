@@ -4,6 +4,7 @@ mode:
   start_events: start_mode_mission_manager
   stop_events: stop_mode_mission_manager, ball_will_end
   priority: 255
+  use_wait_queue: true
 
 # =====================================================================
 # MISSION MANAGER
@@ -18,6 +19,36 @@ mode:
 #   5. Posts select_maintenance_mission or select_shipping_mission
 #      based on player input from GMC
 # =====================================================================
+
+mode_settings:
+  selectable_items:
+    - MaintenanceMission
+    - ShippingMission
+  next_item_events: s_flipper_left_button_active
+  previous_item_events: s_flipper_right_button_active
+  select_item_events: s_launch_button_active
+  slide_player:
+    MaintenanceMission_highlighted: start_maintenance_mission
+    ShippingMission_highlighted: start_shipping_mission
+  slides:
+    select_MaintenanceMission:
+      widgets:
+        - type: text
+          text: Mission Maintenance
+          font_size: 10
+          color: yellow
+      transitions:
+        type: move_in
+        direction: right
+    select_ShippingMission:
+      widgets:
+        - type: text
+          text: Mission Expédition
+          font_size: 10
+          color: yellow
+      transitions:
+        type: move_in
+        direction: right
 
 event_player:
   # --- Qualification ---
@@ -36,19 +67,14 @@ event_player:
   # Ball enters bd_lock while selection is pending -> eject + show selection slide
   "balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}":
     - mission_select_start
-    - eject_bd_lock|1s
-
-  # Player selects missions via GMC events
-  select_maintenance_mission:
-    - start_maintenance_mission
-  select_shipping_mission:
-    - start_shipping_mission
 
   # When any mission starts, clear the qualified flag and stop mission manager shows
   start_maintenance_mission:
     - mission_selection_done
+    - eject_bd_lock|1s
   start_shipping_mission:
     - mission_selection_done
+    - eject_bd_lock|1s
 
   # When any mission completes, clear running flag
   maintenance_mission_completed:
@@ -84,7 +110,7 @@ variable_player:
 show_player:
   # Qualification: slow flash orange
   mission_select_qualify:
-    sh_mission_mgr_flash:
+    sh_led_flash:
       action: play
       loops: -1
       show_tokens:
@@ -93,7 +119,7 @@ show_player:
 
   # Resume on ball start
   mission_select_resume:
-    sh_mission_mgr_flash:
+    sh_led_flash:
       action: play
       loops: -1
       show_tokens:
@@ -102,12 +128,12 @@ show_player:
 
   # Mission selected -> stop flashing (individual mission mode manages its own light)
   mission_selection_done:
-    sh_mission_mgr_flash:
+    sh_led_flash:
       action: stop
 
   # Mode stopping -> clean up
   mode_mission_manager_will_stop:
-    sh_mission_mgr_flash:
+    sh_led_flash:
       action: stop
 
 light_player:
@@ -116,22 +142,5 @@ light_player:
 
 slide_player:
   # Show the mission selection screen in Godot
-  mission_select_start:
-    Mission_select:
-      action: play
-
-shows:
-  sh_mission_mgr_flash:
-    - time: 0
-      lights:
-        (leds): (color)
-    - time: +.25s
-      lights:
-        (leds): off
-    - time: +.25s
-      lights:
-        (leds): (color)
-    - time: +.25s
-      lights:
-        (leds): off
+  mission_select_start: Mission_select_caroussel
 

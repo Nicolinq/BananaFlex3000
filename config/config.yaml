@@ -51,6 +51,7 @@ ball_devices:
         eject_timeouts: 10s
         eject_events: eject_bd_lock
 
+
 ball_holds:
   bh_lock_scoop:
     balls_to_hold: 3

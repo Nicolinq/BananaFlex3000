@@ -84,6 +84,19 @@ shows:
     duration: -1
     lights:
       (leds): (color)
+  sh_mission_running:
+    - time: 0
+      lights:
+        (leds): (color)
+    - time: +.12s
+      lights:
+        (leds): off
+    - time: +.12s
+      lights:
+        (leds): (color)
+    - time: +.12s
+      lights:
+        (leds): off
 
 variable_player:
   shot_left_bank_hit:
