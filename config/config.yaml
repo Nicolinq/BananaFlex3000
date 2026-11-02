@@ -30,6 +30,8 @@ modes:
 - sequential_targets
 - classic_multiball
 - maintenance_mission
+- mission_manager
+- shipping_mission
 - service
 
 ball_devices:

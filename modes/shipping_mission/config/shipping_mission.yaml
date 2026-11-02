@@ -1,0 +1,200 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_shipping_mission
+  stop_events: stop_mode_shipping_mission, ball_will_end
+  priority: 260
+
+# =====================================================================
+# SHIPPING MISSION
+#
+# Goal: Send 3 banana trucks by hitting s_wall_target then ramp_shot_done
+#       within 8 seconds each time.
+#
+# Flow:
+#   1. start_shipping_mission event fires (from mission_manager)
+#   2. 90s global timer starts, l_mission_start flashes yellow
+#   3. s_wall_target_active -> tim_shipping_truck starts (8s window)
+#   4. ramp_shot_done while tim_shipping_truck running -> truck_sent
+#   5. 3x truck_sent -> shipping_mission_completed -> 150,000 points
+#   6. Timeout -> shipping_mission_timeout
+# =====================================================================
+
+achievements:
+  shipping_mission:
+    enable_events: start_shipping_mission
+    start_events: start_shipping_mission
+    complete_events: shipping_mission_completed
+
+timers:
+  tim_shipping_duration:
+    start_value: 90
+    end_value: 0
+    direction: down
+    control_events:
+      - event: start_shipping_mission
+        action: start
+      - event: shipping_mission_completed
+        action: stop
+    start_running: false
+
+  tim_shipping_truck:
+    start_value: 8
+    end_value: 0
+    direction: down
+    control_events:
+      - event: shot_shipping_wall_target_hit
+        action: restart
+      - event: truck_sent
+        action: stop
+      - event: shipping_mission_completed
+        action: stop
+    start_running: false
+
+shots:
+  shot_shipping_wall_target:
+    switch: s_wall_target
+    enable_events: start_shipping_mission
+    disable_events: shipping_mission_completed, shipping_mission_timeout, stop_mode_shipping_mission
+
+counters:
+  co_shipping_trucks:
+    count_events: truck_sent
+    count_complete_value: 3
+    events_when_complete: shipping_mission_completed
+    reset_on_complete: false
+    enable_events: start_shipping_mission
+    disable_events: shipping_mission_completed, shipping_mission_timeout
+
+event_player:
+  # Wall target hit -> start the 8s window (timer restarts via control_events)
+  # Nothing extra needed; tim_shipping_truck control_events handle it
+
+  # ramp_shot_done while truck timer is running -> truck delivered
+  "ramp_shot_done{device.timers.tim_shipping_truck.ticks_remaining > 0}":
+    - truck_sent
+
+  # Mission complete
+  shipping_mission_completed:
+    - shipping_mission_completed_lights
+
+  # Overall timer ran out
+  timer_tim_shipping_duration_complete:
+    - shipping_mission_timeout
+
+  # On mode start with active mission (ball drain/resume)
+  "mode_shipping_mission_started{current_player.pv_shipping_mission_running==1}":
+    - start_shipping_mission
+
+variable_player:
+  start_shipping_mission:
+    pv_shipping_mission_running:
+      int: 1
+      action: set
+    pv_shipping_mission_time_remaining:
+      int: 90
+      action: set
+
+  truck_sent:
+    pv_shipping_mission_trucks_sent:
+      int: 1
+      action: add
+    score:
+      int: 25000
+      action: add
+
+  shipping_mission_completed:
+    pv_shipping_mission_running:
+      int: 0
+      action: set
+    pv_shipping_mission_completed:
+      int: 1
+      action: set
+    score:
+      int: 150000
+      action: add
+
+  shipping_mission_timeout:
+    pv_shipping_mission_running:
+      int: 0
+      action: set
+
+  timer_tim_shipping_duration_tick:
+    pv_shipping_mission_time_remaining:
+      int: -1
+      action: add
+
+show_player:
+  # Mission running: yellow fast flash
+  start_shipping_mission:
+    sh_shipping_running:
+      action: play
+      loops: -1
+      show_tokens:
+        leds: l_mission_start
+        color: tt_yellow
+
+  # Truck sent: brief blue pulse
+  truck_sent:
+    sh_shipping_truck_pulse:
+      action: play
+      loops: 1
+      show_tokens:
+        leds: l_mission_start
+        color: tt_blue
+
+  # Mission complete: solid green
+  shipping_mission_completed_lights:
+    sh_shipping_running:
+      action: stop
+    sh_shipping_done:
+      action: play
+      loops: -1
+      show_tokens:
+        leds: l_mission_start
+        color: tt_green
+
+  # Timeout: stop shows
+  shipping_mission_timeout:
+    sh_shipping_running:
+      action: stop
+
+  # Mode stopping: clean up
+  mode_shipping_mission_will_stop:
+    sh_shipping_running:
+      action: stop
+    sh_shipping_done:
+      action: stop
+
+light_player:
+  mode_shipping_mission_will_stop:
+    l_mission_start: off
+
+shows:
+  sh_shipping_running:
+    - time: 0
+      lights:
+        (leds): (color)
+    - time: +.15s
+      lights:
+        (leds): off
+    - time: +.15s
+      lights:
+        (leds): (color)
+    - time: +.15s
+      lights:
+        (leds): off
+
+  sh_shipping_truck_pulse:
+    - time: 0
+      lights:
+        (leds): (color)
+    - time: +.4s
+      lights:
+        (leds): off
+
+  sh_shipping_done:
+    - time: 0
+      lights:
+        (leds): (color)
+

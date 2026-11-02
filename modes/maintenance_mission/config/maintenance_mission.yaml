@@ -8,40 +8,30 @@ mode:
 # =====================================================================
 # ACHIEVEMENT "maintenance_mission"
 #
-# Lifecycle:
-#   1. Activation (Qualified):
-#      - Triggered when a spinner stack is completed (spinner_stack_complete)
-#      - LED l_mission_start flashes
-#      - Diverter is enabled so orbit shot diverts ball into bd_lock
+# Started by mission_manager when player selects this mission.
+# Goal: reach 100% maintenance by hitting any playfield switch.
+#   - Each switch hit = 1% (100 hits total by default, configurable)
+#   - Time limit: pv_maintenance_mission_initial_time (default 120s)
+#   - Award: 200,000 points on completion
 #
-#   2. Mission Start:
-#      - Ball enters bd_lock via the orbit
-#      - bd_lock ejects ball back to the playfield
-#      - 120-second timer begins countdown
-#      - Progress starts at 0%
-#
-#   3. Progression:
-#      - Every playfield switch hit adds 1% to pv_maintenance_mission_percent
-#
-#   4. Completion / Timeout:
-#      - Reaching 100% awards 200,000 points and completes the achievement
-#      - If 120s expires before 100%, mission times out and resets
+# Note: qualification and l_mission_start flashing during selection
+# are handled by mission_manager.
+# This mode only manages the running and completed states.
 # =====================================================================
 
 achievements:
   maintenance_mission:
-    enable_events: maintenance_mission_qualify
+    enable_events: start_maintenance_mission
     start_events: start_maintenance_mission
     complete_events: maintenance_mission_completed
 
-# Playfield switches that contribute to the 1% maintenance_mission progress
+# All playfield switches contribute 1% maintenance progress
 shots:
   shot_maintenance_mission_switch:
     switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4, s_upper_left_lane, s_upper_right_lane, s_left_orbit, s_right_orbit, s_bank3_1, s_bank3_2, s_bank3_3, s_right_target, s_left_target, s_spinner, s_left_inlane, s_right_inlane, s_wall_target, s_bumper_target, s_red_monkey, s_bumper, s_magnet, s_ramp_begin, s_ramp_end
     enable_events: start_maintenance_mission
     disable_events: maintenance_mission_completed, maintenance_mission_timeout, mode_maintenance_mission_will_stop
 
-# Progress counter from 0 to 100%
 counters:
   co_maintenance_mission_percent:
     count_events: shot_maintenance_mission_switch_hit
@@ -54,7 +44,6 @@ counters:
     reset_events: start_maintenance_mission
     events_when_complete: maintenance_mission_completed
 
-# 120 seconds time limit
 timers:
   tim_maintenance_mission_limit:
     start_value: pv_maintenance_mission_initial_time
@@ -73,36 +62,15 @@ timers:
         action: stop
 
 event_player:
-  # Activate mission qualification on spinner stack completion
-  spinner_stack_complete{current_player.pv_maintenance_mission_completed==0 and current_player.pv_maintenance_mission_running==0}:
-    - maintenance_mission_qualify
-    - enable_lock_diverter
-    - enable_top_left_gate_diverter
-
-  # If qualified from previous ball, re-enable diverters on mode start
-  mode_maintenance_mission_started{current_player.pv_maintenance_mission_ready==1 and current_player.pv_maintenance_mission_completed==0 and current_player.pv_maintenance_mission_running==0}:
-    - enable_lock_diverter
-    - enable_top_left_gate_diverter
-
-  # Orbit shot routes ball into bd_lock -> mission starts & ball is ejected
-  balldevice_bd_lock_ball_entered{current_player.pv_maintenance_mission_ready==1 and current_player.pv_maintenance_mission_running==0}:
-    - start_maintenance_mission
-    - eject_bd_lock|1s
-
-  # Time limit expired (120s)
   timer_tim_maintenance_mission_limit_complete:
     - maintenance_mission_timeout
 
-variable_player:
-  maintenance_mission_qualify:
-    pv_maintenance_mission_ready:
-      int: 1
-      action: set
+  # Resume running show when returning from a drained ball mid-mission
+  mode_maintenance_mission_started{current_player.pv_maintenance_mission_running==1}:
+    - start_maintenance_mission
 
+variable_player:
   start_maintenance_mission:
-    pv_maintenance_mission_ready:
-      int: 0
-      action: set
     pv_maintenance_mission_running:
       int: 1
       action: set
@@ -138,33 +106,9 @@ variable_player:
       int: 0
       action: set
 
-  mode_maintenance_mission_will_stop:
-    pv_maintenance_mission_running:
-      int: 0
-      action: set
-
 show_player:
-  # Qualification: l_mission_start flashes
-  maintenance_mission_qualify:
-    sh_mission_flash:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_orange
-
-  mode_maintenance_mission_started{current_player.pv_maintenance_mission_ready==1 and current_player.pv_maintenance_mission_completed==0 and current_player.pv_maintenance_mission_running==0}:
-    sh_mission_flash:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_orange
-
-  # Mission running: fast flash
+  # Mission running: fast yellow flash
   start_maintenance_mission:
-    sh_mission_flash:
-      action: stop
     sh_mission_running:
       action: play
       loops: -1
@@ -172,7 +116,7 @@ show_player:
         leds: l_mission_start
         color: tt_yellow
 
-  # Completed: stop running show, illuminate solid green
+  # Completed: solid green (persists across balls)
   maintenance_mission_completed:
     sh_mission_running:
       action: stop
@@ -194,8 +138,6 @@ show_player:
       action: stop
 
   mode_maintenance_mission_will_stop:
-    sh_mission_flash:
-      action: stop
     sh_mission_running:
       action: stop
     sh_mission_completed:
@@ -204,24 +146,10 @@ show_player:
 light_player:
   maintenance_mission_timeout:
     l_mission_start: off
-  mode_maintenance_mission_will_stop:
+  mode_maintenance_mission_will_stop{current_player.pv_maintenance_mission_completed==0}:
     l_mission_start: off
 
 shows:
-  sh_mission_flash:
-    - time: 0
-      lights:
-        (leds): (color)
-    - time: +.25s
-      lights:
-        (leds): off
-    - time: +.25s
-      lights:
-        (leds): (color)
-    - time: +.25s
-      lights:
-        (leds): off
-
   sh_mission_running:
     - time: 0
       lights:
@@ -241,4 +169,3 @@ shows:
       duration: -1
       lights:
         (leds): (color)
-

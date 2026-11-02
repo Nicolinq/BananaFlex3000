@@ -7,7 +7,9 @@ player_vars:
         initial_value: 0
     pv_spinner_stack_hits:
         initial_value: 0
-    pv_maintenance_mission_ready:
+    pv_missions_qualified:
+        initial_value: 0
+    pv_mission_running:
         initial_value: 0
     pv_maintenance_mission_running:
         initial_value: 0
@@ -21,3 +23,13 @@ player_vars:
         initial_value: 0
     pv_maintenance_mission_switchs_to_complete:
         initial_value: 100
+    pv_shipping_mission_running:
+        initial_value: 0
+    pv_shipping_mission_completed:
+        initial_value: 0
+    pv_shipping_mission_trucks_sent:
+        initial_value: 0
+    pv_shipping_mission_time_remaining:
+        initial_value: 0
+    pv_shipping_mission_initial_time:
+        initial_value: 90

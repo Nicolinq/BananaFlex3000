@@ -18,6 +18,8 @@ event_player:
       - start_mode_spinner
       - start_mode_skill_shot
       - start_mode_maintenance_mission
+      - start_mode_mission_manager
+      - start_mode_shipping_mission
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_banana_load
@@ -27,6 +29,8 @@ event_player:
       - stop_mode_sequential_targets
       - stop_mode_classic_multiball
       - stop_mode_maintenance_mission
+      - stop_mode_mission_manager
+      - stop_mode_shipping_mission
    mode_skill_shot_will_stop:
       - start_mode_sequential_targets
       - start_mode_classic_multiball
@@ -102,6 +106,7 @@ achievement_groups:
   mission_awards:
     achievements:
       - maintenance_mission
+      - shipping_mission
     auto_select: true
     events_when_all_completed: all_missions_completed
     enable_while_no_achievement_started: false
