@@ -7,3 +7,17 @@ player_vars:
         initial_value: 0
     pv_spinner_stack_hits:
         initial_value: 0
+    pv_maintenance_mission_ready:
+        initial_value: 0
+    pv_maintenance_mission_running:
+        initial_value: 0
+    pv_maintenance_mission_percent:
+        initial_value: 0
+    pv_maintenance_mission_completed:
+        initial_value: 0
+    pv_maintenance_mission_initial_time:
+        initial_value: 120
+    pv_maintenance_mission_time_remaining:
+        initial_value: 0
+    pv_maintenance_mission_switchs_to_complete:
+        initial_value: 100

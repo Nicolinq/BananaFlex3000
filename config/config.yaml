@@ -29,6 +29,7 @@ modes:
 - banana_control
 - sequential_targets
 - classic_multiball
+- maintenance_mission
 - service
 
 ball_devices:
@@ -46,6 +47,7 @@ ball_devices:
         tags: lock
         eject_targets: playfield
         eject_timeouts: 10s
+        eject_events: eject_bd_lock
 
 ball_holds:
   bh_lock_scoop:
