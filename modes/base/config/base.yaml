@@ -4,7 +4,6 @@ config:
 - upper_lanes.yaml
 - orbits.yaml
 - ramp.yaml
-- multiballs.yaml
 
 mode:
   start_events: ball_started

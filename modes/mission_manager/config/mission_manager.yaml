@@ -53,19 +53,19 @@ mode_settings:
 event_player:
   # --- Qualification ---
   # Only qualify if no mission is already running and a selectable mission exists
-  "spinner_stack_complete{current_player.pv_missions_qualified==0 and (current_player.pv_maintenance_mission_completed==0 or current_player.pv_shipping_mission_completed==0)}":
+  spinner_stack_complete{current_player.pv_missions_qualified==0 and (current_player.pv_maintenance_mission_completed==0 or current_player.pv_shipping_mission_completed==0)}:
     - mission_select_qualify
     - enable_lock_diverter
     - enable_top_left_gate_diverter
 
   # Resume qualification on ball restart if still pending
-  "mode_mission_manager_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}":
+  mode_mission_manager_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
     - mission_select_resume
     - enable_lock_diverter
     - enable_top_left_gate_diverter
 
   # Ball enters bd_lock while selection is pending -> eject + show selection slide
-  "balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}":
+  balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
     - mission_select_start
 
   # When any mission starts, clear the qualified flag and stop mission manager shows

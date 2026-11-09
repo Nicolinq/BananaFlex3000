@@ -40,25 +40,28 @@ ball_devices:
         jam_switch: s_ball_trough_jam
         eject_coil: c_ball_trough
         tags: trough, home, drain
-        eject_coil_jam_pulse: 15ms
-        eject_timeouts: 3s
+        #eject_coil_jam_pulse: 15ms
+        eject_timeouts: 1s
         player_controlled_eject_event: s_launch_button_active
+        # confirm_eject_type: switch
+        # confirm_eject_switch: s_right_orbit
+
     bd_lock:
         ball_switches: s_lock_1,s_lock_2,s_lock_3
         eject_coil: c_lock_release
         tags: lock
         eject_targets: playfield
-        eject_timeouts: 10s
+        eject_timeouts: 1s
         eject_events: eject_bd_lock
 
 
-ball_holds:
-  bh_lock_scoop:
-    balls_to_hold: 3
-    hold_devices: bd_lock
-    enable_events: mode_banana_bend_started
-    disable_events: mode_banana_bend_will_stop
-    release_one_events: mode_banana_bend_started
+# ball_holds:
+#   bh_lock_scoop:
+#     balls_to_hold: 3
+#     hold_devices: bd_lock
+#     enable_events: mode_banana_bend_started
+#     disable_events: mode_banana_bend_will_stop
+#     release_one_events: mode_banana_bend_started
 
 playfields:
   playfield:
