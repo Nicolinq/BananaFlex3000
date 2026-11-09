@@ -10,7 +10,7 @@ mode:
 #
 # Flow:
 #   sequential_targets_done
-#     - multiball_lock enabled for ONE ball
+#     - multiball_lock enabled for ONE ball (except first instance)
 #     - l_lock_start flashes orange
 #   Ball enters bd_lock → multiball_lock_classic_mb_lock_locked_ball fires
 #     - sequential targets reset (player must do the sequence again)

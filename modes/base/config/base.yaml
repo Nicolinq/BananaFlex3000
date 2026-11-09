@@ -30,6 +30,7 @@ event_player:
       - stop_mode_maintenance_mission
       - stop_mode_mission_manager
       - stop_mode_shipping_mission
+      - stop_mode_hyperloop
    mode_skill_shot_will_stop:
       - start_mode_sequential_targets
       - start_mode_classic_multiball

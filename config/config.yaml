@@ -27,6 +27,7 @@ modes:
 - banana_load
 - banana_bend
 - banana_control
+- hyperloop
 - sequential_targets
 - classic_multiball
 - maintenance_mission

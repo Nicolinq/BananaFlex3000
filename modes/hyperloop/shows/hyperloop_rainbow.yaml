@@ -1,0 +1,838 @@
+#show_version=6
+- time: 0
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BF06A0'
+    l_belt_b_10: 'C70101'
+    l_belt_b_11: 'C70101'
+    l_belt_b_12: 'C70101'
+    l_belt_b_13: 'C70101'
+    l_belt_b_14: 'C70101'
+    l_belt_b_15: 'C70101'
+    l_belt_b_16: 'C70101'
+    l_belt_b_17: 'C8401F'
+    l_belt_b_18: 'C8401F'
+    l_belt_b_19: 'C8401F'
+    l_belt_b_2: 'BF06A0'
+    l_belt_b_20: 'C8401F'
+    l_belt_b_21: 'C8401F'
+    l_belt_b_22: 'C87900'
+    l_belt_b_23: 'C87900'
+    l_belt_b_24: 'C87900'
+    l_belt_b_25: 'C87900'
+    l_belt_b_26: 'C87900'
+    l_belt_b_27: '1D593B'
+    l_belt_b_28: '1B593C'
+    l_belt_b_29: '1B593C'
+    l_belt_b_3: 'BF06A0'
+    l_belt_b_30: '1B593C'
+    l_belt_b_31: '1B593C'
+    l_belt_b_32: '1B593C'
+    l_belt_b_33: '1B593C'
+    l_belt_b_34: '1B593C'
+    l_belt_b_35: '1B593C'
+    l_belt_b_36: '0051B6'
+    l_belt_b_37: '0051B6'
+    l_belt_b_38: '0051B6'
+    l_belt_b_39: '0051B6'
+    l_belt_b_4: 'BF06A0'
+    l_belt_b_40: '0051B6'
+    l_belt_b_41: '0051B6'
+    l_belt_b_42: '0051B6'
+    l_belt_b_43: '0000C8'
+    l_belt_b_44: '0000C8'
+    l_belt_b_45: '0000C8'
+    l_belt_b_46: '0000C8'
+    l_belt_b_47: '0000C8'
+    l_belt_b_48: '7A2AB9'
+    l_belt_b_49: '7A2AB9'
+    l_belt_b_5: 'BF06A0'
+    l_belt_b_50: '7A2AB9'
+    l_belt_b_6: 'BF06A0'
+    l_belt_b_7: 'BF06A0'
+    l_belt_b_8: 'BF06A0'
+    l_belt_b_9: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'C0058C'
+    l_belt_b_17: 'C70101'
+    l_belt_b_27: 'C87900'
+    l_belt_b_36: '1B593C'
+    l_belt_b_43: '0051B6'
+    l_belt_b_48: '0000C8'
+    l_belt_b_9: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'BF06A0'
+    l_belt_b_11: 'BF06A0'
+    l_belt_b_22: 'C8481A'
+    l_belt_b_28: 'C87900'
+    l_belt_b_37: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '7A2AB9'
+    l_belt_b_12: 'BF06A0'
+    l_belt_b_18: 'C70101'
+    l_belt_b_2: 'A314AA'
+    l_belt_b_22: 'C8401F'
+    l_belt_b_29: 'C87900'
+    l_belt_b_38: '1B593C'
+    l_belt_b_44: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'BF06A0'
+    l_belt_b_2: '7A2AB9'
+    l_belt_b_3: '9F16AC'
+    l_belt_b_30: 'A4730C'
+    l_belt_b_39: '1B593C'
+    l_belt_b_40: '1B593C'
+    l_belt_b_49: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'BF06A0'
+    l_belt_b_19: 'C70E07'
+    l_belt_b_23: 'C8401F'
+    l_belt_b_3: '7A2AB9'
+    l_belt_b_30: 'C87900'
+    l_belt_b_31: 'C87900'
+    l_belt_b_4: '8026B7'
+    l_belt_b_45: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'C6011A'
+    l_belt_b_19: 'C70101'
+    l_belt_b_32: 'C87900'
+    l_belt_b_4: '7A2AB9'
+    l_belt_b_5: '7A2AB9'
+    l_belt_b_50: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'BF06A0'
+    l_belt_b_24: 'C85B10'
+    l_belt_b_33: 'C87900'
+    l_belt_b_41: '1B593C'
+    l_belt_b_6: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'BF06A0'
+    l_belt_b_20: 'C71008'
+    l_belt_b_24: 'C8401F'
+    l_belt_b_34: 'C87900'
+    l_belt_b_42: '125665'
+    l_belt_b_46: '0051B6'
+    l_belt_b_7: '7A2AB9'
+    l_belt_b_8: 'BC07A1'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'C3034F'
+    l_belt_b_20: 'C70101'
+    l_belt_b_35: 'BE7804'
+    l_belt_b_42: '1B593C'
+    l_belt_b_8: '7A2AB9'
+    l_belt_b_9: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '7A2AB9'
+    l_belt_b_17: 'BF06A0'
+    l_belt_b_25: 'C8401F'
+    l_belt_b_35: 'C87900'
+    l_belt_b_36: 'C87900'
+    l_belt_b_43: '1B593C'
+    l_belt_b_47: '0001C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '7A2AB9'
+    l_belt_b_21: 'C70101'
+    l_belt_b_37: 'C87900'
+    l_belt_b_47: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '7A2AB9'
+    l_belt_b_18: 'BF06A0'
+    l_belt_b_26: 'C8401F'
+    l_belt_b_38: 'C87900'
+    l_belt_b_44: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '7A2AB9'
+    l_belt_b_27: 'C8401F'
+    l_belt_b_39: 'C87900'
+    l_belt_b_48: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '1C09C5'
+    l_belt_b_14: '7A2AB9'
+    l_belt_b_19: 'BF06A0'
+    l_belt_b_40: 'C87900'
+    l_belt_b_45: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '0000C8'
+    l_belt_b_15: '7A2AB9'
+    l_belt_b_2: '0000C8'
+    l_belt_b_22: 'C70101'
+    l_belt_b_28: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '8921B3'
+    l_belt_b_29: 'C8401F'
+    l_belt_b_3: '0000C8'
+    l_belt_b_41: 'C87900'
+    l_belt_b_49: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '7A2AB9'
+    l_belt_b_20: 'BF06A0'
+    l_belt_b_23: 'C82411'
+    l_belt_b_30: 'C8401F'
+    l_belt_b_4: '0000C8'
+    l_belt_b_46: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '7A2AB9'
+    l_belt_b_23: 'C70101'
+    l_belt_b_31: 'C8401F'
+    l_belt_b_42: 'C87900'
+    l_belt_b_5: '0000C8'
+    l_belt_b_50: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_32: 'C8401F'
+    l_belt_b_33: 'C85016'
+    l_belt_b_43: 'C87900'
+    l_belt_b_6: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '7A2AB9'
+    l_belt_b_21: 'BF06A0'
+    l_belt_b_24: 'C70101'
+    l_belt_b_33: 'C8401F'
+    l_belt_b_34: 'C8401F'
+    l_belt_b_47: '1B593C'
+    l_belt_b_7: '0000C8'
+    l_belt_b_8: '4116C0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_44: 'C87900'
+    l_belt_b_8: '0000C8'
+    l_belt_b_9: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '0000C8'
+    l_belt_b_25: 'C70101'
+    l_belt_b_35: 'C8401F'
+    l_belt_b_48: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0000C8'
+    l_belt_b_19: '7A2AB9'
+    l_belt_b_22: 'C60114'
+    l_belt_b_36: 'C8401F'
+    l_belt_b_37: 'C85B10'
+    l_belt_b_45: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: '0000C8'
+    l_belt_b_22: 'BF06A0'
+    l_belt_b_26: 'C70101'
+    l_belt_b_37: 'C8401F'
+    l_belt_b_38: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '0000C8'
+    l_belt_b_27: 'C82110'
+    l_belt_b_39: 'C8401F'
+    l_belt_b_49: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '0000C8'
+    l_belt_b_20: '7A2AB9'
+    l_belt_b_23: 'C10583'
+    l_belt_b_27: 'C70101'
+    l_belt_b_40: 'C8401F'
+    l_belt_b_46: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '0051B6'
+    l_belt_b_15: '0000C8'
+    l_belt_b_2: '000DC5'
+    l_belt_b_23: 'BF06A0'
+    l_belt_b_28: 'C70101'
+    l_belt_b_50: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '0502C7'
+    l_belt_b_2: '0051B6'
+    l_belt_b_21: 'BC07A1'
+    l_belt_b_29: 'C70101'
+    l_belt_b_3: '000BC6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '0000C8'
+    l_belt_b_21: '7A2AB9'
+    l_belt_b_24: 'BF06A0'
+    l_belt_b_3: '0051B6'
+    l_belt_b_30: 'C70101'
+    l_belt_b_4: '0024C0'
+    l_belt_b_41: 'C8401F'
+    l_belt_b_47: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '0000C8'
+    l_belt_b_31: 'C70101'
+    l_belt_b_4: '0051B6'
+    l_belt_b_42: 'C8401F'
+    l_belt_b_5: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: 'BF06A0'
+    l_belt_b_32: 'C70101'
+    l_belt_b_48: '766A1C'
+    l_belt_b_6: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: '0000C8'
+    l_belt_b_22: '7A2AB9'
+    l_belt_b_33: 'C70101'
+    l_belt_b_34: 'C81B0D'
+    l_belt_b_43: 'C8401F'
+    l_belt_b_48: 'C87900'
+    l_belt_b_7: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_26: 'BF06A0'
+    l_belt_b_34: 'C70101'
+    l_belt_b_44: 'C87005'
+    l_belt_b_8: '0051B6'
+    l_belt_b_9: '003ABB'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '0051B6'
+    l_belt_b_27: 'BF06A0'
+    l_belt_b_35: 'C70101'
+    l_belt_b_44: 'C8401F'
+    l_belt_b_49: 'C87900'
+    l_belt_b_9: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: '0051B6'
+    l_belt_b_19: '0000C8'
+    l_belt_b_23: '7A2AB9'
+    l_belt_b_36: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '1B593C'
+    l_belt_b_12: '0051B6'
+    l_belt_b_2: '1A593E'
+    l_belt_b_28: 'BF06A0'
+    l_belt_b_37: 'C70101'
+    l_belt_b_45: 'C8401F'
+    l_belt_b_50: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '0051B6'
+    l_belt_b_2: '1B593C'
+    l_belt_b_24: '7A2AB9'
+    l_belt_b_29: 'BF06A0'
+    l_belt_b_3: '125662'
+    l_belt_b_38: 'C70101'
+    l_belt_b_39: 'C8391B'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '0051B6'
+    l_belt_b_20: '0000C8'
+    l_belt_b_3: '1B593C'
+    l_belt_b_30: 'BF06A0'
+    l_belt_b_39: 'C70101'
+    l_belt_b_4: '1B593C'
+    l_belt_b_40: 'C70201'
+    l_belt_b_46: 'C86F05'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '0036BC'
+    l_belt_b_25: 'BC07A1'
+    l_belt_b_31: 'BF06A0'
+    l_belt_b_40: 'C70101'
+    l_belt_b_46: 'C8401F'
+    l_belt_b_5: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '0051B6'
+    l_belt_b_25: '7A2AB9'
+    l_belt_b_32: 'BF06A0'
+    l_belt_b_33: 'C60111'
+    l_belt_b_6: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '0051B6'
+    l_belt_b_21: '0000C8'
+    l_belt_b_26: '7E27B8'
+    l_belt_b_33: 'BF06A0'
+    l_belt_b_34: 'BF06A0'
+    l_belt_b_41: 'C70101'
+    l_belt_b_47: 'C8401F'
+    l_belt_b_7: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '004EB7'
+    l_belt_b_26: '7A2AB9'
+    l_belt_b_42: 'C70302'
+    l_belt_b_8: '1B593C'
+    l_belt_b_9: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: '1B593C'
+    l_belt_b_17: '0051B6'
+    l_belt_b_27: '7A2AB9'
+    l_belt_b_35: 'BF06A0'
+    l_belt_b_42: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: '295B37'
+    l_belt_b_11: '1B593C'
+    l_belt_b_22: '0000C8'
+    l_belt_b_28: '7C28B8'
+    l_belt_b_36: 'BF06A0'
+    l_belt_b_43: 'C70101'
+    l_belt_b_48: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'C87900'
+    l_belt_b_12: '1B593C'
+    l_belt_b_18: '0051B6'
+    l_belt_b_2: '987110'
+    l_belt_b_28: '7A2AB9'
+    l_belt_b_29: '991AAE'
+    l_belt_b_37: 'BF06A0'
+    l_belt_b_38: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: '1B593C'
+    l_belt_b_2: 'C87900'
+    l_belt_b_29: '7A2AB9'
+    l_belt_b_3: '73691D'
+    l_belt_b_39: 'BF06A0'
+    l_belt_b_44: 'C70101'
+    l_belt_b_49: 'C8630C'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: '1B593C'
+    l_belt_b_19: '004EB7'
+    l_belt_b_23: '0000C8'
+    l_belt_b_3: 'C87900'
+    l_belt_b_30: '7A2AB9'
+    l_belt_b_31: '8126B6'
+    l_belt_b_4: 'C87900'
+    l_belt_b_40: 'BF06A0'
+    l_belt_b_49: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: '1B593C'
+    l_belt_b_19: '0051B6'
+    l_belt_b_31: '7A2AB9'
+    l_belt_b_32: '7A2AB9'
+    l_belt_b_45: 'C70101'
+    l_belt_b_5: 'C87900'
+    l_belt_b_50: 'C85911'
+    
+- time: '+1'
+  lights:
+    l_belt_b_24: '3412C2'
+    l_belt_b_33: '7A2AB9'
+    l_belt_b_50: 'C8401F'
+    l_belt_b_6: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: '1B593C'
+    l_belt_b_20: '002DBE'
+    l_belt_b_24: '0000C8'
+    l_belt_b_34: '7A2AB9'
+    l_belt_b_41: 'BF06A0'
+    l_belt_b_46: 'C8401E'
+    l_belt_b_7: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '165753'
+    l_belt_b_20: '0051B6'
+    l_belt_b_35: '8922B4'
+    l_belt_b_42: 'BF06A0'
+    l_belt_b_46: 'C70101'
+    l_belt_b_8: 'C87900'
+    l_belt_b_9: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'C87900'
+    l_belt_b_17: '1B593C'
+    l_belt_b_25: '0000C8'
+    l_belt_b_35: '7A2AB9'
+    l_belt_b_36: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'C87900'
+    l_belt_b_21: '0042B9'
+    l_belt_b_37: '7A2AB9'
+    l_belt_b_43: 'BF06A0'
+    l_belt_b_47: 'C70302'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'C87900'
+    l_belt_b_18: '1B593C'
+    l_belt_b_21: '0051B6'
+    l_belt_b_26: '0000C8'
+    l_belt_b_38: '7A2AB9'
+    l_belt_b_44: 'BF06A0'
+    l_belt_b_47: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'C87900'
+    l_belt_b_27: '0000C8'
+    l_belt_b_39: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'C87900'
+    l_belt_b_19: '13575E'
+    l_belt_b_40: '7A2AB9'
+    l_belt_b_45: 'BF06A0'
+    l_belt_b_48: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'C8401F'
+    l_belt_b_15: '6D681F'
+    l_belt_b_19: '1B593C'
+    l_belt_b_22: '0051B6'
+    l_belt_b_28: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'C87900'
+    l_belt_b_2: 'C8401F'
+    l_belt_b_29: '0000C8'
+    l_belt_b_41: '7A2AB9'
+    l_belt_b_49: 'C82C15'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'C87900'
+    l_belt_b_3: 'C8401F'
+    l_belt_b_30: '0000C8'
+    l_belt_b_42: '8524B5'
+    l_belt_b_46: 'BF06A0'
+    l_belt_b_49: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: '4D622A'
+    l_belt_b_20: '1B593C'
+    l_belt_b_23: '0051B6'
+    l_belt_b_31: '0000C8'
+    l_belt_b_4: 'C8401F'
+    l_belt_b_42: '7A2AB9'
+    l_belt_b_50: 'C8391B'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'C87900'
+    l_belt_b_32: '0000C8'
+    l_belt_b_33: '0E05C6'
+    l_belt_b_43: '7A2AB9'
+    l_belt_b_5: 'C8401F'
+    l_belt_b_50: 'C70101'
+    l_belt_b_6: 'C84F17'
+    
+- time: '+1'
+  lights:
+    l_belt_b_21: '0152AF'
+    l_belt_b_24: '0051B6'
+    l_belt_b_33: '0000C8'
+    l_belt_b_34: '0000C8'
+    l_belt_b_44: 'B909A2'
+    l_belt_b_47: 'BF06A0'
+    l_belt_b_6: 'C8401F'
+    l_belt_b_7: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'C87900'
+    l_belt_b_21: '1B593C'
+    l_belt_b_44: '7A2AB9'
+    l_belt_b_8: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_35: '0000C8'
+    l_belt_b_36: '7729B9'
+    l_belt_b_45: 'B70AA3'
+    l_belt_b_48: 'BF06A0'
+    l_belt_b_9: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'C8401F'
+    l_belt_b_19: '205A3A'
+    l_belt_b_25: '0051B6'
+    l_belt_b_36: '0000C8'
+    l_belt_b_37: '0000C8'
+    l_belt_b_45: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_11: 'C8401F'
+    l_belt_b_12: 'C8421E'
+    l_belt_b_19: 'C87900'
+    l_belt_b_22: '1B593C'
+    l_belt_b_26: '003ABB'
+    l_belt_b_38: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'C8401F'
+    l_belt_b_13: 'C87801'
+    l_belt_b_26: '0051B6'
+    l_belt_b_39: '0000C8'
+    l_belt_b_46: '7C28B8'
+    l_belt_b_49: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'C8401F'
+    l_belt_b_27: '0051B6'
+    l_belt_b_40: '0000C8'
+    l_belt_b_46: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'C70101'
+    l_belt_b_14: 'C8401F'
+    l_belt_b_20: 'C87900'
+    l_belt_b_23: '1B593C'
+    l_belt_b_28: '0051B6'
+    l_belt_b_50: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'C8401F'
+    l_belt_b_2: 'C70101'
+    l_belt_b_29: '0041BA'
+    l_belt_b_41: '0000C8'
+    l_belt_b_47: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'C8670A'
+    l_belt_b_24: '1B593C'
+    l_belt_b_29: '0051B6'
+    l_belt_b_3: 'C70101'
+    l_belt_b_30: '000DC5'
+    l_belt_b_42: '7127BA'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'C8401F'
+    l_belt_b_21: 'C87900'
+    l_belt_b_30: '0051B6'
+    l_belt_b_31: '0051B6'
+    l_belt_b_4: 'C70101'
+    l_belt_b_42: '0000C8'
+    l_belt_b_48: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_17: 'C8401F'
+    l_belt_b_32: '0051B6'
+    l_belt_b_43: '0000C8'
+    l_belt_b_5: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_25: '1B593C'
+    l_belt_b_33: '0051B6'
+    l_belt_b_6: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_22: '345E33'
+    l_belt_b_26: '125664'
+    l_belt_b_34: '0051B6'
+    l_belt_b_44: '0000C8'
+    l_belt_b_49: '7A2AB9'
+    l_belt_b_7: 'C70101'
+    l_belt_b_8: 'C70403'
+    
+- time: '+1'
+  lights:
+    l_belt_b_18: 'C8401F'
+    l_belt_b_22: 'C87900'
+    l_belt_b_26: '1B593C'
+    l_belt_b_35: '0051B6'
+    l_belt_b_8: 'C70101'
+    l_belt_b_9: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_belt_b_10: 'C70101'
+    l_belt_b_27: '1B593C'
+    l_belt_b_36: '0051B6'
+    l_belt_b_45: '0000C8'
+    l_belt_b_50: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_belt_b_1: 'BF06A0'
+    l_belt_b_11: 'C70101'
+    l_belt_b_19: 'C86B08'
+    l_belt_b_2: 'C30353'
+    l_belt_b_23: '856D17'
+    l_belt_b_28: '1B593C'
+    l_belt_b_37: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_belt_b_12: 'C70101'
+    l_belt_b_19: 'C8401F'
+    l_belt_b_2: 'BF06A0'
+    l_belt_b_23: 'C87900'
+    l_belt_b_29: '1B593C'
+    l_belt_b_38: '0051B6'
+    l_belt_b_46: '0401C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_13: 'C70101'
+    l_belt_b_3: 'BF06A0'
+    l_belt_b_30: '145759'
+    l_belt_b_39: '0051B6'
+    l_belt_b_4: 'C40238'
+    l_belt_b_40: '0039BB'
+    l_belt_b_46: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_belt_b_14: 'C70101'
+    l_belt_b_24: 'C87900'
+    l_belt_b_30: '1B593C'
+    l_belt_b_31: '1B593C'
+    l_belt_b_4: 'BF06A0'
+    l_belt_b_40: '0051B6'
+    l_belt_b_5: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'C70E07'
+    l_belt_b_20: 'C8401F'
+    l_belt_b_32: '1B593C'
+    l_belt_b_47: '0000C8'
+    l_belt_b_6: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_15: 'C70101'
+    l_belt_b_25: 'C87900'
+    l_belt_b_33: '1B593C'
+    l_belt_b_41: '0051B6'
+    l_belt_b_7: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_belt_b_16: 'C70101'
+    l_belt_b_26: '345E33'
+    l_belt_b_34: '1B593C'
+    l_belt_b_42: '0051B6'
+    l_belt_b_48: '0000C8'
+    l_belt_b_8: 'BF06A0'
+    
