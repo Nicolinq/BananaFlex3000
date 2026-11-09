@@ -33,3 +33,5 @@ player_vars:
         initial_value: 0
     pv_shipping_mission_initial_time:
         initial_value: 90
+    pv_classic_multiball_instance:
+        initial_value: 0

@@ -37,7 +37,7 @@ multiball_locks:
     # Disables itself as soon as one ball is accepted, so the player
     # must re-complete the sequence to enable the next lock slot.
     enable_events: sequential_targets_done
-    disable_events: multiball_lock_ml_classic_mb_lock_locked_ball, ball_will_end
+    disable_events: multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance>0}, ball_will_end
     locked_ball_counting_strategy: virtual_only
     reset_count_for_current_player_events: multiball_lock_ml_classic_mb_lock_full
 
@@ -52,8 +52,12 @@ event_player:
     - reset_shot_sequence
     - enable_shot_sequence
 
-  # After each ball is locked, reset the sequential shot sequence
-  multiball_lock_ml_classic_mb_lock_locked_ball:
+  # After each ball is locked, reset the sequential shot sequence after instance 1
+  multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance==0}:
+    - disable_shot_sequence
+
+
+  multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance>0}:
     - reset_shot_sequence
     - enable_shot_sequence
   
@@ -62,6 +66,12 @@ event_player:
     - enable_lock_diverter
     - enable_top_left_gate_diverter
 
+variable_player:
+  #Increase the instance when completed.
+  #First multiball is easy
+  multiball_mb_classic_multiball_started:
+    pv_classic_multiball_instance: 1
+    
 # =====================================================================
 # Light: flash l_lock_start while lock is available;
 #        light steady red once a ball is locked.
@@ -77,12 +87,17 @@ show_player:
         color: tt_orange
 
   # Ball locked → stop flash, light red steady
-  multiball_lock_ml_classic_mb_lock_locked_ball:
+  multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance>0}:
     sh_led_flash:
       action: stop
 
   # Mode stopping → clear the light
   mode_classic_multiball_will_stop:
+    sh_led_flash:
+      action: stop
+
+  # Mode starting → clear the light
+  multiball_mb_classic_multiball_started:
     sh_led_flash:
       action: stop
 
