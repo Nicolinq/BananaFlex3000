@@ -1,0 +1,114 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  stop_events: ball_will_end
+  priority: 150
+
+# =====================================================================
+# MISSION QUALIFY
+#
+# Persistent ball-wide mode that owns all mission qualification logic:
+#   1. Listens for spinner_stack_complete to qualify missions
+#   2. Enables lock diverters so the orbit routes the ball to bd_lock
+#   3. Flashes l_mission_start orange while selection is pending
+#   4. Triggers start_mode_mission_manager when ball enters bd_lock
+#   5. Tracks pv_missions_qualified / pv_mission_running player vars
+#   6. Resumes diverters + flash on ball restart if still qualified
+#
+# The carousel selection itself is handled by mission_manager (which
+# only runs during the selection window: lock entry → item selected).
+# =====================================================================
+
+event_player:
+  # Qualification: spinner_stack_complete when no mission running
+  # and at least one mission not yet completed
+  spinner_stack_complete{current_player.pv_missions_qualified==0 and current_player.pv_mission_running==0 and (device.achievements.maintenance_mission.state != 'completed' or device.achievements.shipping_mission.state != 'completed')}:
+    - mission_select_qualify
+    - enable_lock_diverter
+    - enable_top_left_gate_diverter
+
+  # Ball enters lock while qualified → start carousel selection mode
+  balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
+    - start_mode_mission_manager
+
+  # Resume diverters + ball_hold on ball restart if still qualified
+  mode_mission_qualify_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
+    - enable_lock_diverter
+    - enable_top_left_gate_diverter
+    - mission_select_qualify_resume
+
+variable_player:
+  mission_select_qualify:
+    pv_missions_qualified:
+      int: 1
+      action: set
+
+  start_maintenance_mission:
+    pv_missions_qualified:
+      int: 0
+      action: set
+    pv_mission_running:
+      int: 1
+      action: set
+
+  start_shipping_mission:
+    pv_missions_qualified:
+      int: 0
+      action: set
+    pv_mission_running:
+      int: 1
+      action: set
+
+  maintenance_mission_completed:
+    pv_mission_running:
+      int: 0
+      action: set
+
+  maintenance_mission_timeout:
+    pv_mission_running:
+      int: 0
+      action: set
+
+  shipping_mission_completed:
+    pv_mission_running:
+      int: 0
+      action: set
+
+  shipping_mission_timeout:
+    pv_mission_running:
+      int: 0
+      action: set
+
+show_player:
+  # Qualification acquired: flash l_mission_start orange
+  mission_select_qualify:
+    sh_led_flash:
+      action: play
+      loops: -1
+      show_tokens:
+        leds: l_mission_start
+        color: tt_orange
+
+  # Ball restart while still qualified: restore orange flash
+  mode_mission_qualify_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
+    sh_led_flash:
+      action: play
+      loops: -1
+      show_tokens:
+        leds: l_mission_start
+        color: tt_orange
+
+  # Mission selected: individual mission mode takes over its own light
+  start_maintenance_mission:
+    sh_led_flash:
+      action: stop
+
+  start_shipping_mission:
+    sh_led_flash:
+      action: stop
+
+  # Ball ending: clean up
+  mode_mission_qualify_will_stop:
+    sh_led_flash:
+      action: stop

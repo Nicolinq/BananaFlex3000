@@ -32,6 +32,7 @@ modes:
 - classic_multiball
 - maintenance_mission
 - mission_manager
+- mission_qualify
 - shipping_mission
 - service
 
@@ -56,13 +57,12 @@ ball_devices:
         eject_events: eject_bd_lock
 
 
-# ball_holds:
-#   bh_lock_scoop:
-#     balls_to_hold: 3
-#     hold_devices: bd_lock
-#     enable_events: mode_banana_bend_started
-#     disable_events: mode_banana_bend_will_stop
-#     release_one_events: mode_banana_bend_started
+ball_holds:
+  bh_mission_select:
+    balls_to_hold: 1
+    hold_devices: bd_lock
+    enable_events: mission_select_qualify, mission_select_qualify_resume
+    disable_events: carousel_item_selected, ball_will_end, all_missions_completed
 
 playfields:
   playfield:

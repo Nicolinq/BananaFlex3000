@@ -2,145 +2,52 @@
 
 mode:
   start_events: start_mode_mission_manager
-  stop_events: stop_mode_mission_manager, ball_will_end
-  priority: 255
-  use_wait_queue: true
+  stop_events: carousel_item_selected, ball_will_end
+  priority: 200
+  code: mpf.modes.carousel.code.carousel.Carousel
 
 # =====================================================================
-# MISSION MANAGER
+# MISSION MANAGER (MPF CAROUSEL MODE)
 #
-# Central mode that:
-#   1. Qualifies missions when spinner_stack_complete fires
-#      (only if no mission is currently running)
-#   2. Flashes l_mission_start
-#   3. Enables diverters so orbit routes ball to bd_lock
-#   4. When ball enters bd_lock, ejects it and shows the Mission_select
-#      slide in Godot (player chooses which mission to play)
-#   5. Posts select_maintenance_mission or select_shipping_mission
-#      based on player input from GMC
+# This mode is a native MPF Carousel — it must NOT start at ball start.
+# It is triggered from base.yaml when the ball enters bd_lock while
+# missions are qualified (spinner_stack_complete has fired and no mission
+# is currently running).
+#
+# The MPFCarousel node in mission_manager.tscn listens to
+# carousel_item_highlighted events and shows/hides child nodes whose
+# names match the selectable_items below.
+#
+# Child nodes in mission_manager.tscn:
+#   - maintenance_mission   (shown when highlighted)
+#   - shipping_mission      (shown when highlighted)
 # =====================================================================
 
 mode_settings:
   selectable_items:
-    - MaintenanceMission
-    - ShippingMission
-  next_item_events: s_flipper_left_button_active
-  previous_item_events: s_flipper_right_button_active
+    - maintenance_mission{device.achievements.maintenance_mission.state != 'completed'}
+    - shipping_mission{device.achievements.shipping_mission.state != 'completed'}
+  next_item_events: s_flipper_right_button_active
+  previous_item_events: s_flipper_left_button_active
   select_item_events: s_launch_button_active
-  slide_player:
-    MaintenanceMission_highlighted: start_maintenance_mission
-    ShippingMission_highlighted: start_shipping_mission
-  slides:
-    select_MaintenanceMission:
-      widgets:
-        - type: text
-          text: Mission Maintenance
-          font_size: 10
-          color: yellow
-      transitions:
-        type: move_in
-        direction: right
-    select_ShippingMission:
-      widgets:
-        - type: text
-          text: Mission Expédition
-          font_size: 10
-          color: yellow
-      transitions:
-        type: move_in
-        direction: right
-
-event_player:
-  # --- Qualification ---
-  # Only qualify if no mission is already running and a selectable mission exists
-  spinner_stack_complete{current_player.pv_missions_qualified==0 and (current_player.pv_maintenance_mission_completed==0 or current_player.pv_shipping_mission_completed==0)}:
-    - mission_select_qualify
-    - enable_lock_diverter
-    - enable_top_left_gate_diverter
-
-  # Resume qualification on ball restart if still pending
-  mode_mission_manager_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
-    - mission_select_resume
-    - enable_lock_diverter
-    - enable_top_left_gate_diverter
-
-  # Ball enters bd_lock while selection is pending -> eject + show selection slide
-  balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
-    - mission_select_start
-
-  # When any mission starts, clear the qualified flag and stop mission manager shows
-  start_maintenance_mission:
-    - mission_selection_done
-    - eject_bd_lock|1s
-  start_shipping_mission:
-    - mission_selection_done
-    - eject_bd_lock|1s
-
-  # When any mission completes, clear running flag
-  maintenance_mission_completed:
-    - mission_done
-  shipping_mission_completed:
-    - mission_done
-
-  # When any mission times out, clear running flag so it can be qualified again
-  maintenance_mission_timeout:
-    - mission_done
-  shipping_mission_timeout:
-    - mission_done
-
-variable_player:
-  mission_select_qualify:
-    pv_missions_qualified:
-      int: 1
-      action: set
-
-  mission_selection_done:
-    pv_missions_qualified:
-      int: 0
-      action: set
-    pv_mission_running:
-      int: 1
-      action: set
-
-  mission_done:
-    pv_mission_running:
-      int: 0
-      action: set
-
-show_player:
-  # Qualification: slow flash orange
-  mission_select_qualify:
-    sh_led_flash:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_orange
-
-  # Resume on ball start
-  mission_select_resume:
-    sh_led_flash:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_orange
-
-  # Mission selected -> stop flashing (individual mission mode manages its own light)
-  mission_selection_done:
-    sh_led_flash:
-      action: stop
-
-  # Mode stopping -> clean up
-  mode_mission_manager_will_stop:
-    sh_led_flash:
-      action: stop
-
-light_player:
-  mode_mission_manager_will_stop:
-    l_mission_start: off
 
 slide_player:
-  # Show the mission selection screen in Godot
-  mission_select_start: Mission_select_caroussel
+  mode_mission_manager_started:
+    mission_manager:
+      action: play
+  mode_mission_manager_will_stop:
+    mission_manager:
+      action: remove
 
+event_player:
+  carousel_item_selected{item=="maintenance_mission"}:
+    - start_maintenance_mission
+    - eject_bd_lock|1s
+  carousel_item_selected{item=="shipping_mission"}:
+    - start_shipping_mission
+    - eject_bd_lock|1s
+
+show_player:
+  mode_mission_manager_will_stop:
+    sh_led_flash:
+      action: stop

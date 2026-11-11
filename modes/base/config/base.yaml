@@ -17,8 +17,8 @@ event_player:
       - start_mode_spinner
       - start_mode_skill_shot
       - start_mode_maintenance_mission
-      - start_mode_mission_manager
       - start_mode_shipping_mission
+      - start_mode_mission_qualify
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_banana_load
@@ -29,6 +29,7 @@ event_player:
       - stop_mode_classic_multiball
       - stop_mode_maintenance_mission
       - stop_mode_mission_manager
+      - stop_mode_mission_qualify
       - stop_mode_shipping_mission
       - stop_mode_hyperloop
    mode_skill_shot_will_stop:
@@ -120,12 +121,4 @@ achievement_groups:
     achievements:
       - maintenance_mission
       - shipping_mission
-    auto_select: true
     events_when_all_completed: all_missions_completed
-    enable_while_no_achievement_started: false
-    show_when_enabled: on
-    allow_selection_change_while_disabled: true
-    disable_while_achievement_started: false
-    #start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear
-    #enable_events: light_chair
-    #disable_events: unlight_chair
