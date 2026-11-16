@@ -31,7 +31,13 @@ player_vars:
         initial_value: 0
     pv_shipping_mission_time_remaining:
         initial_value: 0
+    pv_shipping_mission_ship_time_remaining:
+        initial_value: 0
     pv_shipping_mission_initial_time:
         initial_value: 90
+    pv_shipping_mission_initial_time_to_ship:
+        initial_value: 8
+    pv_shipping_mission_shipping_to_complete:
+        initial_value: 3
     pv_classic_multiball_instance:
         initial_value: 0

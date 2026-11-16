@@ -28,7 +28,7 @@ achievements:
 
 timers:
   tim_shipping_duration:
-    start_value: 90
+    start_value: current_player.pv_shipping_mission_initial_time
     end_value: 0
     direction: down
     control_events:
@@ -39,7 +39,7 @@ timers:
     start_running: false
 
   tim_shipping_truck:
-    start_value: 8
+    start_value: current_player.pv_shipping_mission_initial_time_to_ship
     end_value: 0
     direction: down
     control_events:
@@ -60,7 +60,7 @@ shots:
 counters:
   co_shipping_trucks:
     count_events: truck_sent
-    count_complete_value: 3
+    count_complete_value: current_player.pv_shipping_mission_shipping_to_complete
     events_when_complete: shipping_mission_completed
     reset_on_complete: false
     enable_events: start_shipping_mission
@@ -71,7 +71,7 @@ event_player:
   # Nothing extra needed; tim_shipping_truck control_events handle it
 
   # ramp_shot_done while truck timer is running -> truck delivered
-  "ramp_shot_done{device.timers.tim_shipping_truck.ticks_remaining > 0}":
+  ramp_shot_done{device.timers.tim_shipping_truck.ticks_remaining > 0}:
     - truck_sent
 
   # Mission complete
@@ -83,7 +83,7 @@ event_player:
     - shipping_mission_timeout
 
   # On mode start with active mission (ball drain/resume)
-  "mode_shipping_mission_started{current_player.pv_shipping_mission_running==1}":
+  mode_shipping_mission_started{current_player.pv_shipping_mission_running==1}:
     - start_shipping_mission
 
 variable_player:
@@ -92,8 +92,12 @@ variable_player:
       int: 1
       action: set
     pv_shipping_mission_time_remaining:
-      int: 90
+      int: current_player.pv_shipping_mission_initial_time
       action: set
+    pv_shipping_mission_ship_time_remaining:
+      int: current_player.pv_shipping_mission_initial_time_to_ship
+      action: set
+
 
   truck_sent:
     pv_shipping_mission_trucks_sent:
@@ -123,58 +127,21 @@ variable_player:
     pv_shipping_mission_time_remaining:
       int: -1
       action: add
+  
+  timer_tim_shipping_truck_tick:
+    pv_shipping_mission_ship_time_remaining:
+      int: -1
+      action: add
 
-show_player:
-  # Mission running: yellow fast flash
-  start_shipping_mission:
-    sh_mission_running:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_yellow
-
-  # Truck sent: brief blue pulse
-  truck_sent:
-    sh_shipping_truck_pulse:
-      action: play
-      loops: 1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_blue
-
-  # Mission complete: solid green
-  shipping_mission_completed_lights:
-    sh_mission_running:
-      action: stop
-    sh_insert_on:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_green
-
-  # Timeout: stop shows
-  shipping_mission_timeout:
-    sh_mission_running:
-      action: stop
-
-  # Mode stopping: clean up
-  mode_shipping_mission_will_stop:
-    sh_mission_running:
-      action: stop
-    sh_insert_on:
-      action: stop
 
 light_player:
   mode_shipping_mission_will_stop:
     l_mission_start: off
 
-shows:
-  sh_shipping_truck_pulse:
-    - time: 0
-      lights:
-        (leds): (color)
-    - time: +.4s
-      lights:
-        (leds): off
+slide_player:
+  start_shipping_mission:
+    shipping_mission:
+      action: play
+  shipping_mission_timeout:
+    shipping_mission:
+      action: remove
