@@ -25,6 +25,7 @@ achievements:
     enable_events: start_shipping_mission
     start_events: start_shipping_mission
     complete_events: shipping_mission_completed
+    restart_after_stop_possible: false
 
 timers:
   tim_shipping_duration:
@@ -82,9 +83,6 @@ event_player:
 
 variable_player:
   start_shipping_mission:
-    pv_shipping_mission_running:
-      int: 1
-      action: set
     pv_shipping_mission_time_remaining:
       int: current_player.pv_shipping_mission_initial_time
       action: set
@@ -102,20 +100,12 @@ variable_player:
       action: add
 
   shipping_mission_completed:
-    pv_shipping_mission_running:
-      int: 0
-      action: set
     pv_shipping_mission_completed:
       int: 1
       action: set
     score:
       int: 150000
       action: add
-
-  shipping_mission_timeout:
-    pv_shipping_mission_running:
-      int: 0
-      action: set
 
   timer_tim_shipping_duration_tick:
     pv_shipping_mission_time_remaining:

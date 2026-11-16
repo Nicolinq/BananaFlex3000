@@ -35,7 +35,7 @@ shots:
 counters:
   co_maintenance_mission_percent:
     count_events: shot_maintenance_mission_switch_hit
-    count_complete_value: pv_maintenance_mission_switchs_to_complete
+    count_complete_value: current_player.pv_maintenance_mission_switchs_to_complete
     starting_count: 0
     direction: up
     persist_state: false
@@ -46,7 +46,7 @@ counters:
 
 timers:
   tim_maintenance_mission_limit:
-    start_value: pv_maintenance_mission_initial_time
+    start_value: current_player.pv_maintenance_mission_initial_time
     end_value: 0
     direction: down
     tick_interval: 1s
@@ -65,21 +65,17 @@ event_player:
   timer_tim_maintenance_mission_limit_complete:
     - maintenance_mission_timeout
 
-  # Resume running show when returning from a drained ball mid-mission
-  mode_maintenance_mission_started{current_player.pv_maintenance_mission_running==1}:
-    - start_maintenance_mission
 
 variable_player:
   start_maintenance_mission:
-    pv_maintenance_mission_running:
-      int: 1
-      action: set
-    pv_maintenance_mission_percent:
+    pv_maintenance_mission_switch_hit_advance:
       int: 0
       action: set
 
   shot_maintenance_mission_switch_hit:
-    pv_maintenance_mission_percent: 100/pv_maintenance_mission_switchs_to_complete
+    pv_maintenance_mission_switch_hit_advance: 
+      int: 1
+      action: add
 
   timer_tim_maintenance_mission_limit_tick:
     pv_maintenance_mission_time_remaining:
@@ -91,48 +87,13 @@ variable_player:
     pv_maintenance_mission_completed:
       int: 1
       action: set
-    pv_maintenance_mission_running:
-      int: 0
-      action: set
-    pv_maintenance_mission_percent:
-      int: 100
-      action: set
 
   maintenance_mission_timeout:
-    pv_maintenance_mission_running:
-      int: 0
-      action: set
-    pv_maintenance_mission_percent:
+    pv_maintenance_mission_switch_hit_advance:
       int: 0
       action: set
 
 show_player:
-  # Mission running: fast yellow flash
-  start_maintenance_mission:
-    sh_mission_running:
-      action: play
-      loops: -1
-      show_tokens:
-        leds: l_mission_start
-        color: tt_yellow
-
-  # Completed: solid green (persists across balls)
-  maintenance_mission_completed:
-    sh_mission_running:
-      action: stop
-    sh_insert_on:
-      action: play
-      show_tokens:
-        leds: l_mission_start
-        color: tt_green
-
-  mode_maintenance_mission_started{current_player.pv_maintenance_mission_completed==1}:
-    sh_insert_on:
-      action: play
-      show_tokens:
-        leds: l_mission_start
-        color: tt_green
-
   maintenance_mission_timeout:
     sh_mission_running:
       action: stop
@@ -148,3 +109,14 @@ light_player:
     l_mission_start: off
   mode_maintenance_mission_will_stop{current_player.pv_maintenance_mission_completed==0}:
     l_mission_start: off
+
+slide_player:
+  start_maintenance_mission:
+    maintenance_mission:
+      action: play
+  maintenance_mission_timeout:
+    maintenance_mission:
+      action: remove
+  maintenance_mission_completed:
+    maintenance_mission:
+      action: remove
