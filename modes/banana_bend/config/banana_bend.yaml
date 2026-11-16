@@ -53,7 +53,9 @@ shot_profiles:
 
 event_player:
   mode_banana_bend_started: enable_lock_diverter,enable_top_left_gate_diverter
-  balldevice_bd_lock_ball_entered: bend_bananas_completed
+  balldevice_bd_lock_ball_entered: 
+    - bend_bananas_completed
+    - eject_bd_lock|1s
   bend_bananas_completed: start_mode_banana_control
 
 

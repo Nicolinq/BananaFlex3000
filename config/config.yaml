@@ -64,6 +64,12 @@ ball_holds:
     hold_devices: bd_lock
     enable_events: mission_select_qualify, mission_select_qualify_resume
     disable_events: carousel_item_selected, ball_will_end, all_missions_completed
+  bh_bend_ready:
+    balls_to_hold: 1
+    hold_devices: bd_lock
+    enable_events: mode_banana_bend_started
+    disable_events: ball_will_end, mode_banana_control_started
+
 
 playfields:
   playfield:
