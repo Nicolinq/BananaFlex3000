@@ -39,3 +39,9 @@ player_vars:
         initial_value: 3
     pv_classic_multiball_instance:
         initial_value: 0
+    pv_hyperloop_turns_to_make:
+        initial_value: 10
+    pv_hyperloop_turns_done:
+        initial_value: 0
+    pv_hyperloop_multiball_started:
+        initial_value: 0

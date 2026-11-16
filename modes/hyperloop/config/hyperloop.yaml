@@ -2,29 +2,114 @@
 
 mode:
   start_events: start_mode_hyperloop
-  stop_events: stop_mode_hyperloop
+  stop_events: stop_mode_hyperloop, ball_will_end
   priority: 300
 
-shots:
-  shot_control_hyperloop:
-    show_tokens:
-      leds: l_hyperloop_start
-    profile: sp_hyperloop_profile_flash
-    hit_events: mode_hyperloop_started
+# =====================================================================
+# HYPERLOOP MODE
+#
+# Flow:
+#   1. Mode starts → enable left_diverter + top_left_gate_diverter
+#      so the ball routes through the hyperloop (magnet loop).
+#   2. First shot_magnet_hit → start hyperloop multiball (3 balls:
+#      1 on playfield + 2 added from bd_trough / bd_lock).
+#   3. Each shot_magnet_hit increments co_hyperloop_turns counter.
+#   4. At 10 turns → hyperloop_turns_complete event →
+#      disable left_diverter + top_left_gate_diverter.
+# =====================================================================
 
-shot_profiles:
-  sp_hyperloop_profile_flash:
-    states:
-      - name: off
-        show: off
-      - name: on
-        show: sh_led_flash
-        show_tokens:
-          color: tt_yellow
-    loop: false
-    advance_on_hit: true
-  
+achievements:
+  hyperloop:
+    enable_events: start_mode_hyperloop
+    start_events: start_mode_hyperloop
+    complete_events: hyperloop_turns_complete
+    restart_after_stop_possible: false
+
+multiballs:
+  mb_hyperloop:
+    ball_count: 2
+    ball_count_type: add
+    start_events: hyperloop_multiball_start
+    hurry_up_time: 2s
+    grace_period: 2s
+
+counters:
+  co_hyperloop_turns:
+    count_events: shot_magnet_hit
+    count_complete_value: pv_hyperloop_turns_to_make
+    starting_count: 0
+    direction: up
+    reset_on_complete: false
+    persist_state: false
+    enable_events: mode_hyperloop_started
+    disable_events: hyperloop_turns_complete, mode_hyperloop_will_stop
+    events_when_complete: hyperloop_turns_complete
+
+event_player:
+  # On mode start: open diverters for hyperloop routing
+  mode_hyperloop_started:
+    - enable_left_diverter
+    - enable_top_left_gate_diverter
+
+  # First magnet hit: kick off the multiball
+  shot_magnet_hit{current_player.pv_hyperloop_multiball_started==0}:
+    - hyperloop_multiball_start
+
+
+
+  # 10 turns done: close diverters, hyperloop phase complete
+  hyperloop_turns_complete:
+    - disable_left_diverter
+    - disable_top_left_gate_diverter
+
+  # Multiball ends: close diverters too if still open
+  multiball_mb_hyperloop_ended:
+    - disable_left_diverter
+    - disable_top_left_gate_diverter
+
+variable_player:
+  # Track that multiball was already started this mode instance
+  hyperloop_multiball_start:
+    pv_hyperloop_multiball_started:
+      int: 1
+      action: set
+
+  # Reset flag when mode stops so next hyperloop works cleanly
+  mode_hyperloop_will_stop:
+    pv_hyperloop_multiball_started:
+      int: 0
+      action: set
+    pv_hyperloop_turns_done:
+      int: 0
+      action: set
+
+
+  shot_magnet_hit:
+    score: 5000 * current_player.bonus_multiplier
+    pv_hyperloop_turns_done:
+      int: 1
+      action: add
+
+  hyperloop_turns_complete:
+    score: 50000
+
 show_player:
   mode_hyperloop_started:
     hyperloop_rainbow:
       speed: 50
+
+  hyperloop_turns_complete:
+    hyperloop_rainbow:
+      action: stop
+
+  mode_hyperloop_will_stop:
+    hyperloop_rainbow:
+      action: stop
+
+slide_player:
+  mode_hyperloop_started:
+    hyperloop:
+      action: play
+  mode_hyperloop_will_stop:
+    hyperloop:
+      action: remove

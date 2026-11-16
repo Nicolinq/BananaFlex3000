@@ -121,4 +121,5 @@ achievement_groups:
     achievements:
       - maintenance_mission
       - shipping_mission
+      - hyperloop
     events_when_all_completed: all_missions_completed
