@@ -727,6 +727,12 @@ lights:
         subtype: led
         tags: inserts,upper_lanes_inserts
         label: "l_upper_right_lane"
+    l_bend_again:
+        previous: l_upper_right_lane #number: 1-0-29
+        type: grb
+        subtype: led
+        tags: inserts,shoot_again
+        label: "l_bend_again"
 
 # keyboard:
 #    1:

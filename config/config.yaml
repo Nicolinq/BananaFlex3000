@@ -19,6 +19,7 @@ player_vars:
 
 modes:
 - attract
+- ball_save
 - base
 - bonus
 - bumper
