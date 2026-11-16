@@ -68,10 +68,8 @@ counters:
 
 event_player:
   # Wall target hit -> start the 8s window (timer restarts via control_events)
-  # Nothing extra needed; tim_shipping_truck control_events handle it
-
   # ramp_shot_done while truck timer is running -> truck delivered
-  ramp_shot_done{device.timers.tim_shipping_truck.ticks_remaining > 0}:
+  ramp_shot_done{device.timers.tim_shipping_truck.ticks > 0}:
     - truck_sent
 
   # Mission complete
@@ -81,10 +79,6 @@ event_player:
   # Overall timer ran out
   timer_tim_shipping_duration_complete:
     - shipping_mission_timeout
-
-  # On mode start with active mission (ball drain/resume)
-  mode_shipping_mission_started{current_player.pv_shipping_mission_running==1}:
-    - start_shipping_mission
 
 variable_player:
   start_shipping_mission:
@@ -104,7 +98,7 @@ variable_player:
       int: 1
       action: add
     score:
-      int: 25000
+      int: 25000 
       action: add
 
   shipping_mission_completed:
@@ -132,6 +126,17 @@ variable_player:
     pv_shipping_mission_ship_time_remaining:
       int: -1
       action: add
+  
+  # Reset remaining ship time when timers stops or is completed
+  timer_tim_shipping_truck_complete:
+    pv_shipping_mission_ship_time_remaining:
+      int: current_player.pv_shipping_mission_initial_time_to_ship
+      action: set
+
+  timer_tim_shipping_truck_stopped:
+    pv_shipping_mission_ship_time_remaining:
+      int: current_player.pv_shipping_mission_initial_time_to_ship
+      action: set
 
 
 light_player:
@@ -143,5 +148,8 @@ slide_player:
     shipping_mission:
       action: play
   shipping_mission_timeout:
+    shipping_mission:
+      action: remove
+  shipping_mission_completed:
     shipping_mission:
       action: remove
