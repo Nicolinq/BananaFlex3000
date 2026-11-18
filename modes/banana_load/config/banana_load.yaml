@@ -398,6 +398,11 @@ event_player:
   s_bank3_2_active: advance_load_13
   s_bank3_3_active: advance_load_14
 
+  # relay bananas_conveyor_is_moving event
+  logicblock_co_change_random_banana_belt_direction_hit: bananas_conveyor_is_moving
+  logicblock_co_change_banana_belt_direction_hit: bananas_conveyor_is_moving
+  player_banana_load_tim_rotate_multiple_times_left_tick: bananas_conveyor_is_moving
+  player_banana_load_tim_rotate_multiple_times_right_tick: bananas_conveyor_is_moving
 
 variable_player:
   mode_banana_load_started:

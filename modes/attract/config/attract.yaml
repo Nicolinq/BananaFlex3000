@@ -13,10 +13,17 @@ mode_settings:
 
 slide_player:
   mode_attract_started: attract
+
+
 sound_player:
-  mode_attract_started: 
-    vishiv-the-banana-song-346071:
+# play music each time the timer ends
+  timer_tim_attract_music_complete: 
+    Monkey_Business_Bumper:
       bus:  music
+# Stop when attract mode ends
+  mode_attract_stopped:
+    Monkey_Business_Bumper:
+      action: stop
 
 show_player:
   mode_attract_started:
@@ -24,6 +31,7 @@ show_player:
       speed: 50
 
 timers:
+  # Carousel auto update
   tim_attract_carousel_timer:
     end_value: 1
     tick_interval: 5s
@@ -35,3 +43,11 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
+  # To play the attract mode music
+  tim_attract_music:
+    start_value: 150
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    restart_on_complete: true

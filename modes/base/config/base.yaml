@@ -39,6 +39,59 @@ event_player:
 slide_player:
    mode_base_started: base_slide
 
+
+sound_player:
+# Starts main music
+  mode_base_started:
+    Bend_It_Round:
+      action: play
+      loops: -1
+      bus:  music
+#Spinner
+  s_spinner_active:
+    BubblingPotion:
+      action: play
+      bus:  effects
+# Targets randoms sounds
+  play_target_sound_1:
+    RocketZips:
+      action: play
+      bus:  effects
+  play_target_sound_2:
+    RocketZips1:
+      action: play
+      bus:  effects
+  play_target_sound_3:
+    RocketZips2:
+      action: play
+      bus:  effects
+  play_target_sound_4:
+    RocketZips3:
+      action: play
+      bus:  effects
+# Top Lanes
+  shot_top_lanes_hit:
+    WindupToy:
+      action: play
+      bus:  effects
+  # Move bananas
+  bananas_conveyor_is_moving:
+    FuzzyChirps2:
+      action: play
+      bus:  effects
+
+# Have some randoms in sounds
+random_event_player:
+  shot_all_targets_hit:
+    events:
+      play_target_sound_1: 1
+      play_target_sound_2: 1
+      play_target_sound_3: 1
+      play_target_sound_4: 1
+    force_all: true
+    force_different: true
+
+# Shots
 shots:
   shot_service:
     switch: s_setup_button, s_plus_button, s_minus_button, s_enter_button
@@ -54,6 +107,8 @@ shots:
     switch: s_upper_left_lane, s_upper_right_lane
   shot_launch_button:
     switch: s_launch_button
+  shot_all_targets:
+    switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4, s_bank3_1, s_bank3_2, s_bank3_3, s_right_target, s_left_target, s_bumper_target
 
 shows:
   sh_led_flash:

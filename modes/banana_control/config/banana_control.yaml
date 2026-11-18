@@ -484,7 +484,9 @@ event_player:
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_21.state!=2 and device.shots.shot_l_banana_control_22.state!=2 and device.shots.shot_l_banana_control_23.state!=2 and device.shots.shot_l_banana_control_24.state!=2 and device.shots.shot_l_banana_control_25.state!=2 and device.shots.shot_l_banana_control_26.state!=2 and device.shots.shot_l_banana_control_27.state!=2 and device.shots.shot_l_banana_control_28.state!=2 and device.shots.shot_l_banana_control_29.state!=2 and device.shots.shot_l_banana_control_30.state!=2}: control_21_30_completed
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_31.state!=2 and device.shots.shot_l_banana_control_32.state!=2 and device.shots.shot_l_banana_control_33.state!=2 and device.shots.shot_l_banana_control_34.state!=2 and device.shots.shot_l_banana_control_35.state!=2 and device.shots.shot_l_banana_control_36.state!=2 and device.shots.shot_l_banana_control_37.state!=2 and device.shots.shot_l_banana_control_38.state!=2 and device.shots.shot_l_banana_control_39.state!=2 and device.shots.shot_l_banana_control_40.state!=2}: control_31_40_completed
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_41.state!=2 and device.shots.shot_l_banana_control_42.state!=2 and device.shots.shot_l_banana_control_43.state!=2 and device.shots.shot_l_banana_control_44.state!=2 and device.shots.shot_l_banana_control_45.state!=2 and device.shots.shot_l_banana_control_46.state!=2 and device.shots.shot_l_banana_control_47.state!=2 and device.shots.shot_l_banana_control_48.state!=2 and device.shots.shot_l_banana_control_49.state!=2 and device.shots.shot_l_banana_control_50.state!=2}: control_41_50_completed
-
+  
+  # relay moving event
+  shot_control_rotate_target_hit: bananas_conveyor_is_moving
   control_completed: start_mode_hyperloop
 
 accruals:
