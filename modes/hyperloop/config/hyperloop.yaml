@@ -20,8 +20,8 @@ mode:
 
 achievements:
   hyperloop:
-    enable_events: start_mode_hyperloop
-    start_events: start_mode_hyperloop
+    enable_events: hyperloop_multiball_start
+    start_events: hyperloop_multiball_start
     complete_events: hyperloop_turns_complete
     restart_after_stop_possible: false
 
@@ -36,7 +36,7 @@ multiballs:
 counters:
   co_hyperloop_turns:
     count_events: shot_magnet_hit
-    count_complete_value: pv_hyperloop_turns_to_make
+    count_complete_value: current_player.pv_hyperloop_turns_to_make
     starting_count: 0
     direction: up
     reset_on_complete: false
