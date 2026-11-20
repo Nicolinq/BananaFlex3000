@@ -1,0 +1,127 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_banana_load, start_mode_banana_control
+  stop_events: ball_will_end
+  priority: 190
+
+# =====================================================================
+# BANANA CONVEYOR
+#
+# Shared rotation engine used by both banana_load and banana_control.
+# Translates physical shots into two canonical events:
+#   bc_rotate_right  — move belt one step to the right
+#   bc_rotate_left   — move belt one step to the left
+#   bc_conveyor_moving — fired on any rotation (for Godot display)
+#
+# Sources of rotation:
+#   - s_bumper_target + s_spinner : toggle direction, then rotate
+#   - s_bumper                    : random rotate (50/50)
+#   - orbit right→left            : 3 steps left  (via timer tick)
+#   - orbit left→right + ramp     : 3 steps right (via timer tick)
+# =====================================================================
+
+shots:
+  # Bumper target / spinner: toggles direction and rotates
+  shot_bc_rotate_target:
+    switch: s_bumper_target
+    profile: sp_bc_rotate_profile
+    advance_events: co_bc_direction_complete
+    hit_events: s_spinner_active
+
+  # Bumper: triggers a random direction choice
+  shot_bc_random_rotate:
+    switch: s_bumper
+    profile: sp_bc_rotate_profile
+    advance_events: bc_do_random_advance
+
+shot_profiles:
+  sp_bc_rotate_profile:
+    states:
+      - name: rotate_right
+      - name: rotate_left
+    loop: true
+    advance_on_hit: false
+
+counters:
+  # Spinner/bumper_target hit counter — used to toggle direction on demand
+  co_bc_direction:
+    count_events: shot_bc_rotate_target_hit
+    starting_count: 0
+    count_complete_value: 10000
+    count_interval: 1
+    direction: up
+    events_when_complete: co_bc_direction_complete
+    reset_on_complete: true
+    disable_on_complete: false
+    persist_state: true
+
+  # Bumper hit counter — triggers random choice
+  co_bc_random_direction:
+    count_events: shot_bc_random_rotate_hit
+    starting_count: 0
+    count_complete_value: 1
+    count_interval: 1
+    direction: up
+    events_when_complete: bc_choose_random_direction
+    reset_on_complete: true
+    disable_on_complete: false
+    persist_state: true
+
+timers:
+  # Orbit right→left: 3 left steps at 500 ms intervals
+  tim_bc_rotate_left:
+    start_value: 0
+    end_value: 3
+    direction: up
+    tick_interval: 500ms
+    control_events:
+      - event: orbit_right_to_left_done
+        action: restart
+    start_running: false
+
+  # Orbit left→right + ramp: 3 right steps at 500 ms intervals
+  tim_bc_rotate_right:
+    start_value: 0
+    end_value: 3
+    direction: up
+    tick_interval: 500ms
+    control_events:
+      - event: orbit_left_to_right_done
+        action: restart
+      - event: ramp_shot_done
+        action: restart
+    start_running: false
+
+random_event_player:
+  bc_choose_random_direction:
+    force_all: false
+    force_different: false
+    events:
+      - bc_rotate_right
+      - bc_rotate_left
+
+event_player:
+  # Bumper_target / spinner: rotate in current profile direction
+  shot_bc_rotate_target_rotate_right_hit:
+    - bc_rotate_right
+  shot_bc_rotate_target_rotate_left_hit:
+    - bc_rotate_left
+
+  # Bumper random: random_event_player fires bc_rotate_right or bc_rotate_left
+  shot_bc_random_rotate_rotate_right_hit:
+    - bc_choose_random_direction
+  shot_bc_random_rotate_rotate_left_hit:
+    - bc_choose_random_direction
+
+  # Orbit / ramp timer ticks: one step per tick
+  timer_tim_bc_rotate_left_tick:
+    - bc_rotate_left
+  timer_tim_bc_rotate_right_tick:
+    - bc_rotate_right
+
+  # Relay conveyor-moving for display / other modes
+  bc_rotate_right:
+    - bc_conveyor_moving
+  bc_rotate_left:
+    - bc_conveyor_moving

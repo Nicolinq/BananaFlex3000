@@ -264,13 +264,6 @@ shots:
     profile: sp_banana_control_profile_on
     hit_events: mode_banana_control_started
     disable_events: control_bananas_completed, mode_banana_control_will_stop
-  shot_control_rotate_target:
-    switch: s_bumper_target
-    profile: sp_banana_control_rotate_profile
-    advance_events: co_change_banana_control_direction_count_complete
-    hit_events: s_spinner_active
-
-
 shot_groups:
   sg_banana_control_group:
     shots: shot_l_banana_control_1,shot_l_banana_control_2,shot_l_banana_control_3,
@@ -284,8 +277,8 @@ shot_groups:
            shot_l_banana_control_38,shot_l_banana_control_39,shot_l_banana_control_40,shot_l_banana_control_41,shot_l_banana_control_42,
            shot_l_banana_control_43,shot_l_banana_control_44,shot_l_banana_control_45,shot_l_banana_control_46,shot_l_banana_control_47,
            shot_l_banana_control_48,shot_l_banana_control_49,shot_l_banana_control_50
-    rotate_right_events: shot_control_rotate_target_rotate_right_hit
-    rotate_left_events: shot_control_rotate_target_rotate_left_hit
+    rotate_right_events: bc_rotate_right
+    rotate_left_events: bc_rotate_left
     reset_events: reset_banana_belt
 
 shot_profiles:
@@ -316,26 +309,7 @@ shot_profiles:
         show: sh_insert_on
         show_tokens:
           color: tt_red
-  sp_banana_control_rotate_profile:
-    states:
-      - name: rotate_right
-      - name: rotate_left
-    loop: true
-    advance_on_hit: false
 
-
-counters:
-  co_change_banana_control_direction: 
-    count_events: shot_rotate_target_hit
-    starting_count: 0
-    # Permet d'inverser le sens de rotation si nécessaire. Valeur à 10000 pour désactiver
-    count_complete_value: 10000
-    count_interval: 1
-    direction: up
-    events_when_complete: co_change_banana_control_direction_count_complete
-    reset_on_complete: true
-    disable_on_complete: false
-    persist_state: true
 
 # when bending : 1 on 10 will not pass control
 random_event_player:
@@ -485,8 +459,7 @@ event_player:
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_31.state!=2 and device.shots.shot_l_banana_control_32.state!=2 and device.shots.shot_l_banana_control_33.state!=2 and device.shots.shot_l_banana_control_34.state!=2 and device.shots.shot_l_banana_control_35.state!=2 and device.shots.shot_l_banana_control_36.state!=2 and device.shots.shot_l_banana_control_37.state!=2 and device.shots.shot_l_banana_control_38.state!=2 and device.shots.shot_l_banana_control_39.state!=2 and device.shots.shot_l_banana_control_40.state!=2}: control_31_40_completed
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_41.state!=2 and device.shots.shot_l_banana_control_42.state!=2 and device.shots.shot_l_banana_control_43.state!=2 and device.shots.shot_l_banana_control_44.state!=2 and device.shots.shot_l_banana_control_45.state!=2 and device.shots.shot_l_banana_control_46.state!=2 and device.shots.shot_l_banana_control_47.state!=2 and device.shots.shot_l_banana_control_48.state!=2 and device.shots.shot_l_banana_control_49.state!=2 and device.shots.shot_l_banana_control_50.state!=2}: control_41_50_completed
   
-  # relay moving event
-  shot_control_rotate_target_hit: bananas_conveyor_is_moving
+  # relay moving event — now handled by banana_conveyor posting bc_conveyor_moving
   control_completed: start_mode_hyperloop
 
 accruals:

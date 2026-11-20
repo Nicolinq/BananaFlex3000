@@ -75,7 +75,7 @@ sound_player:
       action: play
       bus:  effects
   # Move bananas
-  bananas_conveyor_is_moving:
+  bc_conveyor_moving:
     FuzzyChirps2:
       action: play
       bus:  effects
