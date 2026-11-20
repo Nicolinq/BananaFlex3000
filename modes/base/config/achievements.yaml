@@ -1,0 +1,31 @@
+#config_version=6
+
+
+#Achievements management
+achievement_groups:
+  mission_awards:
+    achievements:
+      - maintenance_mission
+      - shipping_mission
+      - hyperloop
+      - classic_multiball_jackpot
+    events_when_all_completed: all_missions_completed
+
+#Display achievements
+widget_player:
+  achievement_hyperloop_state_completed:
+    achievement_hyperloop:
+      action: play
+      slide: base_slide  
+  achievement_classic_multiball_jackpot_state_completed:
+    achievement_classic_multiball_jackpot:
+      action: play
+      slide: base_slide  
+  achievement_maintenance_mission_state_completed:
+    achievement_maintenance_mission:
+      action: play
+      slide: base_slide  
+  achievement_shipping_mission_state_completed:
+    achievement_shipping_mission:
+      action: play
+      slide: base_slide  

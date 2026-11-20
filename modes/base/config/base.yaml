@@ -4,6 +4,7 @@ config:
 - upper_lanes.yaml
 - orbits.yaml
 - ramp.yaml
+- achievements.yaml
 
 mode:
   start_events: ball_started
@@ -170,12 +171,3 @@ variable_player:
 
 coil_player:
   shot_magnet_hit: c_magnet
-
-achievement_groups:
-  mission_awards:
-    achievements:
-      - maintenance_mission
-      - shipping_mission
-      - hyperloop
-      - classic_multiball_jackpot
-    events_when_all_completed: all_missions_completed

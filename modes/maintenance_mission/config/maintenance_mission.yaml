@@ -84,9 +84,6 @@ variable_player:
 
   maintenance_mission_completed:
     score: 200000
-    pv_maintenance_mission_completed:
-      int: 1
-      action: set
 
   maintenance_mission_timeout:
     pv_maintenance_mission_switch_hit_advance:
@@ -107,7 +104,7 @@ show_player:
 light_player:
   maintenance_mission_timeout:
     l_mission_start: off
-  mode_maintenance_mission_will_stop{current_player.pv_maintenance_mission_completed==0}:
+  mode_maintenance_mission_will_stop:
     l_mission_start: off
 
 slide_player:

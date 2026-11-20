@@ -15,16 +15,12 @@ player_vars:
         initial_value: 0
     pv_maintenance_mission_switch_hit_advance:
         initial_value: 0
-    pv_maintenance_mission_completed:
-        initial_value: 0
     pv_maintenance_mission_initial_time:
         initial_value: 120
     pv_maintenance_mission_time_remaining:
         initial_value: 0
     pv_maintenance_mission_switchs_to_complete:
         initial_value: 100
-    pv_shipping_mission_completed:
-        initial_value: 0
     pv_shipping_mission_trucks_sent:
         initial_value: 0
     pv_shipping_mission_time_remaining:

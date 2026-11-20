@@ -129,6 +129,9 @@ slide_player:
   mode_hyperloop_started:
     hyperloop:
       action: play
-  mode_hyperloop_will_stop:
+  hyperloop_turns_complete:
+    hyperloop:
+      action: remove
+  ball_will_end:
     hyperloop:
       action: remove

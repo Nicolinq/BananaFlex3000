@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwr2bg3xwefue"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_htl04"]
+
+[node name="achievement_shipping_mission" type="Control"]
+layout_mode = 3
+anchor_left = 0.41500002
+anchor_top = 0.89300007
+anchor_right = 0.41500002
+anchor_bottom = 0.89300007
+offset_left = -79.20001
+offset_top = -303.43207
+offset_right = -79.20001
+offset_bottom = -303.43207
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_htl04")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 139.0
+offset_bottom = 76.0
+color = Color(0.9860335, 0.9739558, 0.9915258, 1)
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_right = 139.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3944329, 0.81812185, 0.5053218, 1)
+theme_override_colors/font_outline_color = Color(0.447059, 0, 0.364706, 1)
+theme_override_font_sizes/font_size = 20
+text = "SHIPPING"
+horizontal_alignment = 1
+vertical_alignment = 1
