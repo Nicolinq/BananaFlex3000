@@ -2,7 +2,7 @@
 
 mode:
   start_events: start_mode_banana_load, start_mode_banana_control
-  stop_events: ball_will_end
+  stop_events: ball_will_end, stop_mode_banana_control
   priority: 190
 
 # =====================================================================

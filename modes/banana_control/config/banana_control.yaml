@@ -460,7 +460,9 @@ event_player:
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_41.state!=2 and device.shots.shot_l_banana_control_42.state!=2 and device.shots.shot_l_banana_control_43.state!=2 and device.shots.shot_l_banana_control_44.state!=2 and device.shots.shot_l_banana_control_45.state!=2 and device.shots.shot_l_banana_control_46.state!=2 and device.shots.shot_l_banana_control_47.state!=2 and device.shots.shot_l_banana_control_48.state!=2 and device.shots.shot_l_banana_control_49.state!=2 and device.shots.shot_l_banana_control_50.state!=2}: control_41_50_completed
   
   # relay moving event — now handled by banana_conveyor posting bc_conveyor_moving
-  control_completed: start_mode_hyperloop
+  control_completed: 
+    - start_mode_hyperloop
+    - stop_mode_banana_control
 
 accruals:
   acc_verify_all_controls_ok:

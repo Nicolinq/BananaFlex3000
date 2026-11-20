@@ -10,13 +10,7 @@ mode:
 shots:
   shot_l_bend_start:
     show_tokens:
-      leds: l_bend_bananas_start
-    profile: sp_banana_bend_profile_flash
-    hit_events: mode_banana_bend_started
-    disable_events: bend_bananas_completed, mode_banana_bend_will_stop
-  shot_l_bend_arrow_start:
-    show_tokens:
-      leds: l_arrow_top_right
+      leds: l_bend_bananas_start, l_arrow_top_right
     profile: sp_banana_bend_profile_flash
     hit_events: mode_banana_bend_started
     disable_events: bend_bananas_completed, mode_banana_bend_will_stop
