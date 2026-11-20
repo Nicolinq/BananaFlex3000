@@ -733,6 +733,18 @@ lights:
         subtype: led
         tags: inserts,shoot_again
         label: "l_bend_again"
+    l_ramp_jackpot:
+        previous: l_bend_again #number: 1-0-30
+        type: grb
+        subtype: led
+        tags: inserts, ramp
+        label: "l_ramp_jackpot"
+    l_ramp_arrow:
+        previous: l_ramp_jackpot #number: 1-0-31
+        type: grb
+        subtype: led
+        tags: inserts, ramp
+        label: "l_ramp_arrow"
 
 # keyboard:
 #    1:

@@ -177,4 +177,5 @@ achievement_groups:
       - maintenance_mission
       - shipping_mission
       - hyperloop
+      - classic_multiball_jackpot
     events_when_all_completed: all_missions_completed

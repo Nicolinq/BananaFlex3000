@@ -18,6 +18,14 @@ mode:
 #   When 3rd ball locked → multiball_lock_classic_mb_lock_full fires
 #     - start_classic_multiball -> multiball device kicks off the MB
 # =====================================================================
+
+achievements:
+  classic_multiball_jackpot:
+    enable_events: start_classic_multiball
+    start_events: start_classic_multiball
+    complete_events: classic_multiball_jackpot_done
+    restart_after_stop_possible: false
+
 multiballs:
   mb_classic_multiball:
     ball_count: 3
@@ -41,7 +49,33 @@ multiball_locks:
     locked_ball_counting_strategy: virtual_only
     reset_count_for_current_player_events: multiball_lock_ml_classic_mb_lock_full
 
+# Jackpots
+shots:
+  shot_l_ramp_jackpot_start:
+    show_tokens:
+      leds: l_ramp_jackpot, l_ramp_arrow
+    profile: sp_classic_multiball_profile_flash
+    hit_events: start_classic_multiball, ramp_shot_done
+    disable_events: multiball_mb_classic_multiball_ended, ball_will_end
+
+shot_profiles:
+  sp_classic_multiball_profile_flash:
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: sh_led_flash
+        show_tokens:
+          color: red
+      - name: done
+        show: sh_insert_on
+        show_tokens:
+          color: green
+
 event_player:
+  # Jackpot
+  shot_l_ramp_jackpot_start_on_hit: classic_multiball_jackpot_done
+
   # 3rd ball locked → lock is full -> start multiball
   multiball_lock_ml_classic_mb_lock_full:
     - disable_shot_sequence
@@ -67,6 +101,10 @@ event_player:
     - enable_top_left_gate_diverter
 
 variable_player:
+  #Jackpot
+  classic_multiball_jackpot_done:
+    score: 100000
+
   #Increase the instance when completed.
   #First multiball is easy
   multiball_mb_classic_multiball_started:
