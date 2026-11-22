@@ -86,6 +86,10 @@ event_player:
     - disable_left_diverter
     - disable_top_left_gate_diverter
 
+  #Stop mode when multiball ends
+  multiball_mb_hyperloop_stopped: stop_mode_hyperloop
+
+
 variable_player:
   # Track that multiball was already started this mode instance
   hyperloop_multiball_start:
