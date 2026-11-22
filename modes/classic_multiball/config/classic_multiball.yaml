@@ -45,7 +45,7 @@ multiball_locks:
     # Disables itself as soon as one ball is accepted, so the player
     # must re-complete the sequence to enable the next lock slot.
     enable_events: sequential_targets_done
-    disable_events: multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance>0}, ball_will_end
+    disable_events: mode_hyperloop_started, multiball_lock_ml_classic_mb_lock_locked_ball{current_player.pv_classic_multiball_instance>0}, ball_will_end
     locked_ball_counting_strategy: virtual_only
     reset_count_for_current_player_events: multiball_lock_ml_classic_mb_lock_full
 

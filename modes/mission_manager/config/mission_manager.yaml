@@ -40,11 +40,16 @@ slide_player:
       action: remove
 
 event_player:
+  # Mission start — always fire the mission start event regardless of lock state
   carousel_item_selected{item=="maintenance_mission"}:
     - start_maintenance_mission
-    - eject_bd_lock|1s
   carousel_item_selected{item=="shipping_mission"}:
     - start_shipping_mission
+
+  # Only eject the ball from bd_lock when ml_classic_mb_lock is NOT enabled.
+  # If ml_classic_mb_lock is active, the ball stays in bd_lock and is counted
+  # as a locked ball for the classic multiball — do NOT eject it.
+  carousel_item_selected{not device.multiball_locks.ml_classic_mb_lock.enabled}:
     - eject_bd_lock|1s
 
 show_player:

@@ -41,6 +41,9 @@ player_vars:
         initial_value: 0
     pv_hyperloop_multiball_started:
         initial_value: 0
+    # Tracks that a multiball is active
+    pv_multiball_active:
+        initial_value: 0
     
     #Achievements status
     pv_hyperloop_status:

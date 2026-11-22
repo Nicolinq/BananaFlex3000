@@ -21,24 +21,61 @@ mode:
 # =====================================================================
 
 event_player:
-  # Qualification: spinner_stack_complete when no mission running
-  # and at least one mission not yet completed
-  spinner_stack_complete{current_player.pv_missions_qualified==0 and current_player.pv_mission_running==0 and (device.achievements.maintenance_mission.state != 'completed' or device.achievements.shipping_mission.state != 'completed')}:
+  # Qualification: spinner_stack_complete when no mission running,
+  # no multiball active, and at least one mission not yet completed
+  spinner_stack_complete{current_player.pv_missions_qualified==0 and current_player.pv_mission_running==0 and current_player.pv_multiball_active==0 and (device.achievements.maintenance_mission.state != 'completed' or device.achievements.shipping_mission.state != 'completed')}:
     - mission_select_qualify
     - enable_lock_diverter
     - enable_top_left_gate_diverter
 
-  # Ball enters lock while qualified → start carousel selection mode
-  balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
+  # Ball enters lock while qualified AND no multiball active → start carousel
+  balldevice_bd_lock_ball_entered{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0 and current_player.pv_multiball_active==0}:
     - start_mode_mission_manager
 
-  # Resume diverters + ball_hold on ball restart if still qualified
-  mode_mission_qualify_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}:
+  # Resume diverters + ball_hold on ball restart if still qualified and no multiball
+  mode_mission_qualify_started{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0 and current_player.pv_multiball_active==0}:
     - enable_lock_diverter
     - enable_top_left_gate_diverter
     - mission_select_qualify_resume
 
+  # Multiball started: cancel any pending selection, disable diverters
+  multiball_mb_classic_multiball_started:
+    - disable_lock_diverter
+    - disable_top_left_gate_diverter
+    - stop_mode_mission_manager
+  hyperloop_multiball_start:
+    - disable_lock_diverter
+    - disable_top_left_gate_diverter
+    - stop_mode_mission_manager
+
+  # Multiball ended: re-enable diverters if still qualified
+  "multiball_mb_classic_multiball_ended{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}":
+    - enable_lock_diverter
+    - enable_top_left_gate_diverter
+  "multiball_mb_hyperloop_ended{current_player.pv_missions_qualified==1 and current_player.pv_mission_running==0}":
+    - enable_lock_diverter
+    - enable_top_left_gate_diverter
+
 variable_player:
+  # Multiball state tracking
+  multiball_mb_classic_multiball_started:
+    pv_multiball_active:
+      int: 1
+      action: set
+  multiball_mb_classic_multiball_ended:
+    pv_multiball_active:
+      int: 0
+      action: set
+  hyperloop_multiball_start:
+    pv_multiball_active:
+      int: 1
+      action: set
+  multiball_mb_hyperloop_ended:
+    pv_multiball_active:
+      int: 0
+      action: set
+
+  # Mission qualification state tracking
   mission_select_qualify:
     pv_missions_qualified:
       int: 1
