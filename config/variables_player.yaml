@@ -41,3 +41,17 @@ player_vars:
         initial_value: 0
     pv_hyperloop_multiball_started:
         initial_value: 0
+    
+    #Achievements status
+    pv_hyperloop_status:
+        value_type: str
+        initial_value: disabled
+    pv_multiball_jackpot_status:
+        value_type: str
+        initial_value: disabled
+    pv_mission_maintenance_status:
+        value_type: str
+        initial_value: disabled
+    pv_mission_shipping_status:
+        value_type: str
+        initial_value: disabled

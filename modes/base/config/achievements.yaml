@@ -11,21 +11,38 @@ achievement_groups:
       - classic_multiball_jackpot
     events_when_all_completed: all_missions_completed
 
-#Display achievements
-widget_player:
-  achievement_hyperloop_state_completed:
-    achievement_hyperloop:
-      action: play
-      slide: base_slide  
-  achievement_classic_multiball_jackpot_state_completed:
-    achievement_classic_multiball_jackpot:
-      action: play
-      slide: base_slide  
-  achievement_maintenance_mission_state_completed:
-    achievement_maintenance_mission:
-      action: play
-      slide: base_slide  
-  achievement_shipping_mission_state_completed:
-    achievement_shipping_mission:
-      action: play
-      slide: base_slide  
+# Display achievements
+# Update
+slide_player:
+  achievement_hyperloop_changed_state:
+    base_slide:
+      action: update
+  achievement_maintenance_mission_changed_state:
+    base_slide:
+      action: update
+  achievement_shipping_mission_changed_state:
+    base_slide:
+      action: update
+  achievement_classic_multiball_jackpot_changed_state:
+    base_slide:
+      action: update
+
+
+# Relay the achievements status to the variable players for Godot
+variable_player:
+  achievement_hyperloop_changed_state:
+    pv_hyperloop_status:
+      string: "{state}"
+      action: set
+  achievement_maintenance_mission_changed_state:
+    pv_mission_maintenance_status:
+      string: "{state}"
+      action: set
+  achievement_shipping_mission_changed_state:
+    pv_mission_shipping_status:
+      string: "{state}"
+      action: set
+  achievement_classic_multiball_jackpot_changed_state:
+    pv_multiball_jackpot_status:
+      string: "{state}"
+      action: set
