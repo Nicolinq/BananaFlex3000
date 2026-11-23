@@ -30,8 +30,6 @@ multiballs:
   mb_classic_multiball:
     ball_count: 3
     ball_count_type: add
-    hurry_up_time: 2s
-    grace_period: 2s
     start_events: start_classic_multiball
     ball_locks: bd_lock
 

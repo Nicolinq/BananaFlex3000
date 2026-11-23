@@ -8,11 +8,11 @@ ball_saves:
   saveball:
     auto_launch: true
     active_time: current_player.pv_ball_save_time # 7s
-    hurry_up_time: 4s
+    hurry_up_time: 5s
     grace_period: 3s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_bd_trough_ball_eject_success
-    balls_to_save: 1 # -1 for unlimited
+    enable_events: balldevice_bd_trough_ball_eject_success, multiball_mb_classic_multiball_started, multiball_mb_hyperloop_started
+    balls_to_save: 3 # -1 for unlimited
+
 
 show_player:
   ball_save_saveball_timer_start:
@@ -22,19 +22,20 @@ show_player:
       show_tokens:
         lights: l_bend_again
         color: orange
-  # 3s from end
+  # 5s from end
   ball_save_saveball_hurry_up:
     flash_color:
       key: ball_save
       speed: 6
       show_tokens:
         lights: l_bend_again
-        color: orange
+        color: red
   ball_save_saveball_grace_period:
     ball_save: stop
   ball_save_saveball_disabled:
     ball_save: stop
 
+# Display widget at ball save
 widget_player:
   ball_save_saveball_saving_ball:
     ball_save_widget:
