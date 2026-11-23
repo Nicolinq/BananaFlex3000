@@ -37,6 +37,7 @@ modes:
 - mission_qualify
 - shipping_mission
 - service
+- video_mode_splash
 
 ball_devices:
     bd_trough:

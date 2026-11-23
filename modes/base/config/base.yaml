@@ -33,6 +33,7 @@ event_player:
       - stop_mode_mission_qualify
       - stop_mode_shipping_mission
       - stop_mode_hyperloop
+      - stop_mode_video_mode_splash
    mode_skill_shot_will_stop:
       - start_mode_sequential_targets
       - start_mode_classic_multiball

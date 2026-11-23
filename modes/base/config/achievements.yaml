@@ -9,6 +9,7 @@ achievement_groups:
       - shipping_mission
       - hyperloop
       - classic_multiball_jackpot
+      - video_mode_splash
     events_when_all_completed: all_missions_completed
 
 # Display achievements
@@ -24,6 +25,9 @@ slide_player:
     base_slide:
       action: update
   achievement_classic_multiball_jackpot_changed_state:
+    base_slide:
+      action: update
+  achievement_video_mode_splash_changed_state:
     base_slide:
       action: update
 
@@ -44,5 +48,9 @@ variable_player:
       action: set
   achievement_classic_multiball_jackpot_changed_state:
     pv_multiball_jackpot_status:
+      string: "{state}"
+      action: set
+  achievement_video_mode_splash_changed_state:
+    pv_video_mode_splash_status:
       string: "{state}"
       action: set

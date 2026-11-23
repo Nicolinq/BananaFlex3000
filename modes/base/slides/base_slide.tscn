@@ -21,8 +21,9 @@ texture = ExtResource("2_3761s")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 370.0
+offset_bottom = 436.0
 grow_horizontal = 2
+theme_override_constants/margin_top = 40
 
 [node name="VFlowContainer" type="VFlowContainer" parent="TopMarginContainer"]
 layout_mode = 2
@@ -213,6 +214,54 @@ grow_vertical = 2
 color = Color(0.77254903, 0.64705884, 0.12156863, 1)
 
 [node name="stopped" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LMissionShipping/MPFConditionalChildren"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.654902, 0.654902, 0.6745098, 1)
+
+[node name="LVideoModeSplash" type="Label" parent="TopMarginContainer/VFlowContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "VIDEO MODE"
+horizontal_alignment = 1
+
+[node name="MPFConditionalChildren" type="Control" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_o41t6")
+variable_name = "pv_video_mode_splash_status"
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="completed" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23007786, 0.7724759, 0.39117995, 1)
+
+[node name="started" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.77254903, 0.64705884, 0.12156863, 1)
+
+[node name="stopped" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
