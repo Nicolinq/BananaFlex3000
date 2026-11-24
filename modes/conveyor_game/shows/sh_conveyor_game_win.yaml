@@ -1,0 +1,21 @@
+#show_version=6
+
+- time: 0
+  lights:
+    (leds): green
+- time: +150ms
+  lights:
+    (leds): off
+- time: +100ms
+  lights:
+    (leds): green
+- time: +200ms
+  lights:
+    l_belt_b_1, l_belt_b_2, l_belt_b_3, l_belt_b_4, l_belt_b_5, l_belt_b_6, l_belt_b_7, l_belt_b_8, l_belt_b_9, l_belt_b_40, l_belt_b_41, l_belt_b_42, l_belt_b_43, l_belt_b_44, l_belt_b_45, l_belt_b_46, l_belt_b_47, l_belt_b_48, l_belt_b_49, l_belt_b_50: off
+- time: +150ms
+  lights:
+    l_belt_b_10, l_belt_b_11, l_belt_b_12, l_belt_b_13, l_belt_b_14, l_belt_b_15, l_belt_b_16, l_belt_b_17, l_belt_b_18, l_belt_b_19, l_belt_b_30, l_belt_b_31, l_belt_b_32, l_belt_b_33, l_belt_b_34, l_belt_b_35, l_belt_b_36, l_belt_b_37, l_belt_b_38, l_belt_b_39: off
+- time: +150ms
+  lights:
+    l_belt_b_20, l_belt_b_21, l_belt_b_22, l_belt_b_23, l_belt_b_24, l_belt_b_25, l_belt_b_26, l_belt_b_27, l_belt_b_28, l_belt_b_29: off
+- time: +200ms

@@ -1,0 +1,4 @@
+#show_version=6
+- duration: -1
+  lights:
+    l_belt_b_(led_num): (color)
