@@ -223,13 +223,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.654902, 0.654902, 0.6745098, 1)
 
-[node name="LVideoModeSplash" type="Label" parent="TopMarginContainer/VFlowContainer"]
+[node name="LConveyorGame" type="Label" parent="TopMarginContainer/VFlowContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "VIDEO MODE"
+text = "CONVEYOR_GAME"
 horizontal_alignment = 1
 
-[node name="MPFConditionalChildren" type="Control" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash"]
+[node name="MPFConditionalChildren" type="Control" parent="TopMarginContainer/VFlowContainer/LConveyorGame"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -238,10 +238,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_o41t6")
-variable_name = "pv_video_mode_splash_status"
+variable_name = "pv_conveyor_game_status"
 metadata/_custom_type_script = "uid://808knhb8e2nn"
 
-[node name="completed" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
+[node name="completed" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LConveyorGame/MPFConditionalChildren"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -251,7 +251,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.23007786, 0.7724759, 0.39117995, 1)
 
-[node name="started" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
+[node name="started" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LConveyorGame/MPFConditionalChildren"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -261,7 +261,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.77254903, 0.64705884, 0.12156863, 1)
 
-[node name="stopped" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LVideoModeSplash/MPFConditionalChildren"]
+[node name="stopped" type="ColorRect" parent="TopMarginContainer/VFlowContainer/LConveyorGame/MPFConditionalChildren"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15

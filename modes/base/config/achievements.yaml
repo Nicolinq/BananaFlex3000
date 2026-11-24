@@ -9,7 +9,7 @@ achievement_groups:
       - shipping_mission
       - hyperloop
       - classic_multiball_jackpot
-      - video_mode_splash
+      - conveyor_game
     events_when_all_completed: all_missions_completed
 
 # Display achievements
@@ -27,7 +27,7 @@ slide_player:
   achievement_classic_multiball_jackpot_changed_state:
     base_slide:
       action: update
-  achievement_video_mode_splash_changed_state:
+  achievement_conveyor_game_changed_state:
     base_slide:
       action: update
 
@@ -50,7 +50,7 @@ variable_player:
     pv_multiball_jackpot_status:
       string: "{state}"
       action: set
-  achievement_video_mode_splash_changed_state:
-    pv_video_mode_splash_status:
+  achievement_conveyor_game_changed_state:
+    pv_conveyor_game_status:
       string: "{state}"
       action: set

@@ -20,6 +20,7 @@ event_player:
       - start_mode_maintenance_mission
       - start_mode_shipping_mission
       - start_mode_mission_qualify
+      - start_mode_conveyor_game
    mode_base_will_stop:
       - stop_mode_bumper
       - stop_mode_banana_load
@@ -33,7 +34,7 @@ event_player:
       - stop_mode_mission_qualify
       - stop_mode_shipping_mission
       - stop_mode_hyperloop
-      - stop_mode_video_mode_splash
+      - stop_mode_conveyor_game
    mode_skill_shot_will_stop:
       - start_mode_sequential_targets
       - start_mode_classic_multiball

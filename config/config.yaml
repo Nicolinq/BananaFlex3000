@@ -37,7 +37,7 @@ modes:
 - mission_qualify
 - shipping_mission
 - service
-- video_mode_splash
+- conveyor_game
 
 ball_devices:
     bd_trough:

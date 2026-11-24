@@ -1,0 +1,28 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_conveyor_game
+  stop_events: stop_mode_conveyor_game, ball_will_end
+  priority: 300
+
+# =====================================================================
+# VIDEO MODE SPLASH (PURE YAML)
+#
+# Mechanics:
+# - Uses the 50 conveyor LEDs (l_belt_b_1 to l_belt_b_50).
+# - 2 brown bars grow from each side (outdated bananas) via show sh_vm_bars_grow.
+# - The player controls 3 red LEDs with flipper buttons (shot group rotation).
+# - Launch button splashes outdated bananas when touching or overlapping them.
+# - Growth speeds up after 4 splashes (speed: 1.82), and again after 6 (speed: 2.85).
+# - 10 splashes => WIN (conveyor_game_mission_completed + eject_bd_lock).
+# - Bars touch => LOSE (conveyor_game_mission_failed + eject_bd_lock).
+# =====================================================================
+
+achievements:
+  conveyor_game:
+    enable_events: start_conveyor_game_mission
+    start_events: start_conveyor_game_mission
+    complete_events: conveyor_game_mission_completed
+    restart_after_stop_possible: false
+    #reset_events: conveyor_game_mission_failed
+

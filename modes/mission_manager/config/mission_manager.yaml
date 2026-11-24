@@ -27,7 +27,7 @@ mode_settings:
   selectable_items:
     - maintenance_mission{device.achievements.maintenance_mission.state != 'completed'}
     - shipping_mission{device.achievements.shipping_mission.state != 'completed'}
-    - video_mode_splash{device.achievements.video_mode_splash.state != 'completed'}
+    - conveyor_game{device.achievements.conveyor_game.state != 'completed'}
   next_item_events: s_flipper_right_button_active
   previous_item_events: s_flipper_left_button_active
   select_item_events: s_launch_button_active
@@ -46,14 +46,14 @@ event_player:
     - start_maintenance_mission
   carousel_item_selected{item=="shipping_mission"}:
     - start_shipping_mission
-  carousel_item_selected{item=="video_mode_splash"}:
-    - start_video_mode_splash_mission
+  carousel_item_selected{item=="conveyor_game"}:
+    - start_conveyor_game_mission
 
   # Only eject the ball from bd_lock when ml_classic_mb_lock is NOT enabled.
   # If ml_classic_mb_lock is active, the ball stays in bd_lock and is counted
   # as a locked ball for the classic multiball — do NOT eject it.
   # if video mode => keep it
-  carousel_item_selected{not device.multiball_locks.ml_classic_mb_lock.enabled and device.achievements.video_mode_splash.state != 'started'}:
+  carousel_item_selected{not device.multiball_locks.ml_classic_mb_lock.enabled and device.achievements.conveyor_game.state != 'started'}:
     - eject_bd_lock|1s
 
 show_player:

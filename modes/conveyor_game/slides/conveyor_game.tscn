@@ -144,7 +144,7 @@ theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/font_size = 32
 text = "0 "
 script = ExtResource("3_var")
-variable_name = "pv_video_mode_splash_count"
+variable_name = "pv_conveyor_game_count"
 template_string = "%s "
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 

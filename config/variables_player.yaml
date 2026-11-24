@@ -58,9 +58,9 @@ player_vars:
     pv_mission_shipping_status:
         value_type: str
         initial_value: disabled
-    pv_video_mode_splash_status:
+    pv_conveyor_game_status:
         value_type: str
         initial_value: disabled
-    pv_video_mode_splash_count:
+    pv_conveyor_game_count:
         value_type: int
         initial_value: 0
