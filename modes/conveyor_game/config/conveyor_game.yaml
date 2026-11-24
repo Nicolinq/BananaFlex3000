@@ -29,13 +29,44 @@ achievements:
 
 # 1. Variables d'état du mini-jeu (3 balles, 3 niveaux)
 variable_player:
+  conveyor_game_mission_failed:
+    cb_level:
+      action: set
+      int: 0
+    cb_rebounds:
+      action: set
+      int: 0
+    cb_shield_left:
+      action: set
+      int: 0
+    cb_shield_right:
+      action: set
+      int: 0
+    cb_super:
+      action: set
+      int: 0
+
+  conveyor_game_mission_completed:
+    cb_level:
+      action: set
+      int: 0
+    cb_rebounds:
+      action: set
+      int: 0
+    cb_shield_left:
+      action: set
+      int: 0
+    cb_shield_right:
+      action: set
+      int: 0
+    cb_super:
+      action: set
+      int: 0
+
   conveyor_game_mission_started:
     cb_level:
       action: set
       int: 1
-    cb_speed:
-      action: set
-      float: 2.0         # Vitesse initiale (500 ms/LED)
     cb_rebounds:
       action: set
       int: 0
@@ -89,7 +120,7 @@ variable_player:
       int: -1
 
   # Passage au Niveau 2 (à 6 rebonds) : active la balle 2
-  cb_start_level_2:
+  level_2_started:
     cb_level:
       action: set
       int: 2
@@ -109,7 +140,7 @@ variable_player:
     score: 100000
 
   # Passage au Niveau 3 (à 12 rebonds) : active la balle 3
-  cb_start_level_3:
+  level_3_started:
     cb_level:
       action: set
       int: 3
@@ -149,7 +180,7 @@ variable_player:
       action: set
       int: 1
 
-  timer_shield_left_complete:
+  timer_tim_shield_left_complete:
     cb_shield_left:
       action: set
       int: 0
@@ -159,7 +190,7 @@ variable_player:
       action: set
       int: 1
 
-  timer_shield_right_complete:
+  timer_tim_shield_right_complete:
     cb_shield_right:
       action: set
       int: 0
@@ -275,7 +306,7 @@ event_player:
   timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
 
-  timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_pos <= 1 and current_player.cb_shield_left == 0}:
+  timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_pos <= 2 and current_player.cb_shield_left == 0}:
     - conveyor_game_mission_failed
 
   # --- Collisions Balle 2 ---
@@ -290,7 +321,7 @@ event_player:
   timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
 
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos <= 1 and current_player.cb_shield_left == 0}:
+  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos <= 2 and current_player.cb_shield_left == 0}:
     - conveyor_game_mission_failed
 
   # --- Collisions Balle 3 ---
@@ -305,17 +336,18 @@ event_player:
   timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
 
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos <= 1 and current_player.cb_shield_left == 0}:
+  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos <= 2 and current_player.cb_shield_left == 0}:
     - conveyor_game_mission_failed
 
 
 
   # --- Paliers de niveaux (6 -> Niv 2, 12 -> Niv 3, 18 -> Victoire) ---
   player_cb_rebounds{value == 6 and current_player.cb_level == 1}:
-    - cb_start_level_2
+    - level_2_started
 
   player_cb_rebounds{value == 12 and current_player.cb_level == 2}:
-    - cb_start_level_3
+    - level_3_started
+  
   player_cb_rebounds{value >= 18}:
     - conveyor_game_mission_completed
 
@@ -335,7 +367,7 @@ timers:
   tim_1_ball:
     start_value: 0
     end_value: 99999
-    tick_interval: 200ms
+    tick_interval: 100ms
     control_events:
       - event: conveyor_game_mission_started
         action: start
@@ -346,9 +378,9 @@ timers:
   tim_2_balls:
     start_value: 0
     end_value: 99999
-    tick_interval: 100ms
+    tick_interval: 80ms
     control_events:
-      - event: conveyor_game_mission_started
+      - event: level_2_started
         action: start
       - event: conveyor_game_mission_completed
         action: stop
@@ -359,25 +391,25 @@ timers:
     end_value: 99999
     tick_interval: 50ms
     control_events:
-      - event: conveyor_game_mission_started
+      - event: level_3_started
         action: start
       - event: conveyor_game_mission_completed
         action: stop
       - event: conveyor_game_mission_failed
         action: stop
 
-  shield_left:
+  tim_shield_left:
     start_value: 0
-    end_value: 3
+    end_value: 2
     tick_interval: 1s
     start_running: false
     control_events:
       - event: s_flipper_left_button_active
         action: restart
 
-  shield_right:
+  tim_shield_right:
     start_value: 0
-    end_value: 3
+    end_value: 2
     tick_interval: 1s
     start_running: false
     control_events:
@@ -397,28 +429,28 @@ timers:
 
 # 5. Affichage des LEDs (Boucliers + 3 Balles colorées)
 light_player:
-  s_flipper_left_button_active:
+  s_flipper_left_button_active{current_player.cb_level>0}:
     l_belt_b_1: blue
     l_belt_b_2: blue
     l_belt_b_3: blue
     l_belt_b_4: blue
     l_belt_b_5: blue
 
-  timer_shield_left_complete:
+  timer_tim_shield_left_complete{current_player.cb_level>0}:
     l_belt_b_1: off
     l_belt_b_2: off
     l_belt_b_3: off
     l_belt_b_4: off
     l_belt_b_5: off
 
-  s_flipper_right_button_active:
+  s_flipper_right_button_active{current_player.cb_level>0}:
     l_belt_b_46: blue
     l_belt_b_47: blue
     l_belt_b_48: blue
     l_belt_b_49: blue
     l_belt_b_50: blue
 
-  timer_shield_right_complete:
+  timer_tim_shield_right_complete{current_player.cb_level>0}:
     l_belt_b_46: off
     l_belt_b_47: off
     l_belt_b_48: off
@@ -467,6 +499,13 @@ show_player:
   #     fade: 0ms
 
   # # Balle 2 (Jaune)
+  "player_cb_b2_pos{current_player.cb_b2_active == 1 and current_player.cb_super == 0}":
+    sh_conveyor_game_ball_device_on:
+        action: play
+        show_tokens:
+          led_num: "((value))" # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
+          color: yellow
+        key: ball_2_render # Permet de remplacer le show précédent au lieu de les accumuler
   # timer_cb_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_super == 0}:
   #   "l_belt_b_{current_player.cb_b2_pos}":
   #     color: yellow
@@ -486,6 +525,13 @@ show_player:
   #     fade: 0ms
 
   # # Balle 3 (Magenta)
+  "player_cb_b3_pos{current_player.cb_b3_active == 1 and current_player.cb_super == 0}":
+    sh_conveyor_game_ball_device_on:
+        action: play
+        show_tokens:
+          led_num: "((value))" # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
+          color: magenta
+        key: ball_3_render # Permet de remplacer le show précédent au lieu de les accumuler
   # timer_cb_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_super == 0}:
   #   "l_belt_b_{current_player.cb_b3_pos}":
   #     color: magenta
