@@ -164,12 +164,12 @@ variable_player:
     cb_b1_pos:
       action: add
       int: current_player.cb_b1_dir
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1}:
+  timer_tim_2_balls_tick{current_player.cb_b2_active == 1}:
     cb_b2_pos:
       action: add
       int: current_player.cb_b2_dir
 
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1}:
+  timer_tim_3_balls_tick{current_player.cb_b3_active == 1}:
     cb_b3_pos:
       action: add
       int: current_player.cb_b3_dir
@@ -207,7 +207,7 @@ variable_player:
       int: 0
 
   # Rebonds Balle 1
-  cb_b1_rebond_droit:
+  conveyor_game_b1_right_rebound:
 
     cb_b1_dir:
       action: set
@@ -219,7 +219,7 @@ variable_player:
 
     score: 25000 + (75000 * current_player.cb_super)
 
-  cb_b1_rebond_gauche:
+  conveyor_game_b1_left_rebound:
     cb_b1_dir:
       action: set
       int: 1
@@ -233,7 +233,7 @@ variable_player:
 
 
   # Rebonds Balle 2
-  cb_b2_rebond_droit:
+  conveyor_game_b2_right_rebound:
     cb_b2_dir:
       action: set
       int: -1
@@ -244,7 +244,7 @@ variable_player:
 
     score: 25000 + (75000 * current_player.cb_super)
 
-  cb_b2_rebond_gauche:
+  conveyor_game_b2_left_rebound:
     cb_b2_dir:
       action: set
       int: 1
@@ -256,7 +256,7 @@ variable_player:
     score: 25000 + (75000 * current_player.cb_super)
 
   # Rebonds Balle 3
-  cb_b3_rebond_droit:
+  conveyor_game_b3_right_rebound:
     cb_b3_dir:
       action: set
       int: -1
@@ -267,7 +267,7 @@ variable_player:
 
     score: 25000 + (75000 * current_player.cb_super)
 
-  cb_b3_rebond_gauche:
+  conveyor_game_b3_left_rebound:
     cb_b3_dir:
       action: set
       int: 1
@@ -296,12 +296,12 @@ event_player:
 
   # --- Collisions Balle 1 ---
   timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_dir == 1 and current_player.cb_b1_pos >= 45 and current_player.cb_shield_right == 1}:
-    - cb_b1_rebond_droit
-    - cb_any_rebound
+    - conveyor_game_b1_right_rebound
+    - conveyor_game_any_rebound
 
   timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_dir == -1 and current_player.cb_b1_pos <= 4 and current_player.cb_shield_left == 1}:
-    - cb_b1_rebond_gauche
-    - cb_any_rebound
+    - conveyor_game_b1_left_rebound
+    - conveyor_game_any_rebound
 
   timer_tim_1_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_b1_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
@@ -310,45 +310,45 @@ event_player:
     - conveyor_game_mission_failed
 
   # --- Collisions Balle 2 ---
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_dir == 1 and current_player.cb_b2_pos >= 45 and current_player.cb_shield_right == 1}:
-    - cb_b2_rebond_droit
-    - cb_any_rebound
+  timer_tim_2_balls_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_dir == 1 and current_player.cb_b2_pos >= 45 and current_player.cb_shield_right == 1}:
+    - conveyor_game_b2_right_rebound
+    - conveyor_game_any_rebound
 
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_dir == -1 and current_player.cb_b2_pos <= 4 and current_player.cb_shield_left == 1}:
-    - cb_b2_rebond_gauche
-    - cb_any_rebound
+  timer_tim_2_balls_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_dir == -1 and current_player.cb_b2_pos <= 4 and current_player.cb_shield_left == 1}:
+    - conveyor_game_b2_left_rebound
+    - conveyor_game_any_rebound
 
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos >= 49 and current_player.cb_shield_right == 0}:
+  timer_tim_2_balls_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
 
-  timer_tim_2_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos <= 2 and current_player.cb_shield_left == 0}:
+  timer_tim_2_balls_tick{current_player.cb_b2_active == 1 and current_player.cb_b2_pos <= 2 and current_player.cb_shield_left == 0}:
     - conveyor_game_mission_failed
 
   # --- Collisions Balle 3 ---
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_dir == 1 and current_player.cb_b3_pos >= 45 and current_player.cb_shield_right == 1}:
-    - cb_b3_rebond_droit
-    - cb_any_rebound
+  timer_tim_3_balls_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_dir == 1 and current_player.cb_b3_pos >= 45 and current_player.cb_shield_right == 1}:
+    - conveyor_game_b3_right_rebound
+    - conveyor_game_any_rebound
 
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_dir == -1 and current_player.cb_b3_pos <= 4 and current_player.cb_shield_left == 1}:
-    - cb_b3_rebond_gauche
-    - cb_any_rebound
+  timer_tim_3_balls_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_dir == -1 and current_player.cb_b3_pos <= 4 and current_player.cb_shield_left == 1}:
+    - conveyor_game_b3_left_rebound
+    - conveyor_game_any_rebound
 
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos >= 49 and current_player.cb_shield_right == 0}:
+  timer_tim_3_balls_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos >= 49 and current_player.cb_shield_right == 0}:
     - conveyor_game_mission_failed
 
-  timer_tim_3_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos <= 2 and current_player.cb_shield_left == 0}:
+  timer_tim_3_balls_tick{current_player.cb_b3_active == 1 and current_player.cb_b3_pos <= 2 and current_player.cb_shield_left == 0}:
     - conveyor_game_mission_failed
 
 
 
   # --- Paliers de niveaux (6 -> Niv 2, 12 -> Niv 3, 18 -> Victoire) ---
-  player_cb_rebounds{value == 6 and current_player.cb_level == 1}:
+  player_cb_rebounds{value == 3 and current_player.cb_level == 1}:
     - level_2_started
 
-  player_cb_rebounds{value == 12 and current_player.cb_level == 2}:
+  player_cb_rebounds{value == 6 and current_player.cb_level == 2}:
     - level_3_started
   
-  player_cb_rebounds{value >= 18}:
+  player_cb_rebounds{value >= 12}:
     - conveyor_game_mission_completed
 
   # --- Fin de mode après les shows ---
@@ -482,21 +482,6 @@ show_player:
           led_num: "((value))" # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
           color: white
         key: ball_1_render # Permet de remplacer le show précédent au lieu de les accumuler
-    # sh_conveyor_game_ball_device_off:
-    #     action: play
-    #     show_tokens:
-    #       led_num: [current_player.cb_b1_pos - current_player.cb_b1_dir}  # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
-    #     key: ball_1_render  # Permet de remplacer le show précédent au lieu de les accumuler
-
-
-  # timer_cb_ball_tick{current_player.cb_b1_active == 1 and current_player.cb_super == 1}:
-  #   "l_belt_b_{current_player.cb_b1_pos}":
-  #     color: red
-  #     fade: 0ms
-
-  #   "l_belt_b_{current_player.cb_b1_pos - current_player.cb_b1_dir}":
-  #     color: off
-  #     fade: 0ms
 
   # # Balle 2 (Jaune)
   "player_cb_b2_pos{current_player.cb_b2_active == 1 and current_player.cb_super == 0}":
@@ -506,23 +491,6 @@ show_player:
           led_num: "((value))" # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
           color: yellow
         key: ball_2_render # Permet de remplacer le show précédent au lieu de les accumuler
-  # timer_cb_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_super == 0}:
-  #   "l_belt_b_{current_player.cb_b2_pos}":
-  #     color: yellow
-  #     fade: 0ms
-
-  #   "l_belt_b_{current_player.cb_b2_pos - current_player.cb_b2_dir}":
-  #     color: off
-  #     fade: 0ms
-
-  # timer_cb_ball_tick{current_player.cb_b2_active == 1 and current_player.cb_super == 1}:
-  #   "l_belt_b_{current_player.cb_b2_pos}":
-  #     color: red
-  #     fade: 0ms
-
-  #   "l_belt_b_{current_player.cb_b2_pos - current_player.cb_b2_dir}":
-  #     color: off
-  #     fade: 0ms
 
   # # Balle 3 (Magenta)
   "player_cb_b3_pos{current_player.cb_b3_active == 1 and current_player.cb_super == 0}":
@@ -532,23 +500,6 @@ show_player:
           led_num: "((value))" # 'value' contient automatiquement la nouvelle valeur de cb_b1_pos
           color: magenta
         key: ball_3_render # Permet de remplacer le show précédent au lieu de les accumuler
-  # timer_cb_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_super == 0}:
-  #   "l_belt_b_{current_player.cb_b3_pos}":
-  #     color: magenta
-  #     fade: 0ms
-
-  #   "l_belt_b_{current_player.cb_b3_pos - current_player.cb_b3_dir}":
-  #     color: off
-  #     fade: 0ms
-
-  # timer_cb_ball_tick{current_player.cb_b3_active == 1 and current_player.cb_super == 1}:
-  #   "l_belt_b_{current_player.cb_b3_pos}":
-  #     color: red
-  #     fade: 0ms
-
-  #   "l_belt_b_{current_player.cb_b3_pos - current_player.cb_b3_dir}":
-  #     color: off
-  #     fade: 0ms
 
 slide_player:
   conveyor_game_mission_started:
