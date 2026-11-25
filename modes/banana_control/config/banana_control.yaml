@@ -444,13 +444,13 @@ event_player:
                                choose_wrong_bananas_31_40, choose_wrong_bananas_41_50, stop_mode_banana_load, stop_mode_banana_bend
   
   # match between switches and targets and validate green only if red
-  s_bank4_1_active{device.shots.shot_l_banana_control_1.state==2}: advance_control_1
-  s_bank4_2_active{device.shots.shot_l_banana_control_2.state==2}: advance_control_2
-  s_bank4_3_active{device.shots.shot_l_banana_control_3.state==2}: advance_control_3
-  s_bank4_4_active{device.shots.shot_l_banana_control_4.state==2}: advance_control_4
-  s_bank3_1_active{device.shots.shot_l_banana_control_12.state==2}: advance_control_12
-  s_bank3_2_active{device.shots.shot_l_banana_control_13.state==2}: advance_control_13
-  s_bank3_3_active{device.shots.shot_l_banana_control_14.state==2}: advance_control_14
+  s_bank4_1_active{device.shots.shot_l_banana_control_21.state==2}: advance_control_21
+  s_bank4_2_active{device.shots.shot_l_banana_control_22.state==2}: advance_control_22
+  s_bank4_3_active{device.shots.shot_l_banana_control_23.state==2}: advance_control_23
+  s_bank4_4_active{device.shots.shot_l_banana_control_24.state==2}: advance_control_24
+  s_bank3_1_active{device.shots.shot_l_banana_control_29.state==2}: advance_control_29
+  s_bank3_2_active{device.shots.shot_l_banana_control_30.state==2}: advance_control_30
+  s_bank3_3_active{device.shots.shot_l_banana_control_31.state==2}: advance_control_31
 
   #verify completion
   sg_banana_control_group_control_nok_hit{device.shots.shot_l_banana_control_1.state!=2 and device.shots.shot_l_banana_control_2.state!=2 and device.shots.shot_l_banana_control_3.state!=2 and device.shots.shot_l_banana_control_4.state!=2 and device.shots.shot_l_banana_control_5.state!=2 and device.shots.shot_l_banana_control_6.state!=2 and device.shots.shot_l_banana_control_7.state!=2 and device.shots.shot_l_banana_control_8.state!=2 and device.shots.shot_l_banana_control_9.state!=2 and device.shots.shot_l_banana_control_10.state!=2}: control_1_10_completed

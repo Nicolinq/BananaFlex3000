@@ -10,22 +10,22 @@ mode:
 shots:
   shot_l_unbended_1:
     show_tokens:
-      leds: l_belt_b_1, l_bank4_1_arrow
+      leds: l_belt_b_1 
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_1
   shot_l_unbended_2:
     show_tokens:
-      leds: l_belt_b_2, l_bank4_2_arrow
+      leds: l_belt_b_2
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_2
   shot_l_unbended_3:
     show_tokens:
-      leds: l_belt_b_3, l_bank4_3_arrow
+      leds: l_belt_b_3
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_3
   shot_l_unbended_4:
     show_tokens:
-      leds: l_belt_b_4, l_bank4_4_arrow
+      leds: l_belt_b_4
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_4
   shot_l_unbended_5:
@@ -65,17 +65,17 @@ shots:
     hit_events: advance_load_11
   shot_l_unbended_12:
     show_tokens:
-      leds: l_belt_b_12, l_bank3_1_arrow
+      leds: l_belt_b_12
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_12
   shot_l_unbended_13:
     show_tokens:
-      leds: l_belt_b_13, l_bank3_2_arrow
+      leds: l_belt_b_13
     profile: sp_banana_load_profile_hit    
     hit_events: advance_load_13
   shot_l_unbended_14:
     show_tokens:
-      leds: l_belt_b_14, l_bank3_3_arrow
+      leds: l_belt_b_14
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_14
   shot_l_unbended_15:
@@ -110,22 +110,22 @@ shots:
     hit_events: advance_load_20
   shot_l_unbended_21:
     show_tokens:
-      leds: l_belt_b_21
+      leds: l_belt_b_21, l_bank4_1_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_21
   shot_l_unbended_22:
     show_tokens:
-      leds: l_belt_b_22
+      leds: l_belt_b_22, l_bank4_2_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_22
   shot_l_unbended_23:
     show_tokens:
-      leds: l_belt_b_23
+      leds: l_belt_b_23, l_bank4_3_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_23
   shot_l_unbended_24:
     show_tokens:
-      leds: l_belt_b_24
+      leds: l_belt_b_24, l_bank4_4_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_24
   shot_l_unbended_25:
@@ -150,17 +150,17 @@ shots:
     hit_events: advance_load_28
   shot_l_unbended_29:
     show_tokens:
-      leds: l_belt_b_29
+      leds: l_belt_b_29, l_bank3_1_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_29
   shot_l_unbended_30:
     show_tokens:
-      leds: l_belt_b_30
+      leds: l_belt_b_30,l_bank3_2_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_30
   shot_l_unbended_31:
     show_tokens:
-      leds: l_belt_b_31
+      leds: l_belt_b_31, l_bank3_3_arrow
     profile: sp_banana_load_profile_hit
     hit_events: advance_load_31
   shot_l_unbended_32:
@@ -320,13 +320,13 @@ event_player:
   mode_banana_load_started: disable_lock_diverter, disable_top_left_gate_diverter
   
   # match between switches and targets
-  s_bank4_1_active: advance_load_1
-  s_bank4_2_active: advance_load_2
-  s_bank4_3_active: advance_load_3
-  s_bank4_4_active: advance_load_4
-  s_bank3_1_active: advance_load_12
-  s_bank3_2_active: advance_load_13
-  s_bank3_3_active: advance_load_14
+  s_bank4_1_active: advance_load_21
+  s_bank4_2_active: advance_load_22
+  s_bank4_3_active: advance_load_23
+  s_bank4_4_active: advance_load_24
+  s_bank3_1_active: advance_load_29
+  s_bank3_2_active: advance_load_30
+  s_bank3_3_active: advance_load_31
 
 variable_player:
   mode_banana_load_started:
