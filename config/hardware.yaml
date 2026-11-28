@@ -76,7 +76,16 @@ coils:
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
 
-
+servos:
+  servo_top_right_gate:
+    servo_min: 0.1
+    servo_max: 0.9
+    positions:
+      0.0: diverter_top_right_gate_diverter_activating
+      0.9: diverter_top_right_gate_diverter_deactivating
+    reset_position: 0.5
+    reset_events: reset_servo_top_right_gate
+    number: 1
 
 switches:
     #Cabinet Switches
@@ -216,9 +225,8 @@ diverters:
     enable_events: ball_started, enable_top_left_gate_diverter
     disable_events: ball_ended, disable_top_left_gate_diverter
     targets_when_active: playfield
+  #top right gate is a servo (servo_top_right_gate)
   top_right_gate_diverter:
-    activation_coil: c_top_right_gate
-    type: hold
     activation_time: 3s
     activation_switches: s_left_orbit
     enable_events: ball_started, enable_top_right_gate_diverter
@@ -853,6 +861,8 @@ lights:
         subtype: led
         tags: inserts,spinner_inserts
         label: "l_spinner_square_top_1"
+
+        
 
 
 
