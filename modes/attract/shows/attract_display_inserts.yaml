@@ -1,0 +1,547 @@
+#show_version=6
+- time: 0
+  lights:
+    l_arrow_top_right: '000000'
+    l_bank3_1_arrow: '000000'
+    l_bank3_1_round: '000000'
+    l_bank3_2_arrow: '000000'
+    l_bank3_2_round: '000000'
+    l_bank3_3_arrow: '000000'
+    l_bank3_3_round: '000000'
+    l_bank4_1_arrow: '000000'
+    l_bank4_1_round: '000000'
+    l_bank4_2_arrow: '000000'
+    l_bank4_2_round: '000000'
+    l_bank4_3_arrow: '000000'
+    l_bank4_3_round: '000000'
+    l_bank4_4_arrow: '000000'
+    l_bank4_4_round: '000000'
+    l_bend_again: '000000'
+    l_bend_bananas_start: '000000'
+    l_bend_state: '000000'
+    l_control_state: '000000'
+    l_hyperloop_start: '000000'
+    l_jackpot_top_right: '000000'
+    l_load_state: '000000'
+    l_lock_start: '000000'
+    l_mission_start: '000000'
+    l_ramp_arrow: '000000'
+    l_ramp_jackpot: '000000'
+    l_spinner_arrow: '000000'
+    l_spinner_square_top_1: '000000'
+    l_spinner_square_top_2: '000000'
+    l_spinner_square_top_3: '000000'
+    l_upper_left_lane: '000000'
+    l_upper_right_lane: '000000'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'C8401F'
+    l_bank3_1_arrow: 'C70101'
+    l_bank3_1_round: 'C70101'
+    l_bank3_2_arrow: 'C70101'
+    l_bank3_2_round: 'C70101'
+    l_bank3_3_arrow: 'C8401F'
+    l_bank3_3_round: 'C81F0F'
+    l_bank4_1_arrow: 'BF06A0'
+    l_bank4_1_round: 'BF06A0'
+    l_bank4_2_arrow: 'BF06A0'
+    l_bank4_2_round: 'BF06A0'
+    l_bank4_3_arrow: 'BF06A0'
+    l_bank4_3_round: 'BF06A0'
+    l_bank4_4_arrow: 'BF06A0'
+    l_bank4_4_round: 'BF06A0'
+    l_bend_again: '1B593C'
+    l_bend_bananas_start: 'C87900'
+    l_bend_state: '1B593C'
+    l_control_state: '1B593C'
+    l_hyperloop_start: '1B593C'
+    l_jackpot_top_right: 'C8401F'
+    l_load_state: '1B593C'
+    l_lock_start: 'C87900'
+    l_mission_start: 'C87900'
+    l_ramp_arrow: '0051B6'
+    l_ramp_jackpot: '0051B6'
+    l_spinner_arrow: '0051B6'
+    l_spinner_square_top_1: '0000C8'
+    l_spinner_square_top_2: '0000C8'
+    l_spinner_square_top_3: '0000C8'
+    l_upper_left_lane: 'BF06A0'
+    l_upper_right_lane: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: 'C70101'
+    l_spinner_square_top_3: '0051B6'
+    l_upper_right_lane: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_hyperloop_start: 'C87900'
+    l_lock_start: 'C86A08'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: 'C70101'
+    l_bank4_1_arrow: '7A2AB9'
+    l_lock_start: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'C8401E'
+    l_bank4_1_round: '7A2AB9'
+    l_spinner_square_top_2: '003BBB'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'C70101'
+    l_bank3_1_round: 'BF06A0'
+    l_bank4_2_arrow: '7A2AB9'
+    l_bank4_2_round: '7A2AB9'
+    l_mission_start: 'C8401F'
+    l_spinner_square_top_2: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: 'BF06A0'
+    l_bank4_3_arrow: 'B70AA3'
+    l_bank4_3_round: 'B909A2'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_round: 'BF06A0'
+    l_bank4_3_arrow: '7A2AB9'
+    l_bank4_3_round: '7A2AB9'
+    l_jackpot_top_right: 'C70101'
+    l_ramp_jackpot: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: 'C70107'
+    l_bank4_4_arrow: '7A2AB9'
+    l_bank4_4_round: '7A2AB9'
+    l_bend_bananas_start: 'C8401F'
+    l_spinner_arrow: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: 'BF06A0'
+    l_bank3_3_round: 'C20464'
+    l_spinner_square_top_1: '0051B6'
+    l_upper_left_lane: '931DB0'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: 'BF06A0'
+    l_bend_again: 'C87900'
+    l_bend_state: 'C87900'
+    l_control_state: 'C87900'
+    l_hyperloop_start: 'C85314'
+    l_load_state: 'C87900'
+    l_lock_start: 'C70101'
+    l_upper_left_lane: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_bank4_1_arrow: '0000C8'
+    l_bank4_1_round: '220CC4'
+    l_hyperloop_start: 'C8401F'
+    l_ramp_arrow: '1B593C'
+    l_upper_right_lane: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: 'BF06A0'
+    l_bank4_1_round: '0000C8'
+    l_bank4_2_arrow: '4217C0'
+    l_spinner_square_top_3: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_round: 'B40BA4'
+    l_bank4_2_arrow: '0000C8'
+    l_bank4_2_round: '0000C8'
+    l_mission_start: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'BF06A0'
+    l_bank3_1_arrow: '7A2AB9'
+    l_bank3_1_round: '7A2AB9'
+    l_bank4_3_arrow: '0000C8'
+    l_bank4_3_round: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_bank4_4_arrow: '0000C8'
+    l_bank4_4_round: '0000C8'
+    l_bend_bananas_start: 'C8361A'
+    l_spinner_square_top_2: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_round: '7A2AB9'
+    l_bend_bananas_start: 'C70101'
+    l_jackpot_top_right: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: '7A2AB9'
+    l_upper_left_lane: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '7A2AB9'
+    l_bank4_1_arrow: '0009C6'
+    l_bend_again: 'C8401F'
+    l_bend_state: 'C85712'
+    l_control_state: 'C8401F'
+    l_hyperloop_start: 'C8391B'
+    l_load_state: 'C8600E'
+    l_upper_right_lane: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_bank4_1_arrow: '0051B6'
+    l_bank4_1_round: '0051B6'
+    l_bend_state: 'C8401F'
+    l_hyperloop_start: 'C70101'
+    l_load_state: 'C8401F'
+    l_lock_start: 'C40344'
+    l_ramp_jackpot: 'C87900'
+    l_spinner_arrow: 'AE7509'
+    l_spinner_square_top_1: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: '7A2AB9'
+    l_bank4_2_arrow: '0051B6'
+    l_lock_start: 'BF06A0'
+    l_spinner_arrow: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: '0000C8'
+    l_bank3_1_round: '0000C8'
+    l_bank4_2_round: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_bank4_3_arrow: '0051B6'
+    l_bank4_3_round: '0051B6'
+    l_mission_start: 'C60111'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: '7A2AB9'
+    l_bank3_2_arrow: '6924BB'
+    l_bank3_2_round: '0000C8'
+    l_bank4_4_arrow: '0051B6'
+    l_bank4_4_round: '0051B6'
+    l_mission_start: 'BF06A0'
+    l_ramp_arrow: 'C87900'
+    l_spinner_square_top_3: '696821'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: '0000C8'
+    l_jackpot_top_right: 'AF0EA6'
+    l_spinner_square_top_3: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '0000C8'
+    l_bend_bananas_start: 'C50232'
+    l_jackpot_top_right: '7A2AB9'
+    l_upper_left_lane: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_bend_again: 'C70704'
+    l_bend_bananas_start: 'BF06A0'
+    l_spinner_square_top_2: '526329'
+    l_upper_right_lane: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: '0000C8'
+    l_bend_again: 'C70101'
+    l_bend_state: 'C70101'
+    l_control_state: 'C70101'
+    l_load_state: 'C70101'
+    l_spinner_square_top_2: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: '004EB7'
+    l_bank3_1_round: '0051B6'
+    l_bank4_1_arrow: '0D5579'
+    l_lock_start: '7A2AB9'
+    l_ramp_jackpot: 'C8401F'
+    l_spinner_arrow: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: '0051B6'
+    l_bank4_1_arrow: '1B593C'
+    l_bank4_1_round: '1B593C'
+    l_hyperloop_start: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: '0000C8'
+    l_bank3_2_round: '0051B6'
+    l_bank4_2_arrow: '1B593C'
+    l_bank4_2_round: '0E5574'
+    l_spinner_square_top_1: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: '0051B6'
+    l_bank4_2_round: '1B593C'
+    l_bank4_3_arrow: '0F5573'
+    l_mission_start: 'A115AB'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '0050B6'
+    l_bank4_3_arrow: '1B593C'
+    l_bank4_3_round: '1B593C'
+    l_jackpot_top_right: '0000C8'
+    l_mission_start: '7A2AB9'
+    l_ramp_arrow: 'C8401F'
+    l_spinner_square_top_3: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '0051B6'
+    l_bank4_4_arrow: '1B593C'
+    l_bank4_4_round: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: '0051B6'
+    l_bend_bananas_start: 'AB10A7'
+    
+- time: '+1'
+  lights:
+    l_bend_bananas_start: '7A2AB9'
+    l_lock_start: '0401C8'
+    l_spinner_square_top_2: 'C8401F'
+    l_upper_left_lane: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_lock_start: '0000C8'
+    l_upper_right_lane: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: '0051B6'
+    l_bank3_1_arrow: '09548C'
+    l_bend_again: 'BF06A0'
+    l_bend_state: 'BF06A0'
+    l_control_state: 'BF06A0'
+    l_load_state: 'BF06A0'
+    l_ramp_jackpot: 'C70101'
+    l_spinner_arrow: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: '1B593C'
+    l_bank3_1_round: '1B593C'
+    l_bank4_1_arrow: '1C593B'
+    l_hyperloop_start: '931DB0'
+    l_spinner_square_top_1: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_round: '115669'
+    l_bank4_1_arrow: 'C87900'
+    l_bank4_1_round: 'C87900'
+    l_hyperloop_start: '7A2AB9'
+    l_jackpot_top_right: '0051B6'
+    l_mission_start: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: '1B593C'
+    l_bank3_2_round: '1B593C'
+    l_bank4_2_arrow: 'C87900'
+    l_bank4_2_round: '245B38'
+    l_ramp_arrow: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '085492'
+    l_bank4_2_round: 'C87900'
+    l_bank4_3_arrow: '5C6525'
+    l_ramp_arrow: 'C70101'
+    l_spinner_square_top_3: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: '1B593C'
+    l_bank4_3_arrow: 'C87900'
+    l_bank4_3_round: 'C87900'
+    l_bank4_4_arrow: '355E32'
+    l_bend_bananas_start: '1E0AC4'
+    l_lock_start: '0007C6'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: '1B593C'
+    l_bank4_4_arrow: 'C87900'
+    l_bank4_4_round: 'C87900'
+    l_bend_bananas_start: '0000C8'
+    l_lock_start: '0051B6'
+    l_spinner_square_top_2: 'C81D0E'
+    
+- time: '+1'
+  lights:
+    l_spinner_square_top_2: 'C70101'
+    l_upper_left_lane: '255B38'
+    
+- time: '+1'
+  lights:
+    l_upper_left_lane: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: '0A5487'
+    l_bank4_1_arrow: 'C87502'
+    l_hyperloop_start: '4A19BF'
+    l_mission_start: '0023C0'
+    l_spinner_square_top_1: 'C71108'
+    l_upper_right_lane: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: '1B593C'
+    l_bank3_1_arrow: 'C77900'
+    l_bank3_1_round: '9A7110'
+    l_bank4_1_arrow: 'C8401F'
+    l_bank4_1_round: 'C8401F'
+    l_bend_again: '7A2AB9'
+    l_bend_state: '7A2AB9'
+    l_control_state: '7A2AB9'
+    l_hyperloop_start: '0000C8'
+    l_load_state: '7A2AB9'
+    l_mission_start: '0051B6'
+    l_spinner_arrow: 'BF06A0'
+    l_spinner_square_top_1: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: 'C87900'
+    l_bank3_1_round: 'C87900'
+    l_bank4_2_arrow: 'C8401F'
+    l_bank4_2_round: 'C84D18'
+    l_jackpot_top_right: '1B593C'
+    l_ramp_jackpot: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: '5B6526'
+    l_bank3_2_round: 'C87900'
+    l_bank4_2_round: 'C8401F'
+    l_bank4_3_arrow: 'C8401F'
+    l_bank4_3_round: 'C8650B'
+    
+- time: '+1'
+  lights:
+    l_bank3_2_arrow: 'C87900'
+    l_bank4_3_round: 'C8401F'
+    l_bank4_4_arrow: 'C84C18'
+    l_bank4_4_round: 'C87502'
+    l_bend_bananas_start: '003ABB'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: 'C87900'
+    l_bank4_4_arrow: 'C8401F'
+    l_bank4_4_round: 'C8401F'
+    l_bend_bananas_start: '0051B6'
+    l_ramp_arrow: 'BF06A0'
+    l_spinner_square_top_3: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: '3B5F31'
+    l_lock_start: '1B593C'
+    l_upper_left_lane: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: 'C87900'
+    l_upper_right_lane: 'C86C07'
+    
+- time: '+1'
+  lights:
+    l_bank4_1_arrow: 'C70A05'
+    l_spinner_square_top_2: 'BF06A0'
+    l_upper_right_lane: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: 'C8401F'
+    l_bank3_1_round: 'C8401F'
+    l_bank4_1_arrow: 'C70101'
+    l_bank4_1_round: 'C70101'
+    l_bend_again: '0000C8'
+    l_bend_state: '3512C1'
+    l_control_state: '0000C8'
+    l_hyperloop_start: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'B77606'
+    l_bank4_2_arrow: 'C70101'
+    l_bank4_2_round: 'C70101'
+    l_bend_state: '0000C8'
+    l_load_state: '0000C8'
+    l_mission_start: '1B593C'
+    l_spinner_square_top_1: 'C4023B'
+    
+- time: '+1'
+  lights:
+    l_arrow_top_right: 'C87900'
+    l_bank3_2_arrow: 'C8401F'
+    l_bank3_2_round: 'C8401F'
+    l_bank4_3_arrow: 'C70101'
+    l_bank4_3_round: 'C70101'
+    l_spinner_arrow: '8922B3'
+    l_spinner_square_top_1: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_bank4_4_arrow: 'C70101'
+    l_bank4_4_round: 'C70101'
+    l_jackpot_top_right: 'C87900'
+    l_ramp_jackpot: '7A2AB9'
+    l_spinner_arrow: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_round: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_bank3_3_arrow: 'C8401F'
+    l_bend_bananas_start: '06539C'
+    l_upper_left_lane: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bend_bananas_start: '1B593C'
+    l_ramp_arrow: '7D28B8'
+    l_spinner_square_top_3: '7A2AB9'
+    l_upper_right_lane: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_bank3_1_arrow: 'C70101'
+    l_bank3_1_round: 'C70D07'
+    l_lock_start: 'C87900'
+    l_ramp_arrow: '7A2AB9'
+    

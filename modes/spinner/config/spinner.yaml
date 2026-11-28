@@ -5,11 +5,11 @@ mode:
   stop_events: stop_mode_spinner
   priority: 200
 
-# ---- Counter: 4 hits fills the stack ----
+# ---- Counter: 5 hits fills the stack ----
 counters:
   co_spinner_fill:
     count_events: s_spinner_active
-    count_complete_value: 5
+    count_complete_value: 6
     starting_count: 0
     count_interval: 1
     direction: up
@@ -29,20 +29,25 @@ light_player:
   # count=3 : sq3 lights up
   logicblock_co_spinner_fill_hit{count==3}:
     l_spinner_square_top_3: tt_yellow
-  # count=4 : arrow lights up, then spinner_stack_complete fires (reset to 0)
+  # count=4 : sq4 lights up
   logicblock_co_spinner_fill_hit{count==4}:
+    l_spinner_square_top_4: tt_yellow
+  # count=4 : arrow lights up, then spinner_stack_complete fires (reset to 0)
+  logicblock_co_spinner_fill_hit{count==5}:
     l_spinner_arrow: tt_orange
   # On complete: reset resets counter to 0, clear all lights
   spinner_stack_complete:
     l_spinner_square_top_1: off
     l_spinner_square_top_2: off
     l_spinner_square_top_3: off
+    l_spinner_square_top_4: off
     l_spinner_arrow: off
   # When mode stops, clear lights
   mode_spinner_stopping:
     l_spinner_square_top_1: off
     l_spinner_square_top_2: off
     l_spinner_square_top_3: off
+    l_spinner_square_top_4: off
     l_spinner_arrow: off
 
 # ---- Player variable: increment on stack completion ----

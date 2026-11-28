@@ -29,6 +29,8 @@ show_player:
   mode_attract_started:
     attract_display_loop:
       speed: 50
+    attract_display_inserts:
+      speed: 50
 
 timers:
   # Carousel auto update

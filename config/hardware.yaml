@@ -3,20 +3,20 @@
 coils:
     c_ball_trough:
         label: "EJECTION_BILLE"
-        number: 0-0-1
+        number: 0-0-8
         default_pulse_ms: 22
-        default_pulse_power: 0.55
+        default_pulse_power: 1.0
         default_hold_power: 0.075
     c_flipper_left_main:
         label: "FLIPPER GAUCHE"
-        number: 0-0-14
+        number: 0-0-13
         #allow_enable: true
         default_hold_power: 0.08
         default_pulse_power: 1.0
         default_pulse_ms: 35
     c_flipper_right_main:
         label: "FLIPPER DROIT"
-        number: 0-0-13
+        number: 0-0-14
         #allow_enable: true
         default_hold_power: 0.08
         default_pulse_power: 1.0
@@ -34,26 +34,26 @@ coils:
         number: 0-0-5
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
-    c_top_right_gate:
-        label: "PORTE HAUT DROITE"
-        number: 0-0-6
-        default_pulse_ms: 25
-        default_hold_power: 0.2   # keep this low 
+    # c_top_right_gate:
+    #     label: "PORTE HAUT DROITE"
+    #     number: 0-0-6
+    #     default_pulse_ms: 25
+    #     default_hold_power: 0.2   # keep this low 
     c_lock_divertor:
         label: "DEVIATEUR LOCK"
-        number: 1-0-10
+        number: 0-0-6
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
     c_lock_release:
         label: "LIBERATION LOCK"
-        number: 0-0-7
+        number: 0-0-15
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
-    c_knocker:
-        label: "KNOCKER"
-        number: 0-0-8
-        default_pulse_ms: 25
-        default_hold_power: 0.2   # keep this low 
+    # c_knocker:
+    #     label: "KNOCKER"
+    #     number: 0-0-8
+    #     default_pulse_ms: 25
+    #     default_hold_power: 0.2   # keep this low 
     c_magnet:
         label: "MAGNET"
         number: 0-0-12
@@ -62,27 +62,17 @@ coils:
         default_hold_power: 0.075
     c_left_diverter:
         label: "DEVIATEUR HYPERLOOP"
-        number: 1-0-9
-        default_pulse_ms: 25
-        default_hold_power: 0.2   # keep this low 
-    c_red_monkey:
-        label: "CIBLE SINGE ROUGE"
-        number: 1-0-8
-        default_pulse_ms: 25
-        default_hold_power: 0.2   # keep this low 
-    c_wall_up_down:
-        label: "MUR 3 CIBLES"
-        number: 1-0-11
+        number: 0-0-1
         default_pulse_ms: 25
         default_hold_power: 0.2   # keep this low 
 
 servos:
   servo_top_right_gate:
     servo_min: 0.1
-    servo_max: 0.9
+    servo_max: 1.0
     positions:
-      0.0: diverter_top_right_gate_diverter_activating
-      0.9: diverter_top_right_gate_diverter_deactivating
+      0.5: diverter_top_right_gate_diverter_deactivating
+      1.0: diverter_top_right_gate_diverter_activating
     reset_position: 0.5
     reset_events: reset_servo_top_right_gate
     number: 1
@@ -148,11 +138,11 @@ switches:
    s_left_target:
       number: 1-0-57  
    s_spinner:
-      number: 1-0-58  
+      number: 0-0-19 
    s_left_inlane:
       number: 1-0-56  
-   s_right_inlane:
-      number: 1-0-64  
+#    s_right_inlane:
+#       number: 1-0-64  
    s_wall_target:
       number: 1-0-51  
    s_bumper_target:
@@ -175,17 +165,18 @@ switches:
    s_bumper:
       number: 0-0-16 
    s_lock_1:
-      number: 0-0-24 
-   s_lock_2:
       number: 0-0-25 
-   s_lock_3:
+   s_lock_2:
       number: 0-0-26 
-   s_magnet:
+   s_lock_3:
       number: 0-0-27 
+   s_magnet:
+      number: 0-0-24 
    s_ramp_begin:
       number: 0-0-3
+    #Pointe sur inlane droite pour l'instant
    s_ramp_end:
-      number: 0-0-4
+      number: 1-0-64
 
 flippers:
   left_flipper:

@@ -1,11 +1,17 @@
 #config_version=6
 
 hardware:
-   platform: opp
-   driverboards: gen2
+  platform: opp
+  driverboards: gen2
+  servo_controllers: pololu_maestro
+  #servo_controllers: opp  #mpf connait !
+  #servos: opp            #MPF ne connait pas...
 
 opp:
    ports: /dev/ttyACM0, /dev/ttyACM1
+
+pololu_maestro:
+  port: /dev/ttyACM2
 
 config:
 - hardware.yaml

@@ -28,7 +28,7 @@ achievements:
 # All playfield switches contribute 1% maintenance progress
 shots:
   shot_maintenance_mission_switch:
-    switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4, s_upper_left_lane, s_upper_right_lane, s_left_orbit, s_right_orbit, s_bank3_1, s_bank3_2, s_bank3_3, s_right_target, s_left_target, s_spinner, s_left_inlane, s_right_inlane, s_wall_target, s_bumper_target, s_red_monkey, s_bumper, s_magnet, s_ramp_begin, s_ramp_end
+    switch: s_bank4_1, s_bank4_2, s_bank4_3, s_bank4_4, s_upper_left_lane, s_upper_right_lane, s_left_orbit, s_right_orbit, s_bank3_1, s_bank3_2, s_bank3_3, s_right_target, s_left_target, s_spinner, s_left_inlane, s_ramp_end, s_wall_target, s_bumper_target, s_red_monkey, s_bumper, s_magnet, s_ramp_begin, s_ramp_end
     enable_events: start_maintenance_mission
     disable_events: maintenance_mission_completed, maintenance_mission_timeout, mode_maintenance_mission_will_stop
 
